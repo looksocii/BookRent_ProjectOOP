@@ -93,6 +93,7 @@ public class admin extends javax.swing.JFrame {
         admin_sidetab.setLayout(new javax.swing.BoxLayout(admin_sidetab, javax.swing.BoxLayout.PAGE_AXIS));
 
         admin_tab_welcome.setBackground(new java.awt.Color(255, 204, 102));
+        admin_tab_welcome.setPreferredSize(new java.awt.Dimension(0, 140));
         admin_tab_welcome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 admin_mouseclicked(evt);
@@ -107,12 +108,13 @@ public class admin extends javax.swing.JFrame {
         );
         admin_tab_welcomeLayout.setVerticalGroup(
             admin_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 140, Short.MAX_VALUE)
+            .addGap(0, 139, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_welcome);
 
         admin_tab_library.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_library.setPreferredSize(new java.awt.Dimension(200, 80));
         admin_tab_library.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 admin_mouseclicked(evt);
@@ -141,17 +143,18 @@ public class admin extends javax.swing.JFrame {
         );
         admin_tab_libraryLayout.setVerticalGroup(
             admin_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+            .addGap(0, 79, Short.MAX_VALUE)
             .addGroup(admin_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_libraryLayout.createSequentialGroup()
                     .addContainerGap(18, Short.MAX_VALUE)
                     .addComponent(admin_txt_library)
-                    .addContainerGap(19, Short.MAX_VALUE)))
+                    .addContainerGap(18, Short.MAX_VALUE)))
         );
 
         admin_sidetab.add(admin_tab_library);
 
         admin_tab_rent.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_rent.setPreferredSize(new java.awt.Dimension(200, 80));
         admin_tab_rent.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 admin_mouseclicked(evt);
@@ -180,17 +183,18 @@ public class admin extends javax.swing.JFrame {
         );
         admin_tab_rentLayout.setVerticalGroup(
             admin_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+            .addGap(0, 79, Short.MAX_VALUE)
             .addGroup(admin_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(admin_tab_rentLayout.createSequentialGroup()
                     .addGap(0, 18, Short.MAX_VALUE)
                     .addComponent(admin_txt_rent)
-                    .addGap(0, 19, Short.MAX_VALUE)))
+                    .addGap(0, 18, Short.MAX_VALUE)))
         );
 
         admin_sidetab.add(admin_tab_rent);
 
         admin_tab_return.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_return.setPreferredSize(new java.awt.Dimension(200, 80));
         admin_tab_return.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 admin_mouseclicked(evt);
@@ -219,17 +223,18 @@ public class admin extends javax.swing.JFrame {
         );
         admin_tab_returnLayout.setVerticalGroup(
             admin_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+            .addGap(0, 79, Short.MAX_VALUE)
             .addGroup(admin_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(admin_tab_returnLayout.createSequentialGroup()
                     .addGap(0, 18, Short.MAX_VALUE)
                     .addComponent(admin_txt_return)
-                    .addGap(0, 19, Short.MAX_VALUE)))
+                    .addGap(0, 18, Short.MAX_VALUE)))
         );
 
         admin_sidetab.add(admin_tab_return);
 
         admin_tab_user.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_user.setPreferredSize(new java.awt.Dimension(200, 80));
         admin_tab_user.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 admin_mouseclicked(evt);
@@ -258,17 +263,18 @@ public class admin extends javax.swing.JFrame {
         );
         admin_tab_userLayout.setVerticalGroup(
             admin_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+            .addGap(0, 79, Short.MAX_VALUE)
             .addGroup(admin_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(admin_tab_userLayout.createSequentialGroup()
                     .addGap(0, 18, Short.MAX_VALUE)
                     .addComponent(admin_txt_user)
-                    .addGap(0, 19, Short.MAX_VALUE)))
+                    .addGap(0, 18, Short.MAX_VALUE)))
         );
 
         admin_sidetab.add(admin_tab_user);
 
         admin_tab_staff.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_staff.setPreferredSize(new java.awt.Dimension(200, 80));
         admin_tab_staff.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 admin_mouseclicked(evt);
@@ -297,17 +303,18 @@ public class admin extends javax.swing.JFrame {
         );
         admin_tab_staffLayout.setVerticalGroup(
             admin_tab_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+            .addGap(0, 79, Short.MAX_VALUE)
             .addGroup(admin_tab_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_staffLayout.createSequentialGroup()
                     .addContainerGap(18, Short.MAX_VALUE)
                     .addComponent(admin_txt_staff)
-                    .addContainerGap(19, Short.MAX_VALUE)))
+                    .addContainerGap(18, Short.MAX_VALUE)))
         );
 
         admin_sidetab.add(admin_tab_staff);
 
         admin_tab_empty1.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_empty1.setPreferredSize(new java.awt.Dimension(200, 80));
 
         javax.swing.GroupLayout admin_tab_empty1Layout = new javax.swing.GroupLayout(admin_tab_empty1);
         admin_tab_empty1.setLayout(admin_tab_empty1Layout);
@@ -317,7 +324,7 @@ public class admin extends javax.swing.JFrame {
         );
         admin_tab_empty1Layout.setVerticalGroup(
             admin_tab_empty1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+            .addGap(0, 79, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_empty1);
@@ -403,7 +410,7 @@ public class admin extends javax.swing.JFrame {
                 .addComponent(admin_welcome_bookrent)
                 .addGap(49, 49, 49)
                 .addComponent(admin_welcome_name)
-                .addContainerGap(274, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         admin_multipanel.add(admin_panel_welcome, "card6");
@@ -532,7 +539,7 @@ public class admin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_libraryLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(admin_library_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(admin_liblrary_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -598,7 +605,7 @@ public class admin extends javax.swing.JFrame {
                 .addComponent(admin_rent_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(admin_rent_jscroll, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         admin_multipanel.add(admin_panel_rent, "card3");
@@ -661,7 +668,7 @@ public class admin extends javax.swing.JFrame {
                 .addComponent(admin_rent_search1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(admin_return_jscroll, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         admin_multipanel.add(admin_panel_returnbook, "card4");
@@ -717,7 +724,7 @@ public class admin extends javax.swing.JFrame {
                 .addComponent(admin_user_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(admin_user_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 571, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 21, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         admin_multipanel.add(admin_panel_user, "card5");
@@ -824,7 +831,7 @@ public class admin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_staffLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(admin_staff_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(admin_staff_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(admin_staff_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
