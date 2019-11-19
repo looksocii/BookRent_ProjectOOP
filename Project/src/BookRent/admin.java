@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package BookRent;
 
-/**
- *
- * @author User
- */
+import java.awt.Color;
+import java.awt.geom.RoundRectangle2D;
+
 public class admin extends javax.swing.JFrame {
 
     /**
@@ -82,8 +76,8 @@ public class admin extends javax.swing.JFrame {
         admin_return_fine = new javax.swing.JLabel();
         admin_return_bookfine = new javax.swing.JLabel();
         admin_panel_history = new javax.swing.JPanel();
-        user_history_title = new javax.swing.JPanel();
-        user_history_history = new javax.swing.JLabel();
+        admin_history_title = new javax.swing.JPanel();
+        admin_history_history = new javax.swing.JLabel();
         admin_history_name = new javax.swing.JLabel();
         admin_history_search = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -691,26 +685,26 @@ public class admin extends javax.swing.JFrame {
 
         admin_panel_history.setBackground(new java.awt.Color(255, 255, 153));
 
-        user_history_title.setBackground(new java.awt.Color(255, 204, 102));
+        admin_history_title.setBackground(new java.awt.Color(255, 204, 102));
 
-        user_history_history.setFont(new java.awt.Font("Angsana New", 1, 72)); // NOI18N
-        user_history_history.setForeground(new java.awt.Color(255, 255, 255));
-        user_history_history.setText("History");
-        user_history_history.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        admin_history_history.setFont(new java.awt.Font("Angsana New", 1, 72)); // NOI18N
+        admin_history_history.setForeground(new java.awt.Color(255, 255, 255));
+        admin_history_history.setText("History");
+        admin_history_history.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        javax.swing.GroupLayout user_history_titleLayout = new javax.swing.GroupLayout(user_history_title);
-        user_history_title.setLayout(user_history_titleLayout);
-        user_history_titleLayout.setHorizontalGroup(
-            user_history_titleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(user_history_titleLayout.createSequentialGroup()
+        javax.swing.GroupLayout admin_history_titleLayout = new javax.swing.GroupLayout(admin_history_title);
+        admin_history_title.setLayout(admin_history_titleLayout);
+        admin_history_titleLayout.setHorizontalGroup(
+            admin_history_titleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(admin_history_titleLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(user_history_history)
+                .addComponent(admin_history_history)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        user_history_titleLayout.setVerticalGroup(
-            user_history_titleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(user_history_titleLayout.createSequentialGroup()
-                .addComponent(user_history_history)
+        admin_history_titleLayout.setVerticalGroup(
+            admin_history_titleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(admin_history_titleLayout.createSequentialGroup()
+                .addComponent(admin_history_history)
                 .addGap(0, 8, Short.MAX_VALUE))
         );
 
@@ -760,12 +754,12 @@ public class admin extends javax.swing.JFrame {
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
                     .addComponent(admin_history_search))
                 .addContainerGap(25, Short.MAX_VALUE))
-            .addComponent(user_history_title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(admin_history_title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         admin_panel_historyLayout.setVerticalGroup(
             admin_panel_historyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(admin_panel_historyLayout.createSequentialGroup()
-                .addComponent(user_history_title, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(admin_history_title, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(admin_history_name)
                 .addGap(18, 18, 18)
@@ -1220,9 +1214,11 @@ public class admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel admin_history_history;
     private javax.swing.JLabel admin_history_name;
     private javax.swing.JTable admin_history_order;
     private javax.swing.JTextField admin_history_search;
+    private javax.swing.JPanel admin_history_title;
     private javax.swing.JTable admin_library_order;
     private javax.swing.JTextField admin_library_search;
     private javax.swing.JPanel admin_main;
@@ -1279,7 +1275,5 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JLabel admin_welcome_welcome;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel user_history_history;
-    private javax.swing.JPanel user_history_title;
     // End of variables declaration//GEN-END:variables
 }
