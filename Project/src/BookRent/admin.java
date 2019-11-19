@@ -93,6 +93,11 @@ public class admin extends javax.swing.JFrame {
         admin_sidetab.setLayout(new javax.swing.BoxLayout(admin_sidetab, javax.swing.BoxLayout.PAGE_AXIS));
 
         admin_tab_welcome.setBackground(new java.awt.Color(255, 204, 102));
+        admin_tab_welcome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admin_mouseclicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout admin_tab_welcomeLayout = new javax.swing.GroupLayout(admin_tab_welcome);
         admin_tab_welcome.setLayout(admin_tab_welcomeLayout);
@@ -108,6 +113,17 @@ public class admin extends javax.swing.JFrame {
         admin_sidetab.add(admin_tab_welcome);
 
         admin_tab_library.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_library.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admin_mouseclicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                admin_mouseentered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                admin_mouseexited(evt);
+            }
+        });
 
         admin_txt_library.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_library.setText("Library");
@@ -136,6 +152,17 @@ public class admin extends javax.swing.JFrame {
         admin_sidetab.add(admin_tab_library);
 
         admin_tab_rent.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_rent.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admin_mouseclicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                admin_mouseentered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                admin_mouseexited(evt);
+            }
+        });
 
         admin_txt_rent.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_rent.setText("Rent");
@@ -164,6 +191,17 @@ public class admin extends javax.swing.JFrame {
         admin_sidetab.add(admin_tab_rent);
 
         admin_tab_return.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_return.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admin_mouseclicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                admin_mouseentered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                admin_mouseexited(evt);
+            }
+        });
 
         admin_txt_return.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_return.setText("Return");
@@ -192,6 +230,17 @@ public class admin extends javax.swing.JFrame {
         admin_sidetab.add(admin_tab_return);
 
         admin_tab_user.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_user.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admin_mouseclicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                admin_mouseentered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                admin_mouseexited(evt);
+            }
+        });
 
         admin_txt_user.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_user.setText("User");
@@ -220,6 +269,17 @@ public class admin extends javax.swing.JFrame {
         admin_sidetab.add(admin_tab_user);
 
         admin_tab_staff.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_staff.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admin_mouseclicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                admin_mouseentered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                admin_mouseexited(evt);
+            }
+        });
 
         admin_txt_staff.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_staff.setText("Staff");
@@ -228,21 +288,21 @@ public class admin extends javax.swing.JFrame {
         admin_tab_staff.setLayout(admin_tab_staffLayout);
         admin_tab_staffLayout.setHorizontalGroup(
             admin_tab_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 200, Short.MAX_VALUE)
             .addGroup(admin_tab_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(admin_tab_staffLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(admin_txt_staff)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_staffLayout.createSequentialGroup()
+                    .addContainerGap(76, Short.MAX_VALUE)
+                    .addComponent(admin_txt_staff, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(69, Short.MAX_VALUE)))
         );
         admin_tab_staffLayout.setVerticalGroup(
             admin_tab_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 80, Short.MAX_VALUE)
             .addGroup(admin_tab_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(admin_tab_staffLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_staffLayout.createSequentialGroup()
+                    .addContainerGap(18, Short.MAX_VALUE)
                     .addComponent(admin_txt_staff)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addContainerGap(19, Short.MAX_VALUE)))
         );
 
         admin_sidetab.add(admin_tab_staff);
@@ -263,6 +323,17 @@ public class admin extends javax.swing.JFrame {
         admin_sidetab.add(admin_tab_empty1);
 
         admin_tab_logout.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_logout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admin_mouseclicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                admin_mouseentered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                admin_mouseexited(evt);
+            }
+        });
 
         admin_txt_logout.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_logout.setText("Logout");
@@ -598,11 +669,6 @@ public class admin extends javax.swing.JFrame {
         admin_panel_user.setBackground(new java.awt.Color(255, 255, 153));
 
         admin_user_search.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        admin_user_search.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                admin_user_searchActionPerformed(evt);
-            }
-        });
 
         admin_user_order.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -695,30 +761,15 @@ public class admin extends javax.swing.JFrame {
 
         admin_staff_addusername.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_staff_addusername.setText("Username");
-        admin_staff_addusername.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                admin_staff_addusernameActionPerformed(evt);
-            }
-        });
 
         admin_staff_addpassword.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         admin_staff_addpassword.setText("Password");
 
         admin_staff_addfirstname.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_staff_addfirstname.setText("Firstname");
-        admin_staff_addfirstname.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                admin_staff_addfirstnameActionPerformed(evt);
-            }
-        });
 
         admin_staff_addlastname.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_staff_addlastname.setText("Lastname");
-        admin_staff_addlastname.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                admin_staff_addlastnameActionPerformed(evt);
-            }
-        });
 
         admin_staff_addbuttonadd.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_staff_addbuttonadd.setText("ADD");
@@ -811,21 +862,98 @@ public class admin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void admin_user_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_user_searchActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_admin_user_searchActionPerformed
+    private void admin_mouseclicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admin_mouseclicked
+        if (evt.getSource()== admin_tab_welcome){
+            admin_panel_welcome.setVisible(true);
+            admin_panel_library.setVisible(false);
+            admin_panel_rent.setVisible(false);
+            admin_panel_returnbook.setVisible(false);
+            admin_panel_user.setVisible(false);
+            admin_panel_staff.setVisible(false);
+        }
+        if (evt.getSource()== admin_tab_library){
+            admin_panel_welcome.setVisible(false);
+            admin_panel_library.setVisible(true);
+            admin_panel_rent.setVisible(false);
+            admin_panel_returnbook.setVisible(false);
+            admin_panel_user.setVisible(false);
+            admin_panel_staff.setVisible(false);
+        }
+        if (evt.getSource()== admin_tab_rent){
+            admin_panel_welcome.setVisible(false);
+            admin_panel_library.setVisible(false);
+            admin_panel_rent.setVisible(true);
+            admin_panel_returnbook.setVisible(false);
+            admin_panel_user.setVisible(false);
+            admin_panel_staff.setVisible(false);
+        }
+        if (evt.getSource()== admin_tab_return){
+            admin_panel_welcome.setVisible(false);
+            admin_panel_library.setVisible(false);
+            admin_panel_rent.setVisible(false);
+            admin_panel_returnbook.setVisible(true);
+            admin_panel_user.setVisible(false);
+            admin_panel_staff.setVisible(false);
+        }
+        if (evt.getSource()== admin_tab_user){
+            admin_panel_welcome.setVisible(false);
+            admin_panel_library.setVisible(false);
+            admin_panel_rent.setVisible(false);
+            admin_panel_returnbook.setVisible(false);
+            admin_panel_user.setVisible(true);
+            admin_panel_staff.setVisible(false);
+        }
+        if (evt.getSource()== admin_tab_staff){
+            admin_panel_welcome.setVisible(false);
+            admin_panel_library.setVisible(false);
+            admin_panel_rent.setVisible(false);
+            admin_panel_returnbook.setVisible(false);
+            admin_panel_user.setVisible(false);
+            admin_panel_staff.setVisible(true);
+        }
+    }//GEN-LAST:event_admin_mouseclicked
 
-    private void admin_staff_addusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_staff_addusernameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_admin_staff_addusernameActionPerformed
+    private void admin_mouseentered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admin_mouseentered
+        if (evt.getSource()== admin_tab_library){
+            admin_tab_library.setBackground(new Color(255, 153, 0));
+        }
+        if (evt.getSource()== admin_tab_rent){
+            admin_tab_rent.setBackground(new Color(255, 153, 0));
+        }
+        if (evt.getSource()== admin_tab_return){
+            admin_tab_return.setBackground(new Color(255, 153, 0));
+        }
+        if (evt.getSource()== admin_tab_user){
+            admin_tab_user.setBackground(new Color(255, 153, 0));
+        }
+        if (evt.getSource()== admin_tab_staff){
+            admin_tab_staff.setBackground(new Color(255, 153, 0));
+        }
+        if (evt.getSource()== admin_tab_logout){
+            admin_tab_logout.setBackground(new Color(255, 153, 0));
+        }
+    }//GEN-LAST:event_admin_mouseentered
 
-    private void admin_staff_addfirstnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_staff_addfirstnameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_admin_staff_addfirstnameActionPerformed
-
-    private void admin_staff_addlastnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_staff_addlastnameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_admin_staff_addlastnameActionPerformed
+    private void admin_mouseexited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admin_mouseexited
+        if (evt.getSource()== admin_tab_library){
+            admin_tab_library.setBackground(new Color(255, 204, 0));
+        }
+        if (evt.getSource()== admin_tab_rent){
+            admin_tab_rent.setBackground(new Color(255, 204, 0));
+        }
+        if (evt.getSource()== admin_tab_return){
+            admin_tab_return.setBackground(new Color(255, 204, 0));
+        }
+        if (evt.getSource()== admin_tab_user){
+            admin_tab_user.setBackground(new Color(255, 204, 0));
+        }
+        if (evt.getSource()== admin_tab_staff){
+            admin_tab_staff.setBackground(new Color(255, 204, 0));
+        }
+        if (evt.getSource()== admin_tab_logout){
+            admin_tab_logout.setBackground(new Color(255, 204, 0));
+        }
+    }//GEN-LAST:event_admin_mouseexited
 
     /**
      * @param args the command line arguments

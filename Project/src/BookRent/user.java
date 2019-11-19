@@ -47,7 +47,7 @@ public class user extends javax.swing.JFrame {
         user_welcome_name = new javax.swing.JLabel();
         user_panel_library = new javax.swing.JPanel();
         user_library_search = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        user_library_scroll = new javax.swing.JScrollPane();
         user_library_order = new javax.swing.JTable();
         user_panel_rent = new javax.swing.JPanel();
         user_rent_bookid = new javax.swing.JLabel();
@@ -84,7 +84,7 @@ public class user extends javax.swing.JFrame {
         user_history_history = new javax.swing.JLabel();
         user_history_name = new javax.swing.JLabel();
         user_history_search = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        user_history_scroll = new javax.swing.JScrollPane();
         user_history_order = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -100,7 +100,7 @@ public class user extends javax.swing.JFrame {
         user_tab_welcome.setBackground(new java.awt.Color(255, 204, 102));
         user_tab_welcome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                mouseclicked(evt);
+                user_mouseclicked(evt);
             }
         });
 
@@ -120,13 +120,13 @@ public class user extends javax.swing.JFrame {
         user_tab_library.setBackground(new java.awt.Color(255, 204, 0));
         user_tab_library.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                mouseclicked(evt);
+                user_mouseclicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                mouseentered(evt);
+                user_mouseentered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                mouseexited(evt);
+                user_mouseexited(evt);
             }
         });
 
@@ -159,13 +159,13 @@ public class user extends javax.swing.JFrame {
         user_tab_rent.setBackground(new java.awt.Color(255, 204, 0));
         user_tab_rent.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                mouseclicked(evt);
+                user_mouseclicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                mouseentered(evt);
+                user_mouseentered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                mouseexited(evt);
+                user_mouseexited(evt);
             }
         });
 
@@ -198,13 +198,13 @@ public class user extends javax.swing.JFrame {
         user_tab_return.setBackground(new java.awt.Color(255, 204, 0));
         user_tab_return.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                mouseclicked(evt);
+                user_mouseclicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                mouseentered(evt);
+                user_mouseentered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                mouseexited(evt);
+                user_mouseexited(evt);
             }
         });
 
@@ -237,13 +237,13 @@ public class user extends javax.swing.JFrame {
         user_tab_history.setBackground(new java.awt.Color(255, 204, 0));
         user_tab_history.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                mouseclicked(evt);
+                user_mouseclicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                mouseentered(evt);
+                user_mouseentered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                mouseexited(evt);
+                user_mouseexited(evt);
             }
         });
 
@@ -305,11 +305,14 @@ public class user extends javax.swing.JFrame {
 
         user_tab_logout.setBackground(new java.awt.Color(255, 204, 0));
         user_tab_logout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                user_mouseclicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                mouseentered(evt);
+                user_mouseentered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                mouseexited(evt);
+                user_mouseexited(evt);
             }
         });
 
@@ -413,7 +416,7 @@ public class user extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(user_library_order);
+        user_library_scroll.setViewportView(user_library_order);
 
         javax.swing.GroupLayout user_panel_libraryLayout = new javax.swing.GroupLayout(user_panel_library);
         user_panel_library.setLayout(user_panel_libraryLayout);
@@ -422,7 +425,7 @@ public class user extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_panel_libraryLayout.createSequentialGroup()
                 .addContainerGap(31, Short.MAX_VALUE)
                 .addGroup(user_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE)
+                    .addComponent(user_library_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE)
                     .addComponent(user_library_search))
                 .addGap(42, 42, 42))
         );
@@ -432,7 +435,7 @@ public class user extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(user_library_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(user_library_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
         );
 
@@ -445,11 +448,6 @@ public class user extends javax.swing.JFrame {
         user_rent_bookid.setText("BOOK ID");
 
         user_rent_search.setFont(new java.awt.Font("Angsana New", 0, 60)); // NOI18N
-        user_rent_search.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                user_rent_searchActionPerformed(evt);
-            }
-        });
 
         user_rent_image.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -717,11 +715,6 @@ public class user extends javax.swing.JFrame {
         user_history_name.setText("ธีรวัต กาญจนปานวงษ์");
 
         user_history_search.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_history_search.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                user_history_searchActionPerformed(evt);
-            }
-        });
 
         user_history_order.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -746,7 +739,7 @@ public class user extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(user_history_order);
+        user_history_scroll.setViewportView(user_history_order);
         if (user_history_order.getColumnModel().getColumnCount() > 0) {
             user_history_order.getColumnModel().getColumn(7).setResizable(false);
         }
@@ -759,7 +752,7 @@ public class user extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(user_panel_historyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(user_history_name)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
+                    .addComponent(user_history_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
                     .addComponent(user_history_search))
                 .addContainerGap(25, Short.MAX_VALUE))
             .addComponent(user_history_title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -773,7 +766,7 @@ public class user extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(user_history_search, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(user_history_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 21, Short.MAX_VALUE))
         );
 
@@ -808,7 +801,7 @@ public class user extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void mouseclicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseclicked
+    private void user_mouseclicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_mouseclicked
         if (evt.getSource()== user_tab_welcome){
             user_panel_welcome.setVisible(true);
             user_panel_library.setVisible(false);
@@ -844,9 +837,9 @@ public class user extends javax.swing.JFrame {
             user_panel_returnbook.setVisible(false);
             user_panel_history.setVisible(true);
         }
-    }//GEN-LAST:event_mouseclicked
+    }//GEN-LAST:event_user_mouseclicked
 
-    private void mouseentered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseentered
+    private void user_mouseentered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_mouseentered
         if (evt.getSource()== user_tab_library){
             user_tab_library.setBackground(new Color(255, 153, 0));
         }
@@ -862,9 +855,9 @@ public class user extends javax.swing.JFrame {
         if (evt.getSource()== user_tab_logout){
             user_tab_logout.setBackground(new Color(255, 153, 0));
         }
-    }//GEN-LAST:event_mouseentered
+    }//GEN-LAST:event_user_mouseentered
 
-    private void mouseexited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseexited
+    private void user_mouseexited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_mouseexited
         if (evt.getSource()== user_tab_library){
             user_tab_library.setBackground(new Color(255, 204, 0));
         }
@@ -880,15 +873,7 @@ public class user extends javax.swing.JFrame {
         if (evt.getSource()== user_tab_logout){
             user_tab_logout.setBackground(new Color(255, 204, 0));
         }
-    }//GEN-LAST:event_mouseexited
-
-    private void user_rent_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_rent_searchActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_user_rent_searchActionPerformed
-
-    private void user_history_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_history_searchActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_user_history_searchActionPerformed
+    }//GEN-LAST:event_user_mouseexited
 
     /**
      * @param args the command line arguments
@@ -926,14 +911,14 @@ public class user extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel user_history_history;
     private javax.swing.JLabel user_history_name;
     private javax.swing.JTable user_history_order;
+    private javax.swing.JScrollPane user_history_scroll;
     private javax.swing.JTextField user_history_search;
     private javax.swing.JPanel user_history_title;
     private javax.swing.JTable user_library_order;
+    private javax.swing.JScrollPane user_library_scroll;
     private javax.swing.JTextField user_library_search;
     private javax.swing.JPanel user_main;
     private javax.swing.JPanel user_multipanel;
