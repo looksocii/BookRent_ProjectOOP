@@ -1,21 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package BookRent;
 
-/**
- *
- * @author User
- */
+import java.awt.Color;
+import java.awt.geom.RoundRectangle2D;
+
 public class staff extends javax.swing.JFrame {
 
     /**
      * Creates new form staff
      */
     public staff() {
+        setUndecorated(true);
         initComponents();
+        setVisible(true);
+        setLocationRelativeTo(null);
+        setShape(new RoundRectangle2D.Double(0,0, 1000,700, 50,50));
     }
 
     /**
@@ -28,10 +26,10 @@ public class staff extends javax.swing.JFrame {
     private void initComponents() {
 
         staff_main = new javax.swing.JPanel();
-        staff_slidetab = new javax.swing.JPanel();
-        staff_tab_welocme = new javax.swing.JPanel();
+        staff_sidetab = new javax.swing.JPanel();
+        staff_tab_welcome = new javax.swing.JPanel();
         staff_tab_library = new javax.swing.JPanel();
-        staff_txt_liblrary = new javax.swing.JLabel();
+        staff_txt_library = new javax.swing.JLabel();
         staff_tab_rent = new javax.swing.JPanel();
         staff_txt_rent = new javax.swing.JLabel();
         staff_tab_return = new javax.swing.JPanel();
@@ -44,10 +42,34 @@ public class staff extends javax.swing.JFrame {
         staff_txt_logout = new javax.swing.JLabel();
         staff_multipanel = new javax.swing.JPanel();
         staff_panel_welcome = new javax.swing.JPanel();
+        staff_welcome_welcome = new javax.swing.JLabel();
+        staff_welcome_bookrent = new javax.swing.JLabel();
+        staff_welcome_name = new javax.swing.JLabel();
         staff_panel_library = new javax.swing.JPanel();
+        staff_library_search = new javax.swing.JTextField();
+        staff_library_scroll = new javax.swing.JScrollPane();
+        staff_library_order = new javax.swing.JTable();
+        staff_liblrary_add = new javax.swing.JPanel();
+        staff_add_id = new javax.swing.JTextField();
+        staff_add_name = new javax.swing.JTextField();
+        staff_add_type = new javax.swing.JTextField();
+        staff_add_quantity = new javax.swing.JTextField();
+        staff_add_price = new javax.swing.JTextField();
+        staff_add_buttonadd = new javax.swing.JButton();
+        staff_add_buttonimage = new javax.swing.JButton();
+        staff_add_image = new javax.swing.JLabel();
         staff_panel_rent = new javax.swing.JPanel();
-        staff_panel_return = new javax.swing.JPanel();
+        staff_rent_search = new javax.swing.JTextField();
+        staff_rent_jscroll = new javax.swing.JScrollPane();
+        staff_rent_order = new javax.swing.JTable();
+        staff_panel_returnbook = new javax.swing.JPanel();
+        staff_rent_search1 = new javax.swing.JTextField();
+        staff_return_jscroll = new javax.swing.JScrollPane();
+        staff_return_order = new javax.swing.JTable();
         staff_panel_user = new javax.swing.JPanel();
+        staff_user_search = new javax.swing.JTextField();
+        staff_user_scroll = new javax.swing.JScrollPane();
+        staff_user_order = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BookRent");
@@ -56,53 +78,81 @@ public class staff extends javax.swing.JFrame {
         setResizable(false);
 
         staff_main.setBackground(new java.awt.Color(255, 255, 153));
-        staff_main.setMaximumSize(new java.awt.Dimension(1000, 700));
-        staff_main.setMinimumSize(new java.awt.Dimension(1000, 700));
 
-        staff_slidetab.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        staff_slidetab.setMaximumSize(new java.awt.Dimension(200, 700));
-        staff_slidetab.setMinimumSize(new java.awt.Dimension(200, 700));
+        staff_sidetab.setBackground(new java.awt.Color(255, 204, 0));
+        staff_sidetab.setLayout(new javax.swing.BoxLayout(staff_sidetab, javax.swing.BoxLayout.PAGE_AXIS));
 
-        staff_tab_welocme.setBackground(new java.awt.Color(255, 204, 102));
-        staff_tab_welocme.setMaximumSize(new java.awt.Dimension(200, 140));
-        staff_tab_welocme.setMinimumSize(new java.awt.Dimension(200, 140));
+        staff_tab_welcome.setBackground(new java.awt.Color(255, 204, 102));
+        staff_tab_welcome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mouseclicked(evt);
+            }
+        });
 
-        javax.swing.GroupLayout staff_tab_welocmeLayout = new javax.swing.GroupLayout(staff_tab_welocme);
-        staff_tab_welocme.setLayout(staff_tab_welocmeLayout);
-        staff_tab_welocmeLayout.setHorizontalGroup(
-            staff_tab_welocmeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+        javax.swing.GroupLayout staff_tab_welcomeLayout = new javax.swing.GroupLayout(staff_tab_welcome);
+        staff_tab_welcome.setLayout(staff_tab_welcomeLayout);
+        staff_tab_welcomeLayout.setHorizontalGroup(
+            staff_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        staff_tab_welocmeLayout.setVerticalGroup(
-            staff_tab_welocmeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        staff_tab_welcomeLayout.setVerticalGroup(
+            staff_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 140, Short.MAX_VALUE)
         );
 
-        staff_tab_library.setBackground(new java.awt.Color(255, 204, 0));
-        staff_tab_library.setMaximumSize(new java.awt.Dimension(200, 80));
-        staff_tab_library.setMinimumSize(new java.awt.Dimension(200, 80));
+        staff_sidetab.add(staff_tab_welcome);
 
-        staff_txt_liblrary.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        staff_txt_liblrary.setText("Library");
+        staff_tab_library.setBackground(new java.awt.Color(255, 204, 0));
+        staff_tab_library.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mouseclicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                mouseentered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mouseexited(evt);
+            }
+        });
+
+        staff_txt_library.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        staff_txt_library.setText("Library");
 
         javax.swing.GroupLayout staff_tab_libraryLayout = new javax.swing.GroupLayout(staff_tab_library);
         staff_tab_library.setLayout(staff_tab_libraryLayout);
         staff_tab_libraryLayout.setHorizontalGroup(
             staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(staff_tab_libraryLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(staff_txt_liblrary)
-                .addContainerGap(64, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_libraryLayout.createSequentialGroup()
+                    .addContainerGap(64, Short.MAX_VALUE)
+                    .addComponent(staff_txt_library)
+                    .addContainerGap(64, Short.MAX_VALUE)))
         );
         staff_tab_libraryLayout.setVerticalGroup(
             staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_txt_liblrary, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 80, Short.MAX_VALUE)
+            .addGroup(staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_libraryLayout.createSequentialGroup()
+                    .addContainerGap(18, Short.MAX_VALUE)
+                    .addComponent(staff_txt_library)
+                    .addContainerGap(19, Short.MAX_VALUE)))
         );
 
+        staff_sidetab.add(staff_tab_library);
+
         staff_tab_rent.setBackground(new java.awt.Color(255, 204, 0));
-        staff_tab_rent.setMaximumSize(new java.awt.Dimension(200, 80));
-        staff_tab_rent.setMinimumSize(new java.awt.Dimension(200, 80));
-        staff_tab_rent.setPreferredSize(new java.awt.Dimension(200, 80));
+        staff_tab_rent.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mouseclicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                mouseentered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mouseexited(evt);
+            }
+        });
 
         staff_txt_rent.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_rent.setText("Rent");
@@ -111,19 +161,37 @@ public class staff extends javax.swing.JFrame {
         staff_tab_rent.setLayout(staff_tab_rentLayout);
         staff_tab_rentLayout.setHorizontalGroup(
             staff_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(staff_tab_rentLayout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(staff_txt_rent)
-                .addContainerGap(83, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(staff_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(staff_tab_rentLayout.createSequentialGroup()
+                    .addGap(0, 77, Short.MAX_VALUE)
+                    .addComponent(staff_txt_rent)
+                    .addGap(0, 77, Short.MAX_VALUE)))
         );
         staff_tab_rentLayout.setVerticalGroup(
             staff_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_txt_rent, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 80, Short.MAX_VALUE)
+            .addGroup(staff_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(staff_tab_rentLayout.createSequentialGroup()
+                    .addGap(0, 18, Short.MAX_VALUE)
+                    .addComponent(staff_txt_rent)
+                    .addGap(0, 19, Short.MAX_VALUE)))
         );
 
+        staff_sidetab.add(staff_tab_rent);
+
         staff_tab_return.setBackground(new java.awt.Color(255, 204, 0));
-        staff_tab_return.setMaximumSize(new java.awt.Dimension(200, 80));
-        staff_tab_return.setMinimumSize(new java.awt.Dimension(200, 80));
+        staff_tab_return.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mouseclicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                mouseentered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mouseexited(evt);
+            }
+        });
 
         staff_txt_return.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_return.setText("Return");
@@ -132,20 +200,37 @@ public class staff extends javax.swing.JFrame {
         staff_tab_return.setLayout(staff_tab_returnLayout);
         staff_tab_returnLayout.setHorizontalGroup(
             staff_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(staff_tab_returnLayout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(staff_txt_return)
-                .addContainerGap(72, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(staff_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(staff_tab_returnLayout.createSequentialGroup()
+                    .addGap(0, 67, Short.MAX_VALUE)
+                    .addComponent(staff_txt_return)
+                    .addGap(0, 67, Short.MAX_VALUE)))
         );
         staff_tab_returnLayout.setVerticalGroup(
             staff_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_txt_return, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 80, Short.MAX_VALUE)
+            .addGroup(staff_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(staff_tab_returnLayout.createSequentialGroup()
+                    .addGap(0, 18, Short.MAX_VALUE)
+                    .addComponent(staff_txt_return)
+                    .addGap(0, 19, Short.MAX_VALUE)))
         );
 
+        staff_sidetab.add(staff_tab_return);
+
         staff_tab_user.setBackground(new java.awt.Color(255, 204, 0));
-        staff_tab_user.setMaximumSize(new java.awt.Dimension(200, 80));
-        staff_tab_user.setMinimumSize(new java.awt.Dimension(200, 80));
-        staff_tab_user.setPreferredSize(new java.awt.Dimension(200, 80));
+        staff_tab_user.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mouseclicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                mouseentered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mouseexited(evt);
+            }
+        });
 
         staff_txt_user.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_user.setText("User");
@@ -154,19 +239,26 @@ public class staff extends javax.swing.JFrame {
         staff_tab_user.setLayout(staff_tab_userLayout);
         staff_tab_userLayout.setHorizontalGroup(
             staff_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(staff_tab_userLayout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(staff_txt_user)
-                .addContainerGap(84, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(staff_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(staff_tab_userLayout.createSequentialGroup()
+                    .addGap(0, 77, Short.MAX_VALUE)
+                    .addComponent(staff_txt_user)
+                    .addGap(0, 78, Short.MAX_VALUE)))
         );
         staff_tab_userLayout.setVerticalGroup(
             staff_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_txt_user, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addGap(0, 80, Short.MAX_VALUE)
+            .addGroup(staff_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(staff_tab_userLayout.createSequentialGroup()
+                    .addGap(0, 18, Short.MAX_VALUE)
+                    .addComponent(staff_txt_user)
+                    .addGap(0, 19, Short.MAX_VALUE)))
         );
 
+        staff_sidetab.add(staff_tab_user);
+
         staff_tab_empty1.setBackground(new java.awt.Color(255, 204, 0));
-        staff_tab_empty1.setMaximumSize(new java.awt.Dimension(200, 80));
-        staff_tab_empty1.setMinimumSize(new java.awt.Dimension(200, 80));
 
         javax.swing.GroupLayout staff_tab_empty1Layout = new javax.swing.GroupLayout(staff_tab_empty1);
         staff_tab_empty1.setLayout(staff_tab_empty1Layout);
@@ -179,9 +271,9 @@ public class staff extends javax.swing.JFrame {
             .addGap(0, 80, Short.MAX_VALUE)
         );
 
+        staff_sidetab.add(staff_tab_empty1);
+
         staff_tab_empty2.setBackground(new java.awt.Color(255, 204, 0));
-        staff_tab_empty2.setMaximumSize(new java.awt.Dimension(200, 80));
-        staff_tab_empty2.setMinimumSize(new java.awt.Dimension(200, 80));
 
         javax.swing.GroupLayout staff_tab_empty2Layout = new javax.swing.GroupLayout(staff_tab_empty2);
         staff_tab_empty2.setLayout(staff_tab_empty2Layout);
@@ -194,10 +286,20 @@ public class staff extends javax.swing.JFrame {
             .addGap(0, 80, Short.MAX_VALUE)
         );
 
+        staff_sidetab.add(staff_tab_empty2);
+
         staff_tab_logout.setBackground(new java.awt.Color(255, 204, 0));
-        staff_tab_logout.setMaximumSize(new java.awt.Dimension(200, 80));
-        staff_tab_logout.setMinimumSize(new java.awt.Dimension(200, 80));
-        staff_tab_logout.setPreferredSize(new java.awt.Dimension(200, 80));
+        staff_tab_logout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mouseclicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                mouseentered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                mouseexited(evt);
+            }
+        });
 
         staff_txt_logout.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_logout.setText("Logout");
@@ -206,167 +308,454 @@ public class staff extends javax.swing.JFrame {
         staff_tab_logout.setLayout(staff_tab_logoutLayout);
         staff_tab_logoutLayout.setHorizontalGroup(
             staff_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(staff_tab_logoutLayout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(staff_txt_logout)
-                .addContainerGap(68, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(staff_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_logoutLayout.createSequentialGroup()
+                    .addContainerGap(65, Short.MAX_VALUE)
+                    .addComponent(staff_txt_logout)
+                    .addContainerGap(65, Short.MAX_VALUE)))
         );
         staff_tab_logoutLayout.setVerticalGroup(
             staff_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_txt_logout, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addGap(0, 80, Short.MAX_VALUE)
+            .addGroup(staff_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_logoutLayout.createSequentialGroup()
+                    .addContainerGap(19, Short.MAX_VALUE)
+                    .addComponent(staff_txt_logout)
+                    .addContainerGap(18, Short.MAX_VALUE)))
         );
 
-        javax.swing.GroupLayout staff_slidetabLayout = new javax.swing.GroupLayout(staff_slidetab);
-        staff_slidetab.setLayout(staff_slidetabLayout);
-        staff_slidetabLayout.setHorizontalGroup(
-            staff_slidetabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_tab_welocme, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(staff_tab_rent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(staff_tab_return, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(staff_tab_user, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(staff_tab_empty1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(staff_tab_empty2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(staff_tab_logout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(staff_tab_library, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        staff_slidetabLayout.setVerticalGroup(
-            staff_slidetabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(staff_slidetabLayout.createSequentialGroup()
-                .addComponent(staff_tab_welocme, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(staff_tab_library, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(staff_tab_rent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(staff_tab_return, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(staff_tab_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(staff_tab_empty1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(staff_tab_empty2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(staff_tab_logout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        staff_sidetab.add(staff_tab_logout);
 
         staff_multipanel.setBackground(new java.awt.Color(255, 255, 153));
-        staff_multipanel.setMaximumSize(new java.awt.Dimension(800, 700));
-        staff_multipanel.setMinimumSize(new java.awt.Dimension(800, 700));
         staff_multipanel.setLayout(new java.awt.CardLayout());
 
         staff_panel_welcome.setBackground(new java.awt.Color(255, 255, 153));
-        staff_panel_welcome.setMaximumSize(new java.awt.Dimension(800, 700));
-        staff_panel_welcome.setMinimumSize(new java.awt.Dimension(800, 700));
+        staff_panel_welcome.setPreferredSize(new java.awt.Dimension(800, 700));
+
+        staff_welcome_welcome.setFont(new java.awt.Font("Banaue", 1, 90)); // NOI18N
+        staff_welcome_welcome.setText("WELCOME");
+
+        staff_welcome_bookrent.setFont(new java.awt.Font("Banaue", 0, 54)); // NOI18N
+        staff_welcome_bookrent.setText("BookRent");
+
+        staff_welcome_name.setFont(new java.awt.Font("TH SarabunPSK", 0, 48)); // NOI18N
+        staff_welcome_name.setText("ธีรวัต กาญจนปานวงษ์");
 
         javax.swing.GroupLayout staff_panel_welcomeLayout = new javax.swing.GroupLayout(staff_panel_welcome);
         staff_panel_welcome.setLayout(staff_panel_welcomeLayout);
         staff_panel_welcomeLayout.setHorizontalGroup(
             staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
+                .addGap(244, 244, 244)
+                .addComponent(staff_welcome_welcome)
+                .addGap(235, 235, 235))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_welcomeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_welcomeLayout.createSequentialGroup()
+                        .addComponent(staff_welcome_name)
+                        .addGap(261, 261, 261))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_welcomeLayout.createSequentialGroup()
+                        .addComponent(staff_welcome_bookrent)
+                        .addGap(300, 300, 300))))
         );
         staff_panel_welcomeLayout.setVerticalGroup(
             staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
+            .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(staff_welcome_welcome)
+                .addGap(67, 67, 67)
+                .addComponent(staff_welcome_bookrent)
+                .addGap(49, 49, 49)
+                .addComponent(staff_welcome_name)
+                .addContainerGap(274, Short.MAX_VALUE))
         );
 
-        staff_multipanel.add(staff_panel_welcome, "card2");
+        staff_multipanel.add(staff_panel_welcome, "card6");
 
         staff_panel_library.setBackground(new java.awt.Color(255, 255, 153));
-        staff_panel_library.setMaximumSize(new java.awt.Dimension(800, 700));
-        staff_panel_library.setMinimumSize(new java.awt.Dimension(800, 700));
+        staff_panel_library.setPreferredSize(new java.awt.Dimension(800, 700));
+
+        staff_library_search.setFont(new java.awt.Font("Angsana New", 0, 30)); // NOI18N
+
+        staff_library_order.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "No", "Image", "ID", "Name", "Type", "Quantity", "Edit", "Delete"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        staff_library_scroll.setViewportView(staff_library_order);
+
+        staff_liblrary_add.setBackground(new java.awt.Color(255, 204, 102));
+
+        staff_add_id.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        staff_add_id.setText("ID");
+
+        staff_add_name.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        staff_add_name.setText("Name");
+
+        staff_add_type.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        staff_add_type.setText("Type");
+
+        staff_add_quantity.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        staff_add_quantity.setText("Quantity");
+
+        staff_add_price.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        staff_add_price.setText("Price");
+
+        staff_add_buttonadd.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        staff_add_buttonadd.setText("ADD");
+
+        staff_add_buttonimage.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        staff_add_buttonimage.setText("Image");
+
+        staff_add_image.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        staff_add_image.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        javax.swing.GroupLayout staff_liblrary_addLayout = new javax.swing.GroupLayout(staff_liblrary_add);
+        staff_liblrary_add.setLayout(staff_liblrary_addLayout);
+        staff_liblrary_addLayout.setHorizontalGroup(
+            staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_liblrary_addLayout.createSequentialGroup()
+                .addContainerGap(37, Short.MAX_VALUE)
+                .addComponent(staff_add_image, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(staff_add_buttonimage, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(staff_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addComponent(staff_add_name, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(staff_add_type, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(staff_add_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staff_add_price, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staff_add_buttonadd, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
+        );
+        staff_liblrary_addLayout.setVerticalGroup(
+            staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(staff_liblrary_addLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(staff_add_quantity)
+                    .addComponent(staff_add_type)
+                    .addComponent(staff_add_name)
+                    .addComponent(staff_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(staff_add_price, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(staff_add_buttonadd)
+                    .addComponent(staff_add_buttonimage))
+                .addGap(26, 26, 26))
+            .addComponent(staff_add_image, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout staff_panel_libraryLayout = new javax.swing.GroupLayout(staff_panel_library);
         staff_panel_library.setLayout(staff_panel_libraryLayout);
         staff_panel_libraryLayout.setHorizontalGroup(
             staff_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_libraryLayout.createSequentialGroup()
+                .addContainerGap(34, Short.MAX_VALUE)
+                .addGroup(staff_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(staff_library_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE)
+                    .addComponent(staff_library_search))
+                .addGap(39, 39, 39))
+            .addGroup(staff_panel_libraryLayout.createSequentialGroup()
+                .addComponent(staff_liblrary_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         staff_panel_libraryLayout.setVerticalGroup(
             staff_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_libraryLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(staff_library_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(staff_library_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(staff_liblrary_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
-        staff_multipanel.add(staff_panel_library, "card3");
+        staff_multipanel.add(staff_panel_library, "card2");
 
         staff_panel_rent.setBackground(new java.awt.Color(255, 255, 153));
-        staff_panel_rent.setMaximumSize(new java.awt.Dimension(800, 700));
-        staff_panel_rent.setMinimumSize(new java.awt.Dimension(800, 700));
+
+        staff_rent_search.setFont(new java.awt.Font("Angsana New", 0, 30)); // NOI18N
+
+        staff_rent_order.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "No", "Image", "User", "ID", "Name", "Type", "Quantity", "Price", "Rent"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Object.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Float.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        staff_rent_jscroll.setViewportView(staff_rent_order);
 
         javax.swing.GroupLayout staff_panel_rentLayout = new javax.swing.GroupLayout(staff_panel_rent);
         staff_panel_rent.setLayout(staff_panel_rentLayout);
         staff_panel_rentLayout.setHorizontalGroup(
             staff_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_rentLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(staff_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(staff_rent_jscroll)
+                    .addComponent(staff_rent_search, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE))
+                .addGap(37, 37, 37))
         );
         staff_panel_rentLayout.setVerticalGroup(
             staff_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
+            .addGroup(staff_panel_rentLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(staff_rent_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(staff_rent_jscroll, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        staff_multipanel.add(staff_panel_rent, "card4");
+        staff_multipanel.add(staff_panel_rent, "card3");
 
-        staff_panel_return.setBackground(new java.awt.Color(255, 255, 153));
-        staff_panel_return.setMaximumSize(new java.awt.Dimension(800, 700));
-        staff_panel_return.setMinimumSize(new java.awt.Dimension(800, 700));
+        staff_panel_returnbook.setBackground(new java.awt.Color(255, 255, 153));
+        staff_panel_returnbook.setPreferredSize(new java.awt.Dimension(800, 700));
 
-        javax.swing.GroupLayout staff_panel_returnLayout = new javax.swing.GroupLayout(staff_panel_return);
-        staff_panel_return.setLayout(staff_panel_returnLayout);
-        staff_panel_returnLayout.setHorizontalGroup(
-            staff_panel_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+        staff_rent_search1.setFont(new java.awt.Font("Angsana New", 0, 30)); // NOI18N
+
+        staff_return_order.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "No", "Image", "User", "ID", "Name", "Type", "Quantity", "Price", "Return"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Object.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Float.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        staff_return_jscroll.setViewportView(staff_return_order);
+
+        javax.swing.GroupLayout staff_panel_returnbookLayout = new javax.swing.GroupLayout(staff_panel_returnbook);
+        staff_panel_returnbook.setLayout(staff_panel_returnbookLayout);
+        staff_panel_returnbookLayout.setHorizontalGroup(
+            staff_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_returnbookLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(staff_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(staff_return_jscroll)
+                    .addComponent(staff_rent_search1, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE))
+                .addGap(37, 37, 37))
         );
-        staff_panel_returnLayout.setVerticalGroup(
-            staff_panel_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
+        staff_panel_returnbookLayout.setVerticalGroup(
+            staff_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(staff_panel_returnbookLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(staff_rent_search1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(staff_return_jscroll, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        staff_multipanel.add(staff_panel_return, "card5");
+        staff_multipanel.add(staff_panel_returnbook, "card4");
 
         staff_panel_user.setBackground(new java.awt.Color(255, 255, 153));
-        staff_panel_user.setMaximumSize(new java.awt.Dimension(800, 700));
-        staff_panel_user.setMinimumSize(new java.awt.Dimension(800, 700));
+
+        staff_user_search.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+
+        staff_user_order.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "No", "Username", "Firstname", "Lastname", "History"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        staff_user_scroll.setViewportView(staff_user_order);
 
         javax.swing.GroupLayout staff_panel_userLayout = new javax.swing.GroupLayout(staff_panel_user);
         staff_panel_user.setLayout(staff_panel_userLayout);
         staff_panel_userLayout.setHorizontalGroup(
             staff_panel_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(staff_panel_userLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(staff_panel_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(staff_user_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 750, Short.MAX_VALUE)
+                    .addComponent(staff_user_search))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         staff_panel_userLayout.setVerticalGroup(
             staff_panel_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
+            .addGroup(staff_panel_userLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(staff_user_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(staff_user_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 571, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 21, Short.MAX_VALUE))
         );
 
-        staff_multipanel.add(staff_panel_user, "card6");
+        staff_multipanel.add(staff_panel_user, "card5");
 
         javax.swing.GroupLayout staff_mainLayout = new javax.swing.GroupLayout(staff_main);
         staff_main.setLayout(staff_mainLayout);
         staff_mainLayout.setHorizontalGroup(
             staff_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staff_mainLayout.createSequentialGroup()
-                .addComponent(staff_slidetab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(staff_sidetab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(staff_multipanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(staff_multipanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         staff_mainLayout.setVerticalGroup(
             staff_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_slidetab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(staff_multipanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(staff_sidetab, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(staff_multipanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(staff_main, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(staff_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mouseclicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseclicked
+        if (evt.getSource()== staff_tab_welcome){
+            staff_panel_welcome.setVisible(true);
+            staff_panel_library.setVisible(false);
+            staff_panel_rent.setVisible(false);
+            staff_panel_returnbook.setVisible(false);
+            staff_panel_user.setVisible(false);
+        }
+        if (evt.getSource()== staff_tab_library){
+            staff_panel_welcome.setVisible(false);
+            staff_panel_library.setVisible(true);
+            staff_panel_rent.setVisible(false);
+            staff_panel_returnbook.setVisible(false);
+            staff_panel_user.setVisible(false);
+        }
+        if (evt.getSource()== staff_tab_rent){
+            staff_panel_welcome.setVisible(false);
+            staff_panel_library.setVisible(false);
+            staff_panel_rent.setVisible(true);
+            staff_panel_returnbook.setVisible(false);
+            staff_panel_user.setVisible(false);
+        }
+        if (evt.getSource()== staff_tab_return){
+            staff_panel_welcome.setVisible(false);
+            staff_panel_library.setVisible(false);
+            staff_panel_rent.setVisible(false);
+            staff_panel_returnbook.setVisible(true);
+            staff_panel_user.setVisible(false);
+        }
+        if (evt.getSource()== staff_tab_user){
+            staff_panel_welcome.setVisible(false);
+            staff_panel_library.setVisible(false);
+            staff_panel_rent.setVisible(false);
+            staff_panel_returnbook.setVisible(false);
+            staff_panel_user.setVisible(true);
+        }
+    }//GEN-LAST:event_mouseclicked
+
+    private void mouseentered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseentered
+        if (evt.getSource()== staff_tab_library){
+            staff_tab_library.setBackground(new Color(255, 153, 0));
+        }
+        if (evt.getSource()== staff_tab_rent){
+            staff_tab_rent.setBackground(new Color(255, 153, 0));
+        }
+        if (evt.getSource()== staff_tab_return){
+            staff_tab_return.setBackground(new Color(255, 153, 0));
+        }
+        if (evt.getSource()== staff_tab_user){
+            staff_tab_user.setBackground(new Color(255, 153, 0));
+        }
+        if (evt.getSource()== staff_tab_logout){
+            staff_tab_logout.setBackground(new Color(255, 153, 0));
+        }
+    }//GEN-LAST:event_mouseentered
+
+    private void mouseexited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseexited
+        if (evt.getSource()== staff_tab_library){
+            staff_tab_library.setBackground(new Color(255, 204, 0));
+        }
+        if (evt.getSource()== staff_tab_rent){
+            staff_tab_rent.setBackground(new Color(255, 204, 0));
+        }
+        if (evt.getSource()== staff_tab_return){
+            staff_tab_return.setBackground(new Color(255, 204, 0));
+        }
+        if (evt.getSource()== staff_tab_user){
+            staff_tab_user.setBackground(new Color(255, 204, 0));
+        }
+        if (evt.getSource()== staff_tab_logout){
+            staff_tab_logout.setBackground(new Color(255, 204, 0));
+        }
+    }//GEN-LAST:event_mouseexited
 
     /**
      * @param args the command line arguments
@@ -404,14 +793,32 @@ public class staff extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton staff_add_buttonadd;
+    private javax.swing.JButton staff_add_buttonimage;
+    private javax.swing.JTextField staff_add_id;
+    private javax.swing.JLabel staff_add_image;
+    private javax.swing.JTextField staff_add_name;
+    private javax.swing.JTextField staff_add_price;
+    private javax.swing.JTextField staff_add_quantity;
+    private javax.swing.JTextField staff_add_type;
+    private javax.swing.JPanel staff_liblrary_add;
+    private javax.swing.JTable staff_library_order;
+    private javax.swing.JScrollPane staff_library_scroll;
+    private javax.swing.JTextField staff_library_search;
     private javax.swing.JPanel staff_main;
     private javax.swing.JPanel staff_multipanel;
     private javax.swing.JPanel staff_panel_library;
     private javax.swing.JPanel staff_panel_rent;
-    private javax.swing.JPanel staff_panel_return;
+    private javax.swing.JPanel staff_panel_returnbook;
     private javax.swing.JPanel staff_panel_user;
     private javax.swing.JPanel staff_panel_welcome;
-    private javax.swing.JPanel staff_slidetab;
+    private javax.swing.JScrollPane staff_rent_jscroll;
+    private javax.swing.JTable staff_rent_order;
+    private javax.swing.JTextField staff_rent_search;
+    private javax.swing.JTextField staff_rent_search1;
+    private javax.swing.JScrollPane staff_return_jscroll;
+    private javax.swing.JTable staff_return_order;
+    private javax.swing.JPanel staff_sidetab;
     private javax.swing.JPanel staff_tab_empty1;
     private javax.swing.JPanel staff_tab_empty2;
     private javax.swing.JPanel staff_tab_library;
@@ -419,11 +826,17 @@ public class staff extends javax.swing.JFrame {
     private javax.swing.JPanel staff_tab_rent;
     private javax.swing.JPanel staff_tab_return;
     private javax.swing.JPanel staff_tab_user;
-    private javax.swing.JPanel staff_tab_welocme;
-    private javax.swing.JLabel staff_txt_liblrary;
+    private javax.swing.JPanel staff_tab_welcome;
+    private javax.swing.JLabel staff_txt_library;
     private javax.swing.JLabel staff_txt_logout;
     private javax.swing.JLabel staff_txt_rent;
     private javax.swing.JLabel staff_txt_return;
     private javax.swing.JLabel staff_txt_user;
+    private javax.swing.JTable staff_user_order;
+    private javax.swing.JScrollPane staff_user_scroll;
+    private javax.swing.JTextField staff_user_search;
+    private javax.swing.JLabel staff_welcome_bookrent;
+    private javax.swing.JLabel staff_welcome_name;
+    private javax.swing.JLabel staff_welcome_welcome;
     // End of variables declaration//GEN-END:variables
 }
