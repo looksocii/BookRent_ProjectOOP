@@ -2,6 +2,7 @@ package BookRent;
 
 import java.awt.Color;
 import java.awt.geom.RoundRectangle2D;
+import javax.swing.JFileChooser;
 
 public class admin extends javax.swing.JFrame {
 
@@ -28,24 +29,32 @@ public class admin extends javax.swing.JFrame {
         admin_main = new javax.swing.JPanel();
         admin_sidetab = new javax.swing.JPanel();
         admin_tab_welcome = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         admin_tab_library = new javax.swing.JPanel();
         admin_txt_library = new javax.swing.JLabel();
+        user_txt_rent2 = new javax.swing.JLabel();
         admin_tab_rent = new javax.swing.JPanel();
         admin_txt_rent = new javax.swing.JLabel();
+        user_txt_rent = new javax.swing.JLabel();
         admin_tab_return = new javax.swing.JPanel();
         admin_txt_return = new javax.swing.JLabel();
+        user_txt_rent3 = new javax.swing.JLabel();
         admin_tab_user = new javax.swing.JPanel();
         admin_txt_user = new javax.swing.JLabel();
+        user_txt_rent4 = new javax.swing.JLabel();
         admin_tab_staff = new javax.swing.JPanel();
         admin_txt_staff = new javax.swing.JLabel();
+        user_txt_rent6 = new javax.swing.JLabel();
         admin_tab_empty1 = new javax.swing.JPanel();
         admin_tab_logout = new javax.swing.JPanel();
         admin_txt_logout = new javax.swing.JLabel();
+        user_txt_rent5 = new javax.swing.JLabel();
         admin_multipanel = new javax.swing.JPanel();
         admin_panel_welcome = new javax.swing.JPanel();
         admin_welcome_welcome = new javax.swing.JLabel();
         admin_welcome_bookrent = new javax.swing.JLabel();
         admin_welcome_name = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         admin_panel_library = new javax.swing.JPanel();
         admin_library_search = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -88,11 +97,14 @@ public class admin extends javax.swing.JFrame {
         setResizable(false);
 
         admin_main.setBackground(new java.awt.Color(255, 255, 153));
+        admin_main.setMaximumSize(new java.awt.Dimension(1000, 700));
+        admin_main.setMinimumSize(new java.awt.Dimension(1000, 700));
+        admin_main.setPreferredSize(new java.awt.Dimension(1000, 700));
 
         admin_sidetab.setBackground(new java.awt.Color(255, 204, 0));
         admin_sidetab.setLayout(new javax.swing.BoxLayout(admin_sidetab, javax.swing.BoxLayout.PAGE_AXIS));
 
-        admin_tab_welcome.setBackground(new java.awt.Color(255, 204, 102));
+        admin_tab_welcome.setBackground(new java.awt.Color(255, 102, 0));
         admin_tab_welcome.setPreferredSize(new java.awt.Dimension(0, 140));
         admin_tab_welcome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -100,20 +112,25 @@ public class admin extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/welcome.png"))); // NOI18N
+
         javax.swing.GroupLayout admin_tab_welcomeLayout = new javax.swing.GroupLayout(admin_tab_welcome);
         admin_tab_welcome.setLayout(admin_tab_welcomeLayout);
         admin_tab_welcomeLayout.setHorizontalGroup(
             admin_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(admin_tab_welcomeLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel1)
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         admin_tab_welcomeLayout.setVerticalGroup(
             admin_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 139, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_welcome);
 
-        admin_tab_library.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_library.setBackground(new java.awt.Color(255, 153, 0));
         admin_tab_library.setPreferredSize(new java.awt.Dimension(200, 80));
         admin_tab_library.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -130,30 +147,29 @@ public class admin extends javax.swing.JFrame {
         admin_txt_library.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_library.setText("Library");
 
+        user_txt_rent2.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_txt_rent2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/library.png"))); // NOI18N
+
         javax.swing.GroupLayout admin_tab_libraryLayout = new javax.swing.GroupLayout(admin_tab_library);
         admin_tab_library.setLayout(admin_tab_libraryLayout);
         admin_tab_libraryLayout.setHorizontalGroup(
             admin_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(admin_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_libraryLayout.createSequentialGroup()
-                    .addContainerGap(64, Short.MAX_VALUE)
-                    .addComponent(admin_txt_library)
-                    .addContainerGap(64, Short.MAX_VALUE)))
+            .addGroup(admin_tab_libraryLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(user_txt_rent2)
+                .addGap(18, 18, 18)
+                .addComponent(admin_txt_library)
+                .addGap(23, 23, 23))
         );
         admin_tab_libraryLayout.setVerticalGroup(
             admin_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 79, Short.MAX_VALUE)
-            .addGroup(admin_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_libraryLayout.createSequentialGroup()
-                    .addContainerGap(18, Short.MAX_VALUE)
-                    .addComponent(admin_txt_library)
-                    .addContainerGap(18, Short.MAX_VALUE)))
+            .addComponent(user_txt_rent2, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(admin_txt_library, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_library);
 
-        admin_tab_rent.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_rent.setBackground(new java.awt.Color(255, 153, 0));
         admin_tab_rent.setPreferredSize(new java.awt.Dimension(200, 80));
         admin_tab_rent.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -170,30 +186,29 @@ public class admin extends javax.swing.JFrame {
         admin_txt_rent.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_rent.setText("Rent");
 
+        user_txt_rent.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_txt_rent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rent.png"))); // NOI18N
+
         javax.swing.GroupLayout admin_tab_rentLayout = new javax.swing.GroupLayout(admin_tab_rent);
         admin_tab_rent.setLayout(admin_tab_rentLayout);
         admin_tab_rentLayout.setHorizontalGroup(
             admin_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(admin_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(admin_tab_rentLayout.createSequentialGroup()
-                    .addGap(0, 77, Short.MAX_VALUE)
-                    .addComponent(admin_txt_rent)
-                    .addGap(0, 77, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_rentLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(user_txt_rent)
+                .addGap(18, 18, 18)
+                .addComponent(admin_txt_rent)
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         admin_tab_rentLayout.setVerticalGroup(
             admin_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 79, Short.MAX_VALUE)
-            .addGroup(admin_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(admin_tab_rentLayout.createSequentialGroup()
-                    .addGap(0, 18, Short.MAX_VALUE)
-                    .addComponent(admin_txt_rent)
-                    .addGap(0, 18, Short.MAX_VALUE)))
+            .addComponent(admin_txt_rent, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(user_txt_rent, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_rent);
 
-        admin_tab_return.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_return.setBackground(new java.awt.Color(255, 153, 0));
         admin_tab_return.setPreferredSize(new java.awt.Dimension(200, 80));
         admin_tab_return.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -210,30 +225,29 @@ public class admin extends javax.swing.JFrame {
         admin_txt_return.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_return.setText("Return");
 
+        user_txt_rent3.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_txt_rent3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/return.png"))); // NOI18N
+
         javax.swing.GroupLayout admin_tab_returnLayout = new javax.swing.GroupLayout(admin_tab_return);
         admin_tab_return.setLayout(admin_tab_returnLayout);
         admin_tab_returnLayout.setHorizontalGroup(
             admin_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(admin_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(admin_tab_returnLayout.createSequentialGroup()
-                    .addGap(0, 67, Short.MAX_VALUE)
-                    .addComponent(admin_txt_return)
-                    .addGap(0, 67, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_returnLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(user_txt_rent3)
+                .addGap(18, 18, 18)
+                .addComponent(admin_txt_return)
+                .addGap(29, 29, 29))
         );
         admin_tab_returnLayout.setVerticalGroup(
             admin_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 79, Short.MAX_VALUE)
-            .addGroup(admin_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(admin_tab_returnLayout.createSequentialGroup()
-                    .addGap(0, 18, Short.MAX_VALUE)
-                    .addComponent(admin_txt_return)
-                    .addGap(0, 18, Short.MAX_VALUE)))
+            .addComponent(admin_txt_return, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(user_txt_rent3, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_return);
 
-        admin_tab_user.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_user.setBackground(new java.awt.Color(255, 153, 0));
         admin_tab_user.setPreferredSize(new java.awt.Dimension(200, 80));
         admin_tab_user.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -250,30 +264,29 @@ public class admin extends javax.swing.JFrame {
         admin_txt_user.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_user.setText("User");
 
+        user_txt_rent4.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_txt_rent4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user.png"))); // NOI18N
+
         javax.swing.GroupLayout admin_tab_userLayout = new javax.swing.GroupLayout(admin_tab_user);
         admin_tab_user.setLayout(admin_tab_userLayout);
         admin_tab_userLayout.setHorizontalGroup(
             admin_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(admin_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(admin_tab_userLayout.createSequentialGroup()
-                    .addGap(0, 77, Short.MAX_VALUE)
-                    .addComponent(admin_txt_user)
-                    .addGap(0, 78, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_userLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(user_txt_rent4)
+                .addGap(18, 18, 18)
+                .addComponent(admin_txt_user)
+                .addGap(50, 50, 50))
         );
         admin_tab_userLayout.setVerticalGroup(
             admin_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 79, Short.MAX_VALUE)
-            .addGroup(admin_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(admin_tab_userLayout.createSequentialGroup()
-                    .addGap(0, 18, Short.MAX_VALUE)
-                    .addComponent(admin_txt_user)
-                    .addGap(0, 18, Short.MAX_VALUE)))
+            .addComponent(admin_txt_user, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(user_txt_rent4, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_user);
 
-        admin_tab_staff.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_staff.setBackground(new java.awt.Color(255, 153, 0));
         admin_tab_staff.setPreferredSize(new java.awt.Dimension(200, 80));
         admin_tab_staff.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -290,30 +303,29 @@ public class admin extends javax.swing.JFrame {
         admin_txt_staff.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_staff.setText("Staff");
 
+        user_txt_rent6.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_txt_rent6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/staff.png"))); // NOI18N
+
         javax.swing.GroupLayout admin_tab_staffLayout = new javax.swing.GroupLayout(admin_tab_staff);
         admin_tab_staff.setLayout(admin_tab_staffLayout);
         admin_tab_staffLayout.setHorizontalGroup(
             admin_tab_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-            .addGroup(admin_tab_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_staffLayout.createSequentialGroup()
-                    .addContainerGap(76, Short.MAX_VALUE)
-                    .addComponent(admin_txt_staff, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(69, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_staffLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(user_txt_rent6)
+                .addGap(18, 18, 18)
+                .addComponent(admin_txt_staff, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
         );
         admin_tab_staffLayout.setVerticalGroup(
             admin_tab_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 79, Short.MAX_VALUE)
-            .addGroup(admin_tab_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_staffLayout.createSequentialGroup()
-                    .addContainerGap(18, Short.MAX_VALUE)
-                    .addComponent(admin_txt_staff)
-                    .addContainerGap(18, Short.MAX_VALUE)))
+            .addComponent(admin_txt_staff, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(user_txt_rent6, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_staff);
 
-        admin_tab_empty1.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_empty1.setBackground(new java.awt.Color(255, 153, 0));
         admin_tab_empty1.setPreferredSize(new java.awt.Dimension(200, 80));
 
         javax.swing.GroupLayout admin_tab_empty1Layout = new javax.swing.GroupLayout(admin_tab_empty1);
@@ -324,12 +336,12 @@ public class admin extends javax.swing.JFrame {
         );
         admin_tab_empty1Layout.setVerticalGroup(
             admin_tab_empty1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 79, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_empty1);
 
-        admin_tab_logout.setBackground(new java.awt.Color(255, 204, 0));
+        admin_tab_logout.setBackground(new java.awt.Color(255, 153, 0));
         admin_tab_logout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 admin_mouseclicked(evt);
@@ -345,25 +357,24 @@ public class admin extends javax.swing.JFrame {
         admin_txt_logout.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_logout.setText("Logout");
 
+        user_txt_rent5.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_txt_rent5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logout.png"))); // NOI18N
+
         javax.swing.GroupLayout admin_tab_logoutLayout = new javax.swing.GroupLayout(admin_tab_logout);
         admin_tab_logout.setLayout(admin_tab_logoutLayout);
         admin_tab_logoutLayout.setHorizontalGroup(
             admin_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(admin_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_logoutLayout.createSequentialGroup()
-                    .addContainerGap(65, Short.MAX_VALUE)
-                    .addComponent(admin_txt_logout)
-                    .addContainerGap(65, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_logoutLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(user_txt_rent5)
+                .addGap(18, 18, 18)
+                .addComponent(admin_txt_logout)
+                .addGap(25, 25, 25))
         );
         admin_tab_logoutLayout.setVerticalGroup(
             admin_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-            .addGroup(admin_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_logoutLayout.createSequentialGroup()
-                    .addContainerGap(19, Short.MAX_VALUE)
-                    .addComponent(admin_txt_logout)
-                    .addContainerGap(18, Short.MAX_VALUE)))
+            .addComponent(admin_txt_logout, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(user_txt_rent5, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_logout);
@@ -371,7 +382,7 @@ public class admin extends javax.swing.JFrame {
         admin_multipanel.setBackground(new java.awt.Color(255, 255, 153));
         admin_multipanel.setLayout(new java.awt.CardLayout());
 
-        admin_panel_welcome.setBackground(new java.awt.Color(255, 255, 153));
+        admin_panel_welcome.setBackground(new java.awt.Color(255, 204, 0));
         admin_panel_welcome.setPreferredSize(new java.awt.Dimension(800, 700));
 
         admin_welcome_welcome.setFont(new java.awt.Font("Banaue", 1, 90)); // NOI18N
@@ -383,39 +394,47 @@ public class admin extends javax.swing.JFrame {
         admin_welcome_name.setFont(new java.awt.Font("TH SarabunPSK", 0, 48)); // NOI18N
         admin_welcome_name.setText("ธีรวัต กาญจนปานวงษ์");
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
+
         javax.swing.GroupLayout admin_panel_welcomeLayout = new javax.swing.GroupLayout(admin_panel_welcome);
         admin_panel_welcome.setLayout(admin_panel_welcomeLayout);
         admin_panel_welcomeLayout.setHorizontalGroup(
             admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
-                .addGap(244, 244, 244)
-                .addComponent(admin_welcome_welcome)
-                .addGap(235, 235, 235))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_welcomeLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_welcomeLayout.createSequentialGroup()
-                        .addComponent(admin_welcome_name)
-                        .addGap(261, 261, 261))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_welcomeLayout.createSequentialGroup()
-                        .addComponent(admin_welcome_bookrent)
-                        .addGap(300, 300, 300))))
+                    .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
+                        .addGap(244, 244, 244)
+                        .addComponent(admin_welcome_welcome))
+                    .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
+                        .addGap(218, 218, 218)
+                        .addGroup(admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(admin_welcome_name)
+                            .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(admin_welcome_bookrent)))))
+                .addGap(226, 226, 226))
         );
         admin_panel_welcomeLayout.setVerticalGroup(
             admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
                 .addGap(110, 110, 110)
                 .addComponent(admin_welcome_welcome)
-                .addGap(67, 67, 67)
-                .addComponent(admin_welcome_bookrent)
-                .addGap(49, 49, 49)
+                .addGroup(admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addComponent(admin_welcome_bookrent))
+                    .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(59, 59, 59)
                 .addComponent(admin_welcome_name)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(225, Short.MAX_VALUE))
         );
 
         admin_multipanel.add(admin_panel_welcome, "card6");
 
-        admin_panel_library.setBackground(new java.awt.Color(255, 255, 153));
+        admin_panel_library.setBackground(new java.awt.Color(255, 204, 0));
         admin_panel_library.setPreferredSize(new java.awt.Dimension(800, 700));
 
         admin_library_search.setFont(new java.awt.Font("Angsana New", 0, 30)); // NOI18N
@@ -455,7 +474,7 @@ public class admin extends javax.swing.JFrame {
             admin_library_order.getColumnModel().getColumn(6).setMaxWidth(100);
         }
 
-        admin_liblrary_add.setBackground(new java.awt.Color(255, 204, 102));
+        admin_liblrary_add.setBackground(new java.awt.Color(255, 102, 0));
 
         admin_add_id.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_add_id.setText("ID");
@@ -477,6 +496,11 @@ public class admin extends javax.swing.JFrame {
 
         admin_add_jButtonimage.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_add_jButtonimage.setText("Image");
+        admin_add_jButtonimage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                admin_add_jButtonimageActionPerformed(evt);
+            }
+        });
 
         admin_add_image.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_add_image.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -525,7 +549,7 @@ public class admin extends javax.swing.JFrame {
         admin_panel_libraryLayout.setHorizontalGroup(
             admin_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_libraryLayout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(admin_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE)
                     .addComponent(admin_library_search))
@@ -548,7 +572,7 @@ public class admin extends javax.swing.JFrame {
 
         admin_multipanel.add(admin_panel_library, "card2");
 
-        admin_panel_rent.setBackground(new java.awt.Color(255, 255, 153));
+        admin_panel_rent.setBackground(new java.awt.Color(255, 204, 0));
 
         admin_rent_search.setFont(new java.awt.Font("Angsana New", 0, 30)); // NOI18N
 
@@ -595,7 +619,7 @@ public class admin extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(admin_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(admin_rent_jscroll)
-                    .addComponent(admin_rent_search, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE))
+                    .addComponent(admin_rent_search, javax.swing.GroupLayout.DEFAULT_SIZE, 727, Short.MAX_VALUE))
                 .addGap(37, 37, 37))
         );
         admin_panel_rentLayout.setVerticalGroup(
@@ -610,7 +634,7 @@ public class admin extends javax.swing.JFrame {
 
         admin_multipanel.add(admin_panel_rent, "card3");
 
-        admin_panel_returnbook.setBackground(new java.awt.Color(255, 255, 153));
+        admin_panel_returnbook.setBackground(new java.awt.Color(255, 204, 0));
         admin_panel_returnbook.setPreferredSize(new java.awt.Dimension(800, 700));
 
         admin_rent_search1.setFont(new java.awt.Font("Angsana New", 0, 30)); // NOI18N
@@ -658,7 +682,7 @@ public class admin extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(admin_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(admin_return_jscroll)
-                    .addComponent(admin_rent_search1, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE))
+                    .addComponent(admin_rent_search1, javax.swing.GroupLayout.DEFAULT_SIZE, 727, Short.MAX_VALUE))
                 .addGap(37, 37, 37))
         );
         admin_panel_returnbookLayout.setVerticalGroup(
@@ -673,7 +697,7 @@ public class admin extends javax.swing.JFrame {
 
         admin_multipanel.add(admin_panel_returnbook, "card4");
 
-        admin_panel_user.setBackground(new java.awt.Color(255, 255, 153));
+        admin_panel_user.setBackground(new java.awt.Color(255, 204, 0));
 
         admin_user_search.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
 
@@ -715,7 +739,7 @@ public class admin extends javax.swing.JFrame {
                 .addGroup(admin_panel_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(admin_user_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 750, Short.MAX_VALUE)
                     .addComponent(admin_user_search))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         admin_panel_userLayout.setVerticalGroup(
             admin_panel_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -729,7 +753,7 @@ public class admin extends javax.swing.JFrame {
 
         admin_multipanel.add(admin_panel_user, "card5");
 
-        admin_panel_staff.setBackground(new java.awt.Color(255, 255, 153));
+        admin_panel_staff.setBackground(new java.awt.Color(255, 204, 0));
 
         admin_staff_search.setFont(new java.awt.Font("Angsana New", 0, 30)); // NOI18N
 
@@ -764,7 +788,7 @@ public class admin extends javax.swing.JFrame {
             admin_staff_order.getColumnModel().getColumn(4).setMaxWidth(100);
         }
 
-        admin_staff_add.setBackground(new java.awt.Color(255, 204, 102));
+        admin_staff_add.setBackground(new java.awt.Color(255, 102, 0));
 
         admin_staff_addusername.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_staff_addusername.setText("Username");
@@ -817,7 +841,7 @@ public class admin extends javax.swing.JFrame {
         admin_panel_staffLayout.setHorizontalGroup(
             admin_panel_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_staffLayout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(admin_panel_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(admin_staff_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE)
                     .addComponent(admin_staff_search))
@@ -859,7 +883,7 @@ public class admin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(admin_main, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(admin_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -922,45 +946,50 @@ public class admin extends javax.swing.JFrame {
 
     private void admin_mouseentered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admin_mouseentered
         if (evt.getSource()== admin_tab_library){
-            admin_tab_library.setBackground(new Color(255, 153, 0));
+            admin_tab_library.setBackground(new Color(255,204,0));
         }
         if (evt.getSource()== admin_tab_rent){
-            admin_tab_rent.setBackground(new Color(255, 153, 0));
+            admin_tab_rent.setBackground(new Color(255,204,0));
         }
         if (evt.getSource()== admin_tab_return){
-            admin_tab_return.setBackground(new Color(255, 153, 0));
+            admin_tab_return.setBackground(new Color(255,204,0));
         }
         if (evt.getSource()== admin_tab_user){
-            admin_tab_user.setBackground(new Color(255, 153, 0));
+            admin_tab_user.setBackground(new Color(255,204,0));
         }
         if (evt.getSource()== admin_tab_staff){
-            admin_tab_staff.setBackground(new Color(255, 153, 0));
+            admin_tab_staff.setBackground(new Color(255,204,0));
         }
         if (evt.getSource()== admin_tab_logout){
-            admin_tab_logout.setBackground(new Color(255, 153, 0));
+            admin_tab_logout.setBackground(new Color(255,204,0));
         }
     }//GEN-LAST:event_admin_mouseentered
 
     private void admin_mouseexited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admin_mouseexited
         if (evt.getSource()== admin_tab_library){
-            admin_tab_library.setBackground(new Color(255, 204, 0));
+            admin_tab_library.setBackground(new Color(255,153,0));
         }
         if (evt.getSource()== admin_tab_rent){
-            admin_tab_rent.setBackground(new Color(255, 204, 0));
+            admin_tab_rent.setBackground(new Color(255,153,0));
         }
         if (evt.getSource()== admin_tab_return){
-            admin_tab_return.setBackground(new Color(255, 204, 0));
+            admin_tab_return.setBackground(new Color(255,153,0));
         }
         if (evt.getSource()== admin_tab_user){
-            admin_tab_user.setBackground(new Color(255, 204, 0));
+            admin_tab_user.setBackground(new Color(255,153,0));
         }
         if (evt.getSource()== admin_tab_staff){
-            admin_tab_staff.setBackground(new Color(255, 204, 0));
+            admin_tab_staff.setBackground(new Color(255,153,0));
         }
         if (evt.getSource()== admin_tab_logout){
-            admin_tab_logout.setBackground(new Color(255, 204, 0));
+            admin_tab_logout.setBackground(new Color(255,153,0));
         }
     }//GEN-LAST:event_admin_mouseexited
+
+    private void admin_add_jButtonimageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_add_jButtonimageActionPerformed
+        JFileChooser fileopen = new JFileChooser();
+        int ret = fileopen.showDialog(null, "Choose file");
+    }//GEN-LAST:event_admin_add_jButtonimageActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1053,6 +1082,14 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JLabel admin_welcome_bookrent;
     private javax.swing.JLabel admin_welcome_name;
     private javax.swing.JLabel admin_welcome_welcome;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel user_txt_rent;
+    private javax.swing.JLabel user_txt_rent2;
+    private javax.swing.JLabel user_txt_rent3;
+    private javax.swing.JLabel user_txt_rent4;
+    private javax.swing.JLabel user_txt_rent5;
+    private javax.swing.JLabel user_txt_rent6;
     // End of variables declaration//GEN-END:variables
 }

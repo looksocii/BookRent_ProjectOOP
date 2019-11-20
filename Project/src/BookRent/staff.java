@@ -83,7 +83,7 @@ public class staff extends javax.swing.JFrame {
         staff_sidetab.setBackground(new java.awt.Color(255, 204, 0));
         staff_sidetab.setLayout(new javax.swing.BoxLayout(staff_sidetab, javax.swing.BoxLayout.PAGE_AXIS));
 
-        staff_tab_welcome.setBackground(new java.awt.Color(255, 153, 0));
+        staff_tab_welcome.setBackground(new java.awt.Color(255, 102, 0));
         staff_tab_welcome.setPreferredSize(new java.awt.Dimension(200, 140));
         staff_tab_welcome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -99,12 +99,12 @@ public class staff extends javax.swing.JFrame {
         );
         staff_tab_welcomeLayout.setVerticalGroup(
             staff_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 140, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_welcome);
 
-        staff_tab_library.setBackground(new java.awt.Color(255, 204, 51));
+        staff_tab_library.setBackground(new java.awt.Color(255, 153, 0));
         staff_tab_library.setPreferredSize(new java.awt.Dimension(200, 80));
         staff_tab_library.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -125,7 +125,7 @@ public class staff extends javax.swing.JFrame {
         staff_tab_library.setLayout(staff_tab_libraryLayout);
         staff_tab_libraryLayout.setHorizontalGroup(
             staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 200, Short.MAX_VALUE)
             .addGroup(staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_libraryLayout.createSequentialGroup()
                     .addContainerGap(64, Short.MAX_VALUE)
@@ -136,15 +136,12 @@ public class staff extends javax.swing.JFrame {
             staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 80, Short.MAX_VALUE)
             .addGroup(staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_libraryLayout.createSequentialGroup()
-                    .addContainerGap(19, Short.MAX_VALUE)
-                    .addComponent(staff_txt_library)
-                    .addContainerGap(18, Short.MAX_VALUE)))
+                .addComponent(staff_txt_library, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE))
         );
 
         staff_sidetab.add(staff_tab_library);
 
-        staff_tab_rent.setBackground(new java.awt.Color(255, 204, 0));
+        staff_tab_rent.setBackground(new java.awt.Color(255, 153, 0));
         staff_tab_rent.setPreferredSize(new java.awt.Dimension(200, 80));
         staff_tab_rent.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -177,14 +174,14 @@ public class staff extends javax.swing.JFrame {
             .addGap(0, 80, Short.MAX_VALUE)
             .addGroup(staff_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(staff_tab_rentLayout.createSequentialGroup()
-                    .addGap(0, 19, Short.MAX_VALUE)
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(staff_txt_rent)
-                    .addGap(0, 18, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         staff_sidetab.add(staff_tab_rent);
 
-        staff_tab_return.setBackground(new java.awt.Color(255, 204, 0));
+        staff_tab_return.setBackground(new java.awt.Color(255, 153, 0));
         staff_tab_return.setPreferredSize(new java.awt.Dimension(200, 80));
         staff_tab_return.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -217,14 +214,14 @@ public class staff extends javax.swing.JFrame {
             .addGap(0, 80, Short.MAX_VALUE)
             .addGroup(staff_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(staff_tab_returnLayout.createSequentialGroup()
-                    .addGap(0, 19, Short.MAX_VALUE)
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(staff_txt_return)
-                    .addGap(0, 18, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         staff_sidetab.add(staff_tab_return);
 
-        staff_tab_user.setBackground(new java.awt.Color(255, 204, 0));
+        staff_tab_user.setBackground(new java.awt.Color(255, 153, 0));
         staff_tab_user.setPreferredSize(new java.awt.Dimension(200, 80));
         staff_tab_user.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -257,14 +254,14 @@ public class staff extends javax.swing.JFrame {
             .addGap(0, 80, Short.MAX_VALUE)
             .addGroup(staff_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(staff_tab_userLayout.createSequentialGroup()
-                    .addGap(0, 19, Short.MAX_VALUE)
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(staff_txt_user)
-                    .addGap(0, 18, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         staff_sidetab.add(staff_tab_user);
 
-        staff_tab_empty1.setBackground(new java.awt.Color(255, 204, 0));
+        staff_tab_empty1.setBackground(new java.awt.Color(255, 153, 0));
 
         javax.swing.GroupLayout staff_tab_empty1Layout = new javax.swing.GroupLayout(staff_tab_empty1);
         staff_tab_empty1.setLayout(staff_tab_empty1Layout);
@@ -279,7 +276,7 @@ public class staff extends javax.swing.JFrame {
 
         staff_sidetab.add(staff_tab_empty1);
 
-        staff_tab_empty2.setBackground(new java.awt.Color(255, 204, 0));
+        staff_tab_empty2.setBackground(new java.awt.Color(255, 153, 0));
         staff_tab_empty2.setPreferredSize(new java.awt.Dimension(200, 80));
 
         javax.swing.GroupLayout staff_tab_empty2Layout = new javax.swing.GroupLayout(staff_tab_empty2);
@@ -290,12 +287,12 @@ public class staff extends javax.swing.JFrame {
         );
         staff_tab_empty2Layout.setVerticalGroup(
             staff_tab_empty2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_empty2);
 
-        staff_tab_logout.setBackground(new java.awt.Color(255, 204, 0));
+        staff_tab_logout.setBackground(new java.awt.Color(255, 153, 0));
         staff_tab_logout.setPreferredSize(new java.awt.Dimension(200, 80));
         staff_tab_logout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -328,9 +325,9 @@ public class staff extends javax.swing.JFrame {
             .addGap(0, 80, Short.MAX_VALUE)
             .addGroup(staff_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_logoutLayout.createSequentialGroup()
-                    .addContainerGap(19, Short.MAX_VALUE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(staff_txt_logout)
-                    .addContainerGap(18, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         staff_sidetab.add(staff_tab_logout);
@@ -338,7 +335,7 @@ public class staff extends javax.swing.JFrame {
         staff_multipanel.setBackground(new java.awt.Color(255, 255, 153));
         staff_multipanel.setLayout(new java.awt.CardLayout());
 
-        staff_panel_welcome.setBackground(new java.awt.Color(255, 255, 153));
+        staff_panel_welcome.setBackground(new java.awt.Color(255, 204, 0));
         staff_panel_welcome.setPreferredSize(new java.awt.Dimension(800, 700));
 
         staff_welcome_welcome.setFont(new java.awt.Font("Banaue", 1, 90)); // NOI18N
@@ -382,7 +379,7 @@ public class staff extends javax.swing.JFrame {
 
         staff_multipanel.add(staff_panel_welcome, "card6");
 
-        staff_panel_library.setBackground(new java.awt.Color(255, 255, 153));
+        staff_panel_library.setBackground(new java.awt.Color(255, 204, 0));
         staff_panel_library.setPreferredSize(new java.awt.Dimension(800, 700));
 
         staff_library_search.setFont(new java.awt.Font("Angsana New", 0, 30)); // NOI18N
@@ -412,7 +409,7 @@ public class staff extends javax.swing.JFrame {
         });
         staff_library_scroll.setViewportView(staff_library_order);
 
-        staff_liblrary_add.setBackground(new java.awt.Color(255, 204, 102));
+        staff_liblrary_add.setBackground(new java.awt.Color(255, 102, 0));
 
         staff_add_id.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         staff_add_id.setText("ID");
@@ -505,7 +502,7 @@ public class staff extends javax.swing.JFrame {
 
         staff_multipanel.add(staff_panel_library, "card2");
 
-        staff_panel_rent.setBackground(new java.awt.Color(255, 255, 153));
+        staff_panel_rent.setBackground(new java.awt.Color(255, 204, 0));
 
         staff_rent_search.setFont(new java.awt.Font("Angsana New", 0, 30)); // NOI18N
 
@@ -557,7 +554,7 @@ public class staff extends javax.swing.JFrame {
 
         staff_multipanel.add(staff_panel_rent, "card3");
 
-        staff_panel_returnbook.setBackground(new java.awt.Color(255, 255, 153));
+        staff_panel_returnbook.setBackground(new java.awt.Color(255, 204, 0));
         staff_panel_returnbook.setPreferredSize(new java.awt.Dimension(800, 700));
 
         staff_rent_search1.setFont(new java.awt.Font("Angsana New", 0, 30)); // NOI18N
@@ -610,7 +607,7 @@ public class staff extends javax.swing.JFrame {
 
         staff_multipanel.add(staff_panel_returnbook, "card4");
 
-        staff_panel_user.setBackground(new java.awt.Color(255, 255, 153));
+        staff_panel_user.setBackground(new java.awt.Color(255, 204, 0));
 
         staff_user_search.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
 
@@ -673,8 +670,8 @@ public class staff extends javax.swing.JFrame {
         );
         staff_mainLayout.setVerticalGroup(
             staff_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_sidetab, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-            .addComponent(staff_multipanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(staff_sidetab, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(staff_multipanel, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
