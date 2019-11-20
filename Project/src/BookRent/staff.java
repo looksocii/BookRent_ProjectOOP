@@ -28,18 +28,24 @@ public class staff extends javax.swing.JFrame {
         staff_main = new javax.swing.JPanel();
         staff_sidetab = new javax.swing.JPanel();
         staff_tab_welcome = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         staff_tab_library = new javax.swing.JPanel();
         staff_txt_library = new javax.swing.JLabel();
+        user_txt_rent2 = new javax.swing.JLabel();
         staff_tab_rent = new javax.swing.JPanel();
         staff_txt_rent = new javax.swing.JLabel();
+        user_txt_rent = new javax.swing.JLabel();
         staff_tab_return = new javax.swing.JPanel();
         staff_txt_return = new javax.swing.JLabel();
+        user_txt_rent3 = new javax.swing.JLabel();
         staff_tab_user = new javax.swing.JPanel();
         staff_txt_user = new javax.swing.JLabel();
+        user_txt_rent4 = new javax.swing.JLabel();
         staff_tab_empty1 = new javax.swing.JPanel();
         staff_tab_empty2 = new javax.swing.JPanel();
         staff_tab_logout = new javax.swing.JPanel();
         staff_txt_logout = new javax.swing.JLabel();
+        user_txt_rent5 = new javax.swing.JLabel();
         staff_multipanel = new javax.swing.JPanel();
         staff_panel_welcome = new javax.swing.JPanel();
         staff_welcome_welcome = new javax.swing.JLabel();
@@ -79,6 +85,7 @@ public class staff extends javax.swing.JFrame {
         setResizable(false);
 
         staff_main.setBackground(new java.awt.Color(255, 255, 153));
+        staff_main.setPreferredSize(new java.awt.Dimension(1000, 700));
 
         staff_sidetab.setBackground(new java.awt.Color(255, 204, 0));
         staff_sidetab.setLayout(new javax.swing.BoxLayout(staff_sidetab, javax.swing.BoxLayout.PAGE_AXIS));
@@ -91,15 +98,20 @@ public class staff extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/welcome.png"))); // NOI18N
+
         javax.swing.GroupLayout staff_tab_welcomeLayout = new javax.swing.GroupLayout(staff_tab_welcome);
         staff_tab_welcome.setLayout(staff_tab_welcomeLayout);
         staff_tab_welcomeLayout.setHorizontalGroup(
             staff_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(staff_tab_welcomeLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel1)
+                .addGap(60, 60, 60))
         );
         staff_tab_welcomeLayout.setVerticalGroup(
             staff_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         staff_sidetab.add(staff_tab_welcome);
@@ -121,22 +133,24 @@ public class staff extends javax.swing.JFrame {
         staff_txt_library.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_library.setText("Library");
 
+        user_txt_rent2.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_txt_rent2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/library.png"))); // NOI18N
+
         javax.swing.GroupLayout staff_tab_libraryLayout = new javax.swing.GroupLayout(staff_tab_library);
         staff_tab_library.setLayout(staff_tab_libraryLayout);
         staff_tab_libraryLayout.setHorizontalGroup(
             staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-            .addGroup(staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_libraryLayout.createSequentialGroup()
-                    .addContainerGap(64, Short.MAX_VALUE)
-                    .addComponent(staff_txt_library)
-                    .addContainerGap(64, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_libraryLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(user_txt_rent2)
+                .addGap(18, 18, 18)
+                .addComponent(staff_txt_library)
+                .addGap(23, 23, 23))
         );
         staff_tab_libraryLayout.setVerticalGroup(
             staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-            .addGroup(staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(staff_txt_library, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE))
+            .addComponent(staff_txt_library, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(user_txt_rent2, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_library);
@@ -158,25 +172,24 @@ public class staff extends javax.swing.JFrame {
         staff_txt_rent.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_rent.setText("Rent");
 
+        user_txt_rent.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_txt_rent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rent.png"))); // NOI18N
+
         javax.swing.GroupLayout staff_tab_rentLayout = new javax.swing.GroupLayout(staff_tab_rent);
         staff_tab_rent.setLayout(staff_tab_rentLayout);
         staff_tab_rentLayout.setHorizontalGroup(
             staff_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(staff_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(staff_tab_rentLayout.createSequentialGroup()
-                    .addGap(0, 77, Short.MAX_VALUE)
-                    .addComponent(staff_txt_rent)
-                    .addGap(0, 77, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_rentLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(user_txt_rent)
+                .addGap(18, 18, 18)
+                .addComponent(staff_txt_rent)
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         staff_tab_rentLayout.setVerticalGroup(
             staff_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-            .addGroup(staff_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(staff_tab_rentLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(staff_txt_rent)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(staff_txt_rent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(user_txt_rent, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_rent);
@@ -198,25 +211,24 @@ public class staff extends javax.swing.JFrame {
         staff_txt_return.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_return.setText("Return");
 
+        user_txt_rent3.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_txt_rent3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/return.png"))); // NOI18N
+
         javax.swing.GroupLayout staff_tab_returnLayout = new javax.swing.GroupLayout(staff_tab_return);
         staff_tab_return.setLayout(staff_tab_returnLayout);
         staff_tab_returnLayout.setHorizontalGroup(
             staff_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(staff_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(staff_tab_returnLayout.createSequentialGroup()
-                    .addGap(0, 67, Short.MAX_VALUE)
-                    .addComponent(staff_txt_return)
-                    .addGap(0, 67, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_returnLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(user_txt_rent3)
+                .addGap(18, 18, 18)
+                .addComponent(staff_txt_return)
+                .addGap(29, 29, 29))
         );
         staff_tab_returnLayout.setVerticalGroup(
             staff_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-            .addGroup(staff_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(staff_tab_returnLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(staff_txt_return)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(staff_txt_return, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(user_txt_rent3, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_return);
@@ -238,25 +250,24 @@ public class staff extends javax.swing.JFrame {
         staff_txt_user.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_user.setText("User");
 
+        user_txt_rent4.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_txt_rent4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user.png"))); // NOI18N
+
         javax.swing.GroupLayout staff_tab_userLayout = new javax.swing.GroupLayout(staff_tab_user);
         staff_tab_user.setLayout(staff_tab_userLayout);
         staff_tab_userLayout.setHorizontalGroup(
             staff_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(staff_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(staff_tab_userLayout.createSequentialGroup()
-                    .addGap(0, 77, Short.MAX_VALUE)
-                    .addComponent(staff_txt_user)
-                    .addGap(0, 78, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_userLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(user_txt_rent4)
+                .addGap(18, 18, 18)
+                .addComponent(staff_txt_user)
+                .addGap(50, 50, 50))
         );
         staff_tab_userLayout.setVerticalGroup(
             staff_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-            .addGroup(staff_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(staff_tab_userLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(staff_txt_user)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(staff_txt_user, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(user_txt_rent4, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_user);
@@ -287,7 +298,7 @@ public class staff extends javax.swing.JFrame {
         );
         staff_tab_empty2Layout.setVerticalGroup(
             staff_tab_empty2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 80, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_empty2);
@@ -309,25 +320,24 @@ public class staff extends javax.swing.JFrame {
         staff_txt_logout.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_logout.setText("Logout");
 
+        user_txt_rent5.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_txt_rent5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logout.png"))); // NOI18N
+
         javax.swing.GroupLayout staff_tab_logoutLayout = new javax.swing.GroupLayout(staff_tab_logout);
         staff_tab_logout.setLayout(staff_tab_logoutLayout);
         staff_tab_logoutLayout.setHorizontalGroup(
             staff_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(staff_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_logoutLayout.createSequentialGroup()
-                    .addContainerGap(65, Short.MAX_VALUE)
-                    .addComponent(staff_txt_logout)
-                    .addContainerGap(65, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_logoutLayout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(user_txt_rent5)
+                .addGap(18, 18, 18)
+                .addComponent(staff_txt_logout)
+                .addGap(27, 27, 27))
         );
         staff_tab_logoutLayout.setVerticalGroup(
             staff_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-            .addGroup(staff_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_logoutLayout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(staff_txt_logout)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addComponent(staff_txt_logout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(user_txt_rent5, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_logout);
@@ -670,15 +680,15 @@ public class staff extends javax.swing.JFrame {
         );
         staff_mainLayout.setVerticalGroup(
             staff_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_sidetab, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
-            .addComponent(staff_multipanel, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(staff_sidetab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(staff_multipanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_main, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(staff_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -728,24 +738,6 @@ public class staff extends javax.swing.JFrame {
 
     private void mouseentered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseentered
         if (evt.getSource()== staff_tab_library){
-            staff_tab_library.setBackground(new Color(255, 153, 0));
-        }
-        if (evt.getSource()== staff_tab_rent){
-            staff_tab_rent.setBackground(new Color(255, 153, 0));
-        }
-        if (evt.getSource()== staff_tab_return){
-            staff_tab_return.setBackground(new Color(255, 153, 0));
-        }
-        if (evt.getSource()== staff_tab_user){
-            staff_tab_user.setBackground(new Color(255, 153, 0));
-        }
-        if (evt.getSource()== staff_tab_logout){
-            staff_tab_logout.setBackground(new Color(255, 153, 0));
-        }
-    }//GEN-LAST:event_mouseentered
-
-    private void mouseexited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseexited
-        if (evt.getSource()== staff_tab_library){
             staff_tab_library.setBackground(new Color(255, 204, 0));
         }
         if (evt.getSource()== staff_tab_rent){
@@ -759,6 +751,24 @@ public class staff extends javax.swing.JFrame {
         }
         if (evt.getSource()== staff_tab_logout){
             staff_tab_logout.setBackground(new Color(255, 204, 0));
+        }
+    }//GEN-LAST:event_mouseentered
+
+    private void mouseexited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseexited
+        if (evt.getSource()== staff_tab_library){
+            staff_tab_library.setBackground(new Color(255, 153, 0));
+        }
+        if (evt.getSource()== staff_tab_rent){
+            staff_tab_rent.setBackground(new Color(255, 153, 0));
+        }
+        if (evt.getSource()== staff_tab_return){
+            staff_tab_return.setBackground(new Color(255, 153, 0));
+        }
+        if (evt.getSource()== staff_tab_user){
+            staff_tab_user.setBackground(new Color(255, 153, 0));
+        }
+        if (evt.getSource()== staff_tab_logout){
+            staff_tab_logout.setBackground(new Color(255, 153, 0));
         }
     }//GEN-LAST:event_mouseexited
 
@@ -798,6 +808,7 @@ public class staff extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton staff_add_buttonadd;
     private javax.swing.JButton staff_add_buttonimage;
     private javax.swing.JTextField staff_add_id;
@@ -843,5 +854,10 @@ public class staff extends javax.swing.JFrame {
     private javax.swing.JLabel staff_welcome_bookrent;
     private javax.swing.JLabel staff_welcome_name;
     private javax.swing.JLabel staff_welcome_welcome;
+    private javax.swing.JLabel user_txt_rent;
+    private javax.swing.JLabel user_txt_rent2;
+    private javax.swing.JLabel user_txt_rent3;
+    private javax.swing.JLabel user_txt_rent4;
+    private javax.swing.JLabel user_txt_rent5;
     // End of variables declaration//GEN-END:variables
 }
