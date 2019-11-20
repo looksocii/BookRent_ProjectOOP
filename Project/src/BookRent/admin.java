@@ -29,32 +29,32 @@ public class admin extends javax.swing.JFrame {
         admin_main = new javax.swing.JPanel();
         admin_sidetab = new javax.swing.JPanel();
         admin_tab_welcome = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        admin_tab_welcomelogo = new javax.swing.JLabel();
         admin_tab_library = new javax.swing.JPanel();
         admin_txt_library = new javax.swing.JLabel();
-        user_txt_rent2 = new javax.swing.JLabel();
+        admin_tab_librarylogo = new javax.swing.JLabel();
         admin_tab_rent = new javax.swing.JPanel();
         admin_txt_rent = new javax.swing.JLabel();
-        user_txt_rent = new javax.swing.JLabel();
+        admin_tab_rentlogo = new javax.swing.JLabel();
         admin_tab_return = new javax.swing.JPanel();
         admin_txt_return = new javax.swing.JLabel();
-        user_txt_rent3 = new javax.swing.JLabel();
+        admin_tab_returnlogo = new javax.swing.JLabel();
         admin_tab_user = new javax.swing.JPanel();
         admin_txt_user = new javax.swing.JLabel();
-        user_txt_rent4 = new javax.swing.JLabel();
+        admin_tab_userlogo = new javax.swing.JLabel();
         admin_tab_staff = new javax.swing.JPanel();
         admin_txt_staff = new javax.swing.JLabel();
-        user_txt_rent6 = new javax.swing.JLabel();
+        admin_tab_stafflogo = new javax.swing.JLabel();
         admin_tab_empty1 = new javax.swing.JPanel();
         admin_tab_logout = new javax.swing.JPanel();
         admin_txt_logout = new javax.swing.JLabel();
-        user_txt_rent5 = new javax.swing.JLabel();
+        admin_tab_logoutlogo = new javax.swing.JLabel();
         admin_multipanel = new javax.swing.JPanel();
         admin_panel_welcome = new javax.swing.JPanel();
         admin_welcome_welcome = new javax.swing.JLabel();
         admin_welcome_bookrent = new javax.swing.JLabel();
         admin_welcome_name = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        admin_welcome_logo = new javax.swing.JLabel();
         admin_panel_library = new javax.swing.JPanel();
         admin_library_search = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -112,7 +112,7 @@ public class admin extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/welcome.png"))); // NOI18N
+        admin_tab_welcomelogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/welcome.png"))); // NOI18N
 
         javax.swing.GroupLayout admin_tab_welcomeLayout = new javax.swing.GroupLayout(admin_tab_welcome);
         admin_tab_welcome.setLayout(admin_tab_welcomeLayout);
@@ -120,12 +120,12 @@ public class admin extends javax.swing.JFrame {
             admin_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(admin_tab_welcomeLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addComponent(jLabel1)
+                .addComponent(admin_tab_welcomelogo)
                 .addContainerGap(60, Short.MAX_VALUE))
         );
         admin_tab_welcomeLayout.setVerticalGroup(
             admin_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+            .addComponent(admin_tab_welcomelogo, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_welcome);
@@ -147,8 +147,8 @@ public class admin extends javax.swing.JFrame {
         admin_txt_library.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_library.setText("Library");
 
-        user_txt_rent2.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/library.png"))); // NOI18N
+        admin_tab_librarylogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        admin_tab_librarylogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/library.png"))); // NOI18N
 
         javax.swing.GroupLayout admin_tab_libraryLayout = new javax.swing.GroupLayout(admin_tab_library);
         admin_tab_library.setLayout(admin_tab_libraryLayout);
@@ -156,14 +156,14 @@ public class admin extends javax.swing.JFrame {
             admin_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(admin_tab_libraryLayout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(user_txt_rent2)
+                .addComponent(admin_tab_librarylogo)
                 .addGap(18, 18, 18)
                 .addComponent(admin_txt_library)
                 .addGap(23, 23, 23))
         );
         admin_tab_libraryLayout.setVerticalGroup(
             admin_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(user_txt_rent2, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(admin_tab_librarylogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
             .addComponent(admin_txt_library, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -186,8 +186,8 @@ public class admin extends javax.swing.JFrame {
         admin_txt_rent.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_rent.setText("Rent");
 
-        user_txt_rent.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rent.png"))); // NOI18N
+        admin_tab_rentlogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        admin_tab_rentlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rent.png"))); // NOI18N
 
         javax.swing.GroupLayout admin_tab_rentLayout = new javax.swing.GroupLayout(admin_tab_rent);
         admin_tab_rent.setLayout(admin_tab_rentLayout);
@@ -195,7 +195,7 @@ public class admin extends javax.swing.JFrame {
             admin_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_rentLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(user_txt_rent)
+                .addComponent(admin_tab_rentlogo)
                 .addGap(18, 18, 18)
                 .addComponent(admin_txt_rent)
                 .addContainerGap(49, Short.MAX_VALUE))
@@ -203,7 +203,7 @@ public class admin extends javax.swing.JFrame {
         admin_tab_rentLayout.setVerticalGroup(
             admin_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(admin_txt_rent, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(admin_tab_rentlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_rent);
@@ -225,8 +225,8 @@ public class admin extends javax.swing.JFrame {
         admin_txt_return.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_return.setText("Return");
 
-        user_txt_rent3.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/return.png"))); // NOI18N
+        admin_tab_returnlogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        admin_tab_returnlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/return.png"))); // NOI18N
 
         javax.swing.GroupLayout admin_tab_returnLayout = new javax.swing.GroupLayout(admin_tab_return);
         admin_tab_return.setLayout(admin_tab_returnLayout);
@@ -234,7 +234,7 @@ public class admin extends javax.swing.JFrame {
             admin_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_returnLayout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(user_txt_rent3)
+                .addComponent(admin_tab_returnlogo)
                 .addGap(18, 18, 18)
                 .addComponent(admin_txt_return)
                 .addGap(29, 29, 29))
@@ -242,7 +242,7 @@ public class admin extends javax.swing.JFrame {
         admin_tab_returnLayout.setVerticalGroup(
             admin_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(admin_txt_return, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent3, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(admin_tab_returnlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_return);
@@ -264,8 +264,8 @@ public class admin extends javax.swing.JFrame {
         admin_txt_user.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_user.setText("User");
 
-        user_txt_rent4.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user.png"))); // NOI18N
+        admin_tab_userlogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        admin_tab_userlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user.png"))); // NOI18N
 
         javax.swing.GroupLayout admin_tab_userLayout = new javax.swing.GroupLayout(admin_tab_user);
         admin_tab_user.setLayout(admin_tab_userLayout);
@@ -273,7 +273,7 @@ public class admin extends javax.swing.JFrame {
             admin_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_userLayout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(user_txt_rent4)
+                .addComponent(admin_tab_userlogo)
                 .addGap(18, 18, 18)
                 .addComponent(admin_txt_user)
                 .addGap(50, 50, 50))
@@ -281,7 +281,7 @@ public class admin extends javax.swing.JFrame {
         admin_tab_userLayout.setVerticalGroup(
             admin_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(admin_txt_user, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent4, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(admin_tab_userlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_user);
@@ -303,8 +303,8 @@ public class admin extends javax.swing.JFrame {
         admin_txt_staff.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_staff.setText("Staff");
 
-        user_txt_rent6.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/staff.png"))); // NOI18N
+        admin_tab_stafflogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        admin_tab_stafflogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/staff.png"))); // NOI18N
 
         javax.swing.GroupLayout admin_tab_staffLayout = new javax.swing.GroupLayout(admin_tab_staff);
         admin_tab_staff.setLayout(admin_tab_staffLayout);
@@ -312,7 +312,7 @@ public class admin extends javax.swing.JFrame {
             admin_tab_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_staffLayout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(user_txt_rent6)
+                .addComponent(admin_tab_stafflogo)
                 .addGap(18, 18, 18)
                 .addComponent(admin_txt_staff, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
@@ -320,7 +320,7 @@ public class admin extends javax.swing.JFrame {
         admin_tab_staffLayout.setVerticalGroup(
             admin_tab_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(admin_txt_staff, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent6, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(admin_tab_stafflogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_staff);
@@ -357,8 +357,8 @@ public class admin extends javax.swing.JFrame {
         admin_txt_logout.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         admin_txt_logout.setText("Logout");
 
-        user_txt_rent5.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logout.png"))); // NOI18N
+        admin_tab_logoutlogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        admin_tab_logoutlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logout.png"))); // NOI18N
 
         javax.swing.GroupLayout admin_tab_logoutLayout = new javax.swing.GroupLayout(admin_tab_logout);
         admin_tab_logout.setLayout(admin_tab_logoutLayout);
@@ -366,7 +366,7 @@ public class admin extends javax.swing.JFrame {
             admin_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_tab_logoutLayout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(user_txt_rent5)
+                .addComponent(admin_tab_logoutlogo)
                 .addGap(18, 18, 18)
                 .addComponent(admin_txt_logout)
                 .addGap(25, 25, 25))
@@ -374,7 +374,7 @@ public class admin extends javax.swing.JFrame {
         admin_tab_logoutLayout.setVerticalGroup(
             admin_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(admin_txt_logout, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent5, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(admin_tab_logoutlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         admin_sidetab.add(admin_tab_logout);
@@ -394,7 +394,7 @@ public class admin extends javax.swing.JFrame {
         admin_welcome_name.setFont(new java.awt.Font("TH SarabunPSK", 0, 48)); // NOI18N
         admin_welcome_name.setText("ธีรวัต กาญจนปานวงษ์");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
+        admin_welcome_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
 
         javax.swing.GroupLayout admin_panel_welcomeLayout = new javax.swing.GroupLayout(admin_panel_welcome);
         admin_panel_welcome.setLayout(admin_panel_welcomeLayout);
@@ -410,7 +410,7 @@ public class admin extends javax.swing.JFrame {
                         .addGroup(admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(admin_welcome_name)
                             .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(admin_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(admin_welcome_bookrent)))))
                 .addGap(226, 226, 226))
@@ -425,9 +425,9 @@ public class admin extends javax.swing.JFrame {
                         .addGap(67, 67, 67)
                         .addComponent(admin_welcome_bookrent))
                     .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(59, 59, 59)
+                        .addGap(43, 43, 43)
+                        .addComponent(admin_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(57, 57, 57)
                 .addComponent(admin_welcome_name)
                 .addContainerGap(225, Short.MAX_VALUE))
         );
@@ -1064,12 +1064,19 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JTextField admin_staff_search;
     private javax.swing.JPanel admin_tab_empty1;
     private javax.swing.JPanel admin_tab_library;
+    private javax.swing.JLabel admin_tab_librarylogo;
     private javax.swing.JPanel admin_tab_logout;
+    private javax.swing.JLabel admin_tab_logoutlogo;
     private javax.swing.JPanel admin_tab_rent;
+    private javax.swing.JLabel admin_tab_rentlogo;
     private javax.swing.JPanel admin_tab_return;
+    private javax.swing.JLabel admin_tab_returnlogo;
     private javax.swing.JPanel admin_tab_staff;
+    private javax.swing.JLabel admin_tab_stafflogo;
     private javax.swing.JPanel admin_tab_user;
+    private javax.swing.JLabel admin_tab_userlogo;
     private javax.swing.JPanel admin_tab_welcome;
+    private javax.swing.JLabel admin_tab_welcomelogo;
     private javax.swing.JLabel admin_txt_library;
     private javax.swing.JLabel admin_txt_logout;
     private javax.swing.JLabel admin_txt_rent;
@@ -1080,16 +1087,9 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JScrollPane admin_user_scroll;
     private javax.swing.JTextField admin_user_search;
     private javax.swing.JLabel admin_welcome_bookrent;
+    private javax.swing.JLabel admin_welcome_logo;
     private javax.swing.JLabel admin_welcome_name;
     private javax.swing.JLabel admin_welcome_welcome;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel user_txt_rent;
-    private javax.swing.JLabel user_txt_rent2;
-    private javax.swing.JLabel user_txt_rent3;
-    private javax.swing.JLabel user_txt_rent4;
-    private javax.swing.JLabel user_txt_rent5;
-    private javax.swing.JLabel user_txt_rent6;
     // End of variables declaration//GEN-END:variables
 }

@@ -28,30 +28,30 @@ public class user extends javax.swing.JFrame {
         user_main = new javax.swing.JPanel();
         user_sidetab = new javax.swing.JPanel();
         user_tab_welcome = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        user_tab_welcomelogo = new javax.swing.JLabel();
         user_tab_library = new javax.swing.JPanel();
         user_txt_library = new javax.swing.JLabel();
-        user_txt_rent2 = new javax.swing.JLabel();
+        user_tab_librarylogo = new javax.swing.JLabel();
         user_tab_rent = new javax.swing.JPanel();
+        user_tab_rentlogo = new javax.swing.JLabel();
         user_txt_rent = new javax.swing.JLabel();
-        user_txt_rent1 = new javax.swing.JLabel();
         user_tab_return = new javax.swing.JPanel();
         user_txt_return = new javax.swing.JLabel();
-        user_txt_rent3 = new javax.swing.JLabel();
+        user_tab_returnlogo = new javax.swing.JLabel();
         user_tab_history = new javax.swing.JPanel();
         user_txt_history = new javax.swing.JLabel();
-        user_txt_rent4 = new javax.swing.JLabel();
+        user_tab_historylogo = new javax.swing.JLabel();
         user_tab_empty1 = new javax.swing.JPanel();
         user_tab_empty2 = new javax.swing.JPanel();
         user_tab_logout = new javax.swing.JPanel();
         user_txt_logout = new javax.swing.JLabel();
-        user_txt_rent5 = new javax.swing.JLabel();
+        user_tab_logoutlogo = new javax.swing.JLabel();
         user_multipanel = new javax.swing.JPanel();
         user_panel_welcome = new javax.swing.JPanel();
         user_welcome_welcome = new javax.swing.JLabel();
         user_welcome_bookrent = new javax.swing.JLabel();
         user_welcome_name = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        user_welcome_logo = new javax.swing.JLabel();
         user_panel_library = new javax.swing.JPanel();
         user_library_search = new javax.swing.JTextField();
         user_library_scroll = new javax.swing.JScrollPane();
@@ -115,7 +115,7 @@ public class user extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/welcome.png"))); // NOI18N
+        user_tab_welcomelogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/welcome.png"))); // NOI18N
 
         javax.swing.GroupLayout user_tab_welcomeLayout = new javax.swing.GroupLayout(user_tab_welcome);
         user_tab_welcome.setLayout(user_tab_welcomeLayout);
@@ -123,12 +123,12 @@ public class user extends javax.swing.JFrame {
             user_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(user_tab_welcomeLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addComponent(jLabel1)
+                .addComponent(user_tab_welcomelogo)
                 .addContainerGap(60, Short.MAX_VALUE))
         );
         user_tab_welcomeLayout.setVerticalGroup(
             user_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+            .addComponent(user_tab_welcomelogo, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
         );
 
         user_sidetab.add(user_tab_welcome);
@@ -150,8 +150,8 @@ public class user extends javax.swing.JFrame {
         user_txt_library.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         user_txt_library.setText("Library");
 
-        user_txt_rent2.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/library.png"))); // NOI18N
+        user_tab_librarylogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_tab_librarylogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/library.png"))); // NOI18N
 
         javax.swing.GroupLayout user_tab_libraryLayout = new javax.swing.GroupLayout(user_tab_library);
         user_tab_library.setLayout(user_tab_libraryLayout);
@@ -159,7 +159,7 @@ public class user extends javax.swing.JFrame {
             user_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_tab_libraryLayout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(user_txt_rent2)
+                .addComponent(user_tab_librarylogo)
                 .addGap(18, 18, 18)
                 .addComponent(user_txt_library)
                 .addGap(23, 23, 23))
@@ -167,7 +167,7 @@ public class user extends javax.swing.JFrame {
         user_tab_libraryLayout.setVerticalGroup(
             user_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(user_txt_library, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent2, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(user_tab_librarylogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         user_sidetab.add(user_tab_library);
@@ -186,11 +186,11 @@ public class user extends javax.swing.JFrame {
             }
         });
 
-        user_txt_rent.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rent.png"))); // NOI18N
+        user_tab_rentlogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_tab_rentlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rent.png"))); // NOI18N
 
-        user_txt_rent1.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent1.setText("Rent");
+        user_txt_rent.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_txt_rent.setText("Rent");
 
         javax.swing.GroupLayout user_tab_rentLayout = new javax.swing.GroupLayout(user_tab_rent);
         user_tab_rent.setLayout(user_tab_rentLayout);
@@ -198,15 +198,15 @@ public class user extends javax.swing.JFrame {
             user_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_tab_rentLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(user_txt_rent)
+                .addComponent(user_tab_rentlogo)
                 .addGap(18, 18, 18)
-                .addComponent(user_txt_rent1)
+                .addComponent(user_txt_rent)
                 .addContainerGap(49, Short.MAX_VALUE))
         );
         user_tab_rentLayout.setVerticalGroup(
             user_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(user_txt_rent, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
-            .addComponent(user_txt_rent1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(user_tab_rentlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(user_txt_rent, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         user_sidetab.add(user_tab_rent);
@@ -228,8 +228,8 @@ public class user extends javax.swing.JFrame {
         user_txt_return.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         user_txt_return.setText("Return");
 
-        user_txt_rent3.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/return.png"))); // NOI18N
+        user_tab_returnlogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_tab_returnlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/return.png"))); // NOI18N
 
         javax.swing.GroupLayout user_tab_returnLayout = new javax.swing.GroupLayout(user_tab_return);
         user_tab_return.setLayout(user_tab_returnLayout);
@@ -237,7 +237,7 @@ public class user extends javax.swing.JFrame {
             user_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_tab_returnLayout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(user_txt_rent3)
+                .addComponent(user_tab_returnlogo)
                 .addGap(18, 18, 18)
                 .addComponent(user_txt_return)
                 .addGap(29, 29, 29))
@@ -245,7 +245,7 @@ public class user extends javax.swing.JFrame {
         user_tab_returnLayout.setVerticalGroup(
             user_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(user_txt_return, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent3, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(user_tab_returnlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         user_sidetab.add(user_tab_return);
@@ -267,8 +267,8 @@ public class user extends javax.swing.JFrame {
         user_txt_history.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         user_txt_history.setText("History");
 
-        user_txt_rent4.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/history.png"))); // NOI18N
+        user_tab_historylogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_tab_historylogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/history.png"))); // NOI18N
 
         javax.swing.GroupLayout user_tab_historyLayout = new javax.swing.GroupLayout(user_tab_history);
         user_tab_history.setLayout(user_tab_historyLayout);
@@ -276,7 +276,7 @@ public class user extends javax.swing.JFrame {
             user_tab_historyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_tab_historyLayout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(user_txt_rent4)
+                .addComponent(user_tab_historylogo)
                 .addGap(18, 18, 18)
                 .addComponent(user_txt_history)
                 .addGap(24, 24, 24))
@@ -284,7 +284,7 @@ public class user extends javax.swing.JFrame {
         user_tab_historyLayout.setVerticalGroup(
             user_tab_historyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(user_txt_history, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent4, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(user_tab_historylogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         user_sidetab.add(user_tab_history);
@@ -337,8 +337,8 @@ public class user extends javax.swing.JFrame {
         user_txt_logout.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         user_txt_logout.setText("Logout");
 
-        user_txt_rent5.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logout.png"))); // NOI18N
+        user_tab_logoutlogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_tab_logoutlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logout.png"))); // NOI18N
 
         javax.swing.GroupLayout user_tab_logoutLayout = new javax.swing.GroupLayout(user_tab_logout);
         user_tab_logout.setLayout(user_tab_logoutLayout);
@@ -346,7 +346,7 @@ public class user extends javax.swing.JFrame {
             user_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_tab_logoutLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(user_txt_rent5)
+                .addComponent(user_tab_logoutlogo)
                 .addGap(18, 18, 18)
                 .addComponent(user_txt_logout)
                 .addContainerGap(25, Short.MAX_VALUE))
@@ -354,7 +354,7 @@ public class user extends javax.swing.JFrame {
         user_tab_logoutLayout.setVerticalGroup(
             user_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(user_txt_logout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent5, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(user_tab_logoutlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         user_sidetab.add(user_tab_logout);
@@ -374,7 +374,7 @@ public class user extends javax.swing.JFrame {
         user_welcome_name.setFont(new java.awt.Font("TH SarabunPSK", 0, 48)); // NOI18N
         user_welcome_name.setText("ธีรวัต กาญจนปานวงษ์");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
+        user_welcome_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
 
         javax.swing.GroupLayout user_panel_welcomeLayout = new javax.swing.GroupLayout(user_panel_welcome);
         user_panel_welcome.setLayout(user_panel_welcomeLayout);
@@ -389,7 +389,7 @@ public class user extends javax.swing.JFrame {
                 .addGroup(user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(user_welcome_name)
                     .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(user_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(user_welcome_bookrent)))
                 .addGap(248, 248, 248))
@@ -404,9 +404,9 @@ public class user extends javax.swing.JFrame {
                         .addGap(67, 67, 67)
                         .addComponent(user_welcome_bookrent))
                     .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(59, 59, 59)
+                        .addGap(43, 43, 43)
+                        .addComponent(user_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(57, 57, 57)
                 .addComponent(user_welcome_name)
                 .addContainerGap(225, Short.MAX_VALUE))
         );
@@ -933,8 +933,6 @@ public class user extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel user_history_history;
     private javax.swing.JLabel user_history_name;
     private javax.swing.JTable user_history_order;
@@ -983,22 +981,24 @@ public class user extends javax.swing.JFrame {
     private javax.swing.JPanel user_tab_empty1;
     private javax.swing.JPanel user_tab_empty2;
     private javax.swing.JPanel user_tab_history;
+    private javax.swing.JLabel user_tab_historylogo;
     private javax.swing.JPanel user_tab_library;
+    private javax.swing.JLabel user_tab_librarylogo;
     private javax.swing.JPanel user_tab_logout;
+    private javax.swing.JLabel user_tab_logoutlogo;
     private javax.swing.JPanel user_tab_rent;
+    private javax.swing.JLabel user_tab_rentlogo;
     private javax.swing.JPanel user_tab_return;
+    private javax.swing.JLabel user_tab_returnlogo;
     private javax.swing.JPanel user_tab_welcome;
+    private javax.swing.JLabel user_tab_welcomelogo;
     private javax.swing.JLabel user_txt_history;
     private javax.swing.JLabel user_txt_library;
     private javax.swing.JLabel user_txt_logout;
     private javax.swing.JLabel user_txt_rent;
-    private javax.swing.JLabel user_txt_rent1;
-    private javax.swing.JLabel user_txt_rent2;
-    private javax.swing.JLabel user_txt_rent3;
-    private javax.swing.JLabel user_txt_rent4;
-    private javax.swing.JLabel user_txt_rent5;
     private javax.swing.JLabel user_txt_return;
     private javax.swing.JLabel user_welcome_bookrent;
+    private javax.swing.JLabel user_welcome_logo;
     private javax.swing.JLabel user_welcome_name;
     private javax.swing.JLabel user_welcome_welcome;
     // End of variables declaration//GEN-END:variables

@@ -101,19 +101,19 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="user_tab_welcomelogo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="60" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel1" alignment="0" pref="140" max="32767" attributes="0"/>
+                      <Component id="user_tab_welcomelogo" alignment="0" pref="140" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel1">
+                <Component class="javax.swing.JLabel" name="user_tab_welcomelogo">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/images/welcome.png"/>
@@ -142,7 +142,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="27" max="32767" attributes="0"/>
-                          <Component id="user_txt_rent2" min="-2" max="-2" attributes="0"/>
+                          <Component id="user_tab_librarylogo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="user_txt_library" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
@@ -152,7 +152,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="user_txt_library" max="32767" attributes="0"/>
-                      <Component id="user_txt_rent2" pref="80" max="32767" attributes="0"/>
+                      <Component id="user_tab_librarylogo" pref="80" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -165,7 +165,7 @@
                     <Property name="text" type="java.lang.String" value="Library"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="user_txt_rent2">
+                <Component class="javax.swing.JLabel" name="user_tab_librarylogo">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Angsana New" size="36" style="0"/>
@@ -197,22 +197,22 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="user_txt_rent" min="-2" max="-2" attributes="0"/>
+                          <Component id="user_tab_rentlogo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="user_txt_rent1" min="-2" max="-2" attributes="0"/>
+                          <Component id="user_txt_rent" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="49" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="user_txt_rent" alignment="0" pref="80" max="32767" attributes="0"/>
-                      <Component id="user_txt_rent1" alignment="1" max="32767" attributes="0"/>
+                      <Component id="user_tab_rentlogo" alignment="0" pref="80" max="32767" attributes="0"/>
+                      <Component id="user_txt_rent" alignment="1" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="user_txt_rent">
+                <Component class="javax.swing.JLabel" name="user_tab_rentlogo">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Angsana New" size="36" style="0"/>
@@ -222,7 +222,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="user_txt_rent1">
+                <Component class="javax.swing.JLabel" name="user_txt_rent">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Angsana New" size="36" style="0"/>
@@ -252,7 +252,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="27" max="32767" attributes="0"/>
-                          <Component id="user_txt_rent3" min="-2" max="-2" attributes="0"/>
+                          <Component id="user_tab_returnlogo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="user_txt_return" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
@@ -262,7 +262,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="user_txt_return" max="32767" attributes="0"/>
-                      <Component id="user_txt_rent3" pref="80" max="32767" attributes="0"/>
+                      <Component id="user_tab_returnlogo" pref="80" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -275,7 +275,7 @@
                     <Property name="text" type="java.lang.String" value="Return"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="user_txt_rent3">
+                <Component class="javax.swing.JLabel" name="user_tab_returnlogo">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Angsana New" size="36" style="0"/>
@@ -307,7 +307,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="27" max="32767" attributes="0"/>
-                          <Component id="user_txt_rent4" min="-2" max="-2" attributes="0"/>
+                          <Component id="user_tab_historylogo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="user_txt_history" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
@@ -317,7 +317,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="user_txt_history" max="32767" attributes="0"/>
-                      <Component id="user_txt_rent4" pref="80" max="32767" attributes="0"/>
+                      <Component id="user_tab_historylogo" pref="80" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -330,7 +330,7 @@
                     <Property name="text" type="java.lang.String" value="History"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="user_txt_rent4">
+                <Component class="javax.swing.JLabel" name="user_tab_historylogo">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Angsana New" size="36" style="0"/>
@@ -405,7 +405,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="user_txt_rent5" min="-2" max="-2" attributes="0"/>
+                          <Component id="user_tab_logoutlogo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="user_txt_logout" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="25" max="32767" attributes="0"/>
@@ -415,7 +415,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="user_txt_logout" max="32767" attributes="0"/>
-                      <Component id="user_txt_rent5" pref="80" max="32767" attributes="0"/>
+                      <Component id="user_tab_logoutlogo" pref="80" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -428,7 +428,7 @@
                     <Property name="text" type="java.lang.String" value="Logout"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="user_txt_rent5">
+                <Component class="javax.swing.JLabel" name="user_tab_logoutlogo">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Angsana New" size="36" style="0"/>
@@ -479,7 +479,7 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="user_welcome_name" min="-2" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Component id="jLabel2" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <Component id="user_welcome_logo" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="user_welcome_bookrent" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -499,11 +499,11 @@
                                   <Component id="user_welcome_bookrent" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="user_welcome_logo" min="-2" pref="120" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                           <Component id="user_welcome_name" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="225" max="32767" attributes="0"/>
                       </Group>
@@ -535,7 +535,7 @@
                     <Property name="text" type="java.lang.String" value="&#xe18;&#xe35;&#xe23;&#xe27;&#xe31;&#xe15; &#xe01;&#xe32;&#xe0d;&#xe08;&#xe19;&#xe1b;&#xe32;&#xe19;&#xe27;&#xe07;&#xe29;&#xe4c;"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel2">
+                <Component class="javax.swing.JLabel" name="user_welcome_logo">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/images/logo.png"/>

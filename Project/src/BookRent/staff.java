@@ -28,29 +28,30 @@ public class staff extends javax.swing.JFrame {
         staff_main = new javax.swing.JPanel();
         staff_sidetab = new javax.swing.JPanel();
         staff_tab_welcome = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        staff_tab_welcomelogo = new javax.swing.JLabel();
         staff_tab_library = new javax.swing.JPanel();
         staff_txt_library = new javax.swing.JLabel();
-        user_txt_rent2 = new javax.swing.JLabel();
+        staff_tab_librarylogo = new javax.swing.JLabel();
         staff_tab_rent = new javax.swing.JPanel();
         staff_txt_rent = new javax.swing.JLabel();
-        user_txt_rent = new javax.swing.JLabel();
+        staff_tab_rentlogo = new javax.swing.JLabel();
         staff_tab_return = new javax.swing.JPanel();
         staff_txt_return = new javax.swing.JLabel();
-        user_txt_rent3 = new javax.swing.JLabel();
+        staff_tab_returnlogo = new javax.swing.JLabel();
         staff_tab_user = new javax.swing.JPanel();
         staff_txt_user = new javax.swing.JLabel();
-        user_txt_rent4 = new javax.swing.JLabel();
+        staff_tab_userlogo = new javax.swing.JLabel();
         staff_tab_empty1 = new javax.swing.JPanel();
         staff_tab_empty2 = new javax.swing.JPanel();
         staff_tab_logout = new javax.swing.JPanel();
         staff_txt_logout = new javax.swing.JLabel();
-        user_txt_rent5 = new javax.swing.JLabel();
+        staff_tab_logoutlogo = new javax.swing.JLabel();
         staff_multipanel = new javax.swing.JPanel();
         staff_panel_welcome = new javax.swing.JPanel();
         staff_welcome_welcome = new javax.swing.JLabel();
         staff_welcome_bookrent = new javax.swing.JLabel();
         staff_welcome_name = new javax.swing.JLabel();
+        staff_welcome_logo = new javax.swing.JLabel();
         staff_panel_library = new javax.swing.JPanel();
         staff_library_search = new javax.swing.JTextField();
         staff_library_scroll = new javax.swing.JScrollPane();
@@ -98,7 +99,7 @@ public class staff extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/welcome.png"))); // NOI18N
+        staff_tab_welcomelogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/welcome.png"))); // NOI18N
 
         javax.swing.GroupLayout staff_tab_welcomeLayout = new javax.swing.GroupLayout(staff_tab_welcome);
         staff_tab_welcome.setLayout(staff_tab_welcomeLayout);
@@ -106,12 +107,12 @@ public class staff extends javax.swing.JFrame {
             staff_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staff_tab_welcomeLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addComponent(jLabel1)
+                .addComponent(staff_tab_welcomelogo)
                 .addGap(60, 60, 60))
         );
         staff_tab_welcomeLayout.setVerticalGroup(
             staff_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(staff_tab_welcomelogo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         staff_sidetab.add(staff_tab_welcome);
@@ -133,8 +134,8 @@ public class staff extends javax.swing.JFrame {
         staff_txt_library.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_library.setText("Library");
 
-        user_txt_rent2.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/library.png"))); // NOI18N
+        staff_tab_librarylogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        staff_tab_librarylogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/library.png"))); // NOI18N
 
         javax.swing.GroupLayout staff_tab_libraryLayout = new javax.swing.GroupLayout(staff_tab_library);
         staff_tab_library.setLayout(staff_tab_libraryLayout);
@@ -142,7 +143,7 @@ public class staff extends javax.swing.JFrame {
             staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_libraryLayout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(user_txt_rent2)
+                .addComponent(staff_tab_librarylogo)
                 .addGap(18, 18, 18)
                 .addComponent(staff_txt_library)
                 .addGap(23, 23, 23))
@@ -150,7 +151,7 @@ public class staff extends javax.swing.JFrame {
         staff_tab_libraryLayout.setVerticalGroup(
             staff_tab_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(staff_txt_library, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent2, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(staff_tab_librarylogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_library);
@@ -172,8 +173,8 @@ public class staff extends javax.swing.JFrame {
         staff_txt_rent.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_rent.setText("Rent");
 
-        user_txt_rent.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rent.png"))); // NOI18N
+        staff_tab_rentlogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        staff_tab_rentlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rent.png"))); // NOI18N
 
         javax.swing.GroupLayout staff_tab_rentLayout = new javax.swing.GroupLayout(staff_tab_rent);
         staff_tab_rent.setLayout(staff_tab_rentLayout);
@@ -181,7 +182,7 @@ public class staff extends javax.swing.JFrame {
             staff_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_rentLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(user_txt_rent)
+                .addComponent(staff_tab_rentlogo)
                 .addGap(18, 18, 18)
                 .addComponent(staff_txt_rent)
                 .addContainerGap(49, Short.MAX_VALUE))
@@ -189,7 +190,7 @@ public class staff extends javax.swing.JFrame {
         staff_tab_rentLayout.setVerticalGroup(
             staff_tab_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(staff_txt_rent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(staff_tab_rentlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_rent);
@@ -211,8 +212,8 @@ public class staff extends javax.swing.JFrame {
         staff_txt_return.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_return.setText("Return");
 
-        user_txt_rent3.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/return.png"))); // NOI18N
+        staff_tab_returnlogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        staff_tab_returnlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/return.png"))); // NOI18N
 
         javax.swing.GroupLayout staff_tab_returnLayout = new javax.swing.GroupLayout(staff_tab_return);
         staff_tab_return.setLayout(staff_tab_returnLayout);
@@ -220,7 +221,7 @@ public class staff extends javax.swing.JFrame {
             staff_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_returnLayout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(user_txt_rent3)
+                .addComponent(staff_tab_returnlogo)
                 .addGap(18, 18, 18)
                 .addComponent(staff_txt_return)
                 .addGap(29, 29, 29))
@@ -228,7 +229,7 @@ public class staff extends javax.swing.JFrame {
         staff_tab_returnLayout.setVerticalGroup(
             staff_tab_returnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(staff_txt_return, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent3, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(staff_tab_returnlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_return);
@@ -250,8 +251,8 @@ public class staff extends javax.swing.JFrame {
         staff_txt_user.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_user.setText("User");
 
-        user_txt_rent4.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user.png"))); // NOI18N
+        staff_tab_userlogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        staff_tab_userlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user.png"))); // NOI18N
 
         javax.swing.GroupLayout staff_tab_userLayout = new javax.swing.GroupLayout(staff_tab_user);
         staff_tab_user.setLayout(staff_tab_userLayout);
@@ -259,7 +260,7 @@ public class staff extends javax.swing.JFrame {
             staff_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_userLayout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(user_txt_rent4)
+                .addComponent(staff_tab_userlogo)
                 .addGap(18, 18, 18)
                 .addComponent(staff_txt_user)
                 .addGap(50, 50, 50))
@@ -267,7 +268,7 @@ public class staff extends javax.swing.JFrame {
         staff_tab_userLayout.setVerticalGroup(
             staff_tab_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(staff_txt_user, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent4, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(staff_tab_userlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_user);
@@ -320,8 +321,8 @@ public class staff extends javax.swing.JFrame {
         staff_txt_logout.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         staff_txt_logout.setText("Logout");
 
-        user_txt_rent5.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
-        user_txt_rent5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logout.png"))); // NOI18N
+        staff_tab_logoutlogo.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        staff_tab_logoutlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logout.png"))); // NOI18N
 
         javax.swing.GroupLayout staff_tab_logoutLayout = new javax.swing.GroupLayout(staff_tab_logout);
         staff_tab_logout.setLayout(staff_tab_logoutLayout);
@@ -329,7 +330,7 @@ public class staff extends javax.swing.JFrame {
             staff_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_logoutLayout.createSequentialGroup()
                 .addContainerGap(25, Short.MAX_VALUE)
-                .addComponent(user_txt_rent5)
+                .addComponent(staff_tab_logoutlogo)
                 .addGap(18, 18, 18)
                 .addComponent(staff_txt_logout)
                 .addGap(27, 27, 27))
@@ -337,7 +338,7 @@ public class staff extends javax.swing.JFrame {
         staff_tab_logoutLayout.setVerticalGroup(
             staff_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(staff_txt_logout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(user_txt_rent5, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(staff_tab_logoutlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_logout);
@@ -357,34 +358,42 @@ public class staff extends javax.swing.JFrame {
         staff_welcome_name.setFont(new java.awt.Font("TH SarabunPSK", 0, 48)); // NOI18N
         staff_welcome_name.setText("ธีรวัต กาญจนปานวงษ์");
 
+        staff_welcome_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
+
         javax.swing.GroupLayout staff_panel_welcomeLayout = new javax.swing.GroupLayout(staff_panel_welcome);
         staff_panel_welcome.setLayout(staff_panel_welcomeLayout);
         staff_panel_welcomeLayout.setHorizontalGroup(
             staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
-                .addGap(244, 244, 244)
-                .addComponent(staff_welcome_welcome)
-                .addGap(235, 235, 235))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_welcomeLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_welcomeLayout.createSequentialGroup()
-                        .addComponent(staff_welcome_name)
-                        .addGap(261, 261, 261))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_welcomeLayout.createSequentialGroup()
-                        .addComponent(staff_welcome_bookrent)
-                        .addGap(300, 300, 300))))
+                    .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
+                        .addGap(244, 244, 244)
+                        .addComponent(staff_welcome_welcome))
+                    .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
+                        .addGap(218, 218, 218)
+                        .addGroup(staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(staff_welcome_name)
+                            .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
+                                .addComponent(staff_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(staff_welcome_bookrent)))))
+                .addGap(235, 235, 235))
         );
         staff_panel_welcomeLayout.setVerticalGroup(
             staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
                 .addGap(110, 110, 110)
                 .addComponent(staff_welcome_welcome)
-                .addGap(67, 67, 67)
-                .addComponent(staff_welcome_bookrent)
-                .addGap(49, 49, 49)
+                .addGroup(staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addComponent(staff_welcome_bookrent))
+                    .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(staff_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(57, 57, 57)
                 .addComponent(staff_welcome_name)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(225, Short.MAX_VALUE))
         );
 
         staff_multipanel.add(staff_panel_welcome, "card6");
@@ -808,7 +817,6 @@ public class staff extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton staff_add_buttonadd;
     private javax.swing.JButton staff_add_buttonimage;
     private javax.swing.JTextField staff_add_id;
@@ -838,11 +846,17 @@ public class staff extends javax.swing.JFrame {
     private javax.swing.JPanel staff_tab_empty1;
     private javax.swing.JPanel staff_tab_empty2;
     private javax.swing.JPanel staff_tab_library;
+    private javax.swing.JLabel staff_tab_librarylogo;
     private javax.swing.JPanel staff_tab_logout;
+    private javax.swing.JLabel staff_tab_logoutlogo;
     private javax.swing.JPanel staff_tab_rent;
+    private javax.swing.JLabel staff_tab_rentlogo;
     private javax.swing.JPanel staff_tab_return;
+    private javax.swing.JLabel staff_tab_returnlogo;
     private javax.swing.JPanel staff_tab_user;
+    private javax.swing.JLabel staff_tab_userlogo;
     private javax.swing.JPanel staff_tab_welcome;
+    private javax.swing.JLabel staff_tab_welcomelogo;
     private javax.swing.JLabel staff_txt_library;
     private javax.swing.JLabel staff_txt_logout;
     private javax.swing.JLabel staff_txt_rent;
@@ -852,12 +866,8 @@ public class staff extends javax.swing.JFrame {
     private javax.swing.JScrollPane staff_user_scroll;
     private javax.swing.JTextField staff_user_search;
     private javax.swing.JLabel staff_welcome_bookrent;
+    private javax.swing.JLabel staff_welcome_logo;
     private javax.swing.JLabel staff_welcome_name;
     private javax.swing.JLabel staff_welcome_welcome;
-    private javax.swing.JLabel user_txt_rent;
-    private javax.swing.JLabel user_txt_rent2;
-    private javax.swing.JLabel user_txt_rent3;
-    private javax.swing.JLabel user_txt_rent4;
-    private javax.swing.JLabel user_txt_rent5;
     // End of variables declaration//GEN-END:variables
 }
