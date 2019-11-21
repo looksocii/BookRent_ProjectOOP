@@ -96,7 +96,6 @@ public class user extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BookRent");
-        setPreferredSize(new java.awt.Dimension(1000, 700));
         setResizable(false);
 
         user_main.setBackground(new java.awt.Color(255, 255, 153));

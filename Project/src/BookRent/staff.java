@@ -82,7 +82,6 @@ public class staff extends javax.swing.JFrame {
         setTitle("BookRent");
         setMaximumSize(new java.awt.Dimension(1000, 700));
         setMinimumSize(new java.awt.Dimension(1000, 700));
-        setPreferredSize(new java.awt.Dimension(1000, 700));
         setResizable(false);
 
         staff_main.setBackground(new java.awt.Color(255, 255, 153));
