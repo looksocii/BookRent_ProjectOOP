@@ -379,10 +379,6 @@ public class user extends javax.swing.JFrame {
         user_panel_welcome.setLayout(user_panel_welcomeLayout);
         user_panel_welcomeLayout.setHorizontalGroup(
             user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                .addGap(244, 244, 244)
-                .addComponent(user_welcome_welcome)
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_panel_welcomeLayout.createSequentialGroup()
                 .addGap(218, 218, 218)
                 .addGroup(user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -392,6 +388,10 @@ public class user extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(user_welcome_bookrent)))
                 .addGap(248, 248, 248))
+            .addGroup(user_panel_welcomeLayout.createSequentialGroup()
+                .addGap(244, 244, 244)
+                .addComponent(user_welcome_welcome)
+                .addContainerGap())
         );
         user_panel_welcomeLayout.setVerticalGroup(
             user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
