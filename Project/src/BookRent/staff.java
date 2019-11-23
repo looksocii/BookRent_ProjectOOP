@@ -52,6 +52,7 @@ public class staff extends javax.swing.JFrame {
         staff_welcome_bookrent = new javax.swing.JLabel();
         staff_welcome_name = new javax.swing.JLabel();
         staff_welcome_logo = new javax.swing.JLabel();
+        staff_welcome_close = new javax.swing.JLabel();
         staff_panel_library = new javax.swing.JPanel();
         staff_library_search = new javax.swing.JTextField();
         staff_library_scroll = new javax.swing.JScrollPane();
@@ -65,8 +66,8 @@ public class staff extends javax.swing.JFrame {
         staff_add_buttonadd = new javax.swing.JButton();
         staff_add_buttonimage = new javax.swing.JButton();
         staff_add_image = new javax.swing.JLabel();
-        admin_staff_buttonedit = new javax.swing.JButton();
         admin_staff_buttondelete = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
         staff_panel_rent = new javax.swing.JPanel();
         staff_rent_search = new javax.swing.JTextField();
         staff_rent_jscroll = new javax.swing.JScrollPane();
@@ -340,8 +341,8 @@ public class staff extends javax.swing.JFrame {
         );
         staff_tab_logoutLayout.setVerticalGroup(
             staff_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_txt_logout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(staff_tab_logoutlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(staff_txt_logout, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+            .addComponent(staff_tab_logoutlogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         staff_sidetab.add(staff_tab_logout);
@@ -364,6 +365,13 @@ public class staff extends javax.swing.JFrame {
 
         staff_welcome_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
 
+        staff_welcome_close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
+        staff_welcome_close.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closebutton(evt);
+            }
+        });
+
         javax.swing.GroupLayout staff_panel_welcomeLayout = new javax.swing.GroupLayout(staff_panel_welcome);
         staff_panel_welcome.setLayout(staff_panel_welcomeLayout);
         staff_panel_welcomeLayout.setHorizontalGroup(
@@ -381,12 +389,18 @@ public class staff extends javax.swing.JFrame {
                                 .addComponent(staff_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(staff_welcome_bookrent)))))
-                .addGap(16, 16, 16))
+                .addContainerGap(337, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_welcomeLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(staff_welcome_close, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
         staff_panel_welcomeLayout.setVerticalGroup(
             staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
-                .addGap(110, 110, 110)
+                .addGap(22, 22, 22)
+                .addComponent(staff_welcome_close, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
                 .addComponent(staff_welcome_welcome)
                 .addGap(43, 43, 43)
                 .addGroup(staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -411,14 +425,14 @@ public class staff extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No", "Image", "ID", "Name", "Type", "Quantity"
+                "No", "Image", "ID", "Name", "Author", "Type", "Quantity"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -438,8 +452,8 @@ public class staff extends javax.swing.JFrame {
             staff_library_order.getColumnModel().getColumn(1).setMaxWidth(190);
             staff_library_order.getColumnModel().getColumn(2).setMinWidth(150);
             staff_library_order.getColumnModel().getColumn(2).setMaxWidth(160);
-            staff_library_order.getColumnModel().getColumn(5).setMinWidth(80);
-            staff_library_order.getColumnModel().getColumn(5).setMaxWidth(90);
+            staff_library_order.getColumnModel().getColumn(6).setMinWidth(80);
+            staff_library_order.getColumnModel().getColumn(6).setMaxWidth(90);
         }
 
         staff_liblrary_add.setBackground(new java.awt.Color(255, 102, 0));
@@ -460,7 +474,7 @@ public class staff extends javax.swing.JFrame {
         staff_add_price.setText("Price");
 
         staff_add_buttonadd.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
-        staff_add_buttonadd.setText("ADD");
+        staff_add_buttonadd.setText("Update");
 
         staff_add_buttonimage.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         staff_add_buttonimage.setText("Image");
@@ -468,11 +482,11 @@ public class staff extends javax.swing.JFrame {
         staff_add_image.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         staff_add_image.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        admin_staff_buttonedit.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
-        admin_staff_buttonedit.setText("Edit");
-
         admin_staff_buttondelete.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_staff_buttondelete.setText("Delete");
+
+        jTextField1.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        jTextField1.setText("Author");
 
         javax.swing.GroupLayout staff_liblrary_addLayout = new javax.swing.GroupLayout(staff_liblrary_add);
         staff_liblrary_add.setLayout(staff_liblrary_addLayout);
@@ -481,44 +495,44 @@ public class staff extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_liblrary_addLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(staff_add_image, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addComponent(staff_add_buttonimage)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addComponent(staff_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(staff_add_name, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(staff_add_type, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addComponent(staff_add_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(staff_add_price, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(staff_add_buttonadd)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(admin_staff_buttonedit, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(admin_staff_buttondelete, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
         staff_liblrary_addLayout.setVerticalGroup(
             staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(staff_add_image, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(staff_liblrary_addLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(admin_staff_buttonedit)
                         .addComponent(admin_staff_buttondelete)
                         .addComponent(staff_add_buttonadd)
                         .addComponent(staff_add_price, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(staff_add_quantity)
-                        .addComponent(staff_add_type)
-                        .addComponent(staff_add_name))
+                        .addComponent(staff_add_type))
                     .addGroup(staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(staff_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(staff_add_buttonimage)))
+                        .addComponent(staff_add_buttonimage)
+                        .addComponent(staff_add_name)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(26, 26, 26))
-            .addComponent(staff_add_image, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout staff_panel_libraryLayout = new javax.swing.GroupLayout(staff_panel_library);
@@ -556,14 +570,14 @@ public class staff extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No", "Image", "User", "ID", "Name", "Type", "Quantity", "Price", "Rent"
+                "No", "Image", "User", "ID", "Name", "Author", "Type", "Quantity", "Price", "Rent"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Float.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Float.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -582,10 +596,12 @@ public class staff extends javax.swing.JFrame {
             staff_rent_order.getColumnModel().getColumn(1).setMaxWidth(110);
             staff_rent_order.getColumnModel().getColumn(3).setMinWidth(100);
             staff_rent_order.getColumnModel().getColumn(3).setMaxWidth(110);
-            staff_rent_order.getColumnModel().getColumn(6).setMinWidth(80);
-            staff_rent_order.getColumnModel().getColumn(6).setMaxWidth(90);
             staff_rent_order.getColumnModel().getColumn(7).setMinWidth(80);
             staff_rent_order.getColumnModel().getColumn(7).setMaxWidth(90);
+            staff_rent_order.getColumnModel().getColumn(8).setMinWidth(80);
+            staff_rent_order.getColumnModel().getColumn(8).setMaxWidth(90);
+            staff_rent_order.getColumnModel().getColumn(9).setMinWidth(80);
+            staff_rent_order.getColumnModel().getColumn(9).setMaxWidth(90);
         }
 
         javax.swing.GroupLayout staff_panel_rentLayout = new javax.swing.GroupLayout(staff_panel_rent);
@@ -621,14 +637,14 @@ public class staff extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No", "Image", "User", "ID", "Name", "Type", "Quantity", "Price", "Return"
+                "No", "Image", "User", "ID", "Name", "Author", "Type", "Quantity", "Price", "Return"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Float.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Float.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -645,10 +661,12 @@ public class staff extends javax.swing.JFrame {
             staff_return_order.getColumnModel().getColumn(0).setMaxWidth(60);
             staff_return_order.getColumnModel().getColumn(3).setMinWidth(100);
             staff_return_order.getColumnModel().getColumn(3).setMaxWidth(110);
-            staff_return_order.getColumnModel().getColumn(6).setMinWidth(80);
-            staff_return_order.getColumnModel().getColumn(6).setMaxWidth(90);
             staff_return_order.getColumnModel().getColumn(7).setMinWidth(80);
             staff_return_order.getColumnModel().getColumn(7).setMaxWidth(90);
+            staff_return_order.getColumnModel().getColumn(8).setMinWidth(80);
+            staff_return_order.getColumnModel().getColumn(8).setMaxWidth(90);
+            staff_return_order.getColumnModel().getColumn(9).setMinWidth(80);
+            staff_return_order.getColumnModel().getColumn(9).setMaxWidth(90);
         }
 
         javax.swing.GroupLayout staff_panel_returnbookLayout = new javax.swing.GroupLayout(staff_panel_returnbook);
@@ -836,6 +854,10 @@ public class staff extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_mouseexited
 
+    private void closebutton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closebutton
+        dispose();
+    }//GEN-LAST:event_closebutton
+
     /**
      * @param args the command line arguments
      */
@@ -873,7 +895,7 @@ public class staff extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton admin_staff_buttondelete;
-    private javax.swing.JButton admin_staff_buttonedit;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton staff_add_buttonadd;
     private javax.swing.JButton staff_add_buttonimage;
     private javax.swing.JTextField staff_add_id;
@@ -923,6 +945,7 @@ public class staff extends javax.swing.JFrame {
     private javax.swing.JScrollPane staff_user_scroll;
     private javax.swing.JTextField staff_user_search;
     private javax.swing.JLabel staff_welcome_bookrent;
+    private javax.swing.JLabel staff_welcome_close;
     private javax.swing.JLabel staff_welcome_logo;
     private javax.swing.JLabel staff_welcome_name;
     private javax.swing.JLabel staff_welcome_welcome;

@@ -52,6 +52,7 @@ public class user extends javax.swing.JFrame {
         user_welcome_bookrent = new javax.swing.JLabel();
         user_welcome_name = new javax.swing.JLabel();
         user_welcome_logo = new javax.swing.JLabel();
+        user_welcome_close = new javax.swing.JLabel();
         user_panel_library = new javax.swing.JPanel();
         user_library_search = new javax.swing.JTextField();
         user_library_scroll = new javax.swing.JScrollPane();
@@ -71,6 +72,8 @@ public class user extends javax.swing.JFrame {
         user_rent_bookdatereturn = new javax.swing.JLabel();
         user_rent_bookprice = new javax.swing.JLabel();
         user_rent_button = new javax.swing.JButton();
+        user_rent_author = new javax.swing.JLabel();
+        user_rent_bookauthor = new javax.swing.JLabel();
         user_panel_returnbook = new javax.swing.JPanel();
         user_return_bookid = new javax.swing.JLabel();
         user_return_search = new javax.swing.JTextField();
@@ -86,6 +89,8 @@ public class user extends javax.swing.JFrame {
         user_return_bookname = new javax.swing.JLabel();
         user_return_fine = new javax.swing.JLabel();
         user_return_bookfine = new javax.swing.JLabel();
+        user_return_author = new javax.swing.JLabel();
+        user_return_bookauthor = new javax.swing.JLabel();
         user_panel_history = new javax.swing.JPanel();
         user_history_title = new javax.swing.JPanel();
         user_history_history = new javax.swing.JLabel();
@@ -323,6 +328,7 @@ public class user extends javax.swing.JFrame {
         user_sidetab.add(user_tab_empty2);
 
         user_tab_logout.setBackground(new java.awt.Color(255, 153, 0));
+        user_tab_logout.setPreferredSize(new java.awt.Dimension(200, 80));
         user_tab_logout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 user_mouseclicked(evt);
@@ -378,6 +384,13 @@ public class user extends javax.swing.JFrame {
 
         user_welcome_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
 
+        user_welcome_close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
+        user_welcome_close.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closebutton(evt);
+            }
+        });
+
         javax.swing.GroupLayout user_panel_welcomeLayout = new javax.swing.GroupLayout(user_panel_welcome);
         user_panel_welcome.setLayout(user_panel_welcomeLayout);
         user_panel_welcomeLayout.setHorizontalGroup(
@@ -395,12 +408,18 @@ public class user extends javax.swing.JFrame {
                                 .addComponent(user_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(user_welcome_bookrent)))))
-                .addGap(325, 325, 325))
+                .addContainerGap(337, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_panel_welcomeLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(user_welcome_close, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
         user_panel_welcomeLayout.setVerticalGroup(
             user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                .addGap(110, 110, 110)
+                .addGap(21, 21, 21)
+                .addComponent(user_welcome_close, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49)
                 .addComponent(user_welcome_welcome)
                 .addGap(43, 43, 43)
                 .addGroup(user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -425,14 +444,14 @@ public class user extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No", "Image", "ID", "Name", "Type", "Quantity", "Price", "Status"
+                "No", "Image", "ID", "Name", "Author", "Type", "Quantity", "Price", "Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Float.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Float.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -449,14 +468,14 @@ public class user extends javax.swing.JFrame {
             user_library_order.getColumnModel().getColumn(0).setMaxWidth(60);
             user_library_order.getColumnModel().getColumn(1).setMinWidth(150);
             user_library_order.getColumnModel().getColumn(1).setMaxWidth(160);
-            user_library_order.getColumnModel().getColumn(2).setMinWidth(150);
-            user_library_order.getColumnModel().getColumn(2).setMaxWidth(160);
-            user_library_order.getColumnModel().getColumn(5).setMinWidth(80);
-            user_library_order.getColumnModel().getColumn(5).setMaxWidth(90);
+            user_library_order.getColumnModel().getColumn(2).setMinWidth(120);
+            user_library_order.getColumnModel().getColumn(2).setMaxWidth(140);
             user_library_order.getColumnModel().getColumn(6).setMinWidth(80);
             user_library_order.getColumnModel().getColumn(6).setMaxWidth(90);
-            user_library_order.getColumnModel().getColumn(7).setMinWidth(100);
-            user_library_order.getColumnModel().getColumn(7).setMaxWidth(110);
+            user_library_order.getColumnModel().getColumn(7).setMinWidth(80);
+            user_library_order.getColumnModel().getColumn(7).setMaxWidth(90);
+            user_library_order.getColumnModel().getColumn(8).setMinWidth(100);
+            user_library_order.getColumnModel().getColumn(8).setMaxWidth(110);
         }
 
         javax.swing.GroupLayout user_panel_libraryLayout = new javax.swing.GroupLayout(user_panel_library);
@@ -526,6 +545,12 @@ public class user extends javax.swing.JFrame {
         user_rent_button.setText("Rent");
         user_rent_button.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        user_rent_author.setFont(new java.awt.Font("Angsana New", 1, 36)); // NOI18N
+        user_rent_author.setText("Author :");
+
+        user_rent_bookauthor.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_rent_bookauthor.setText("ศ.ดร.พันธกานต์ แก้วสังหาร");
+
         javax.swing.GroupLayout user_panel_rentLayout = new javax.swing.GroupLayout(user_panel_rent);
         user_panel_rent.setLayout(user_panel_rentLayout);
         user_panel_rentLayout.setHorizontalGroup(
@@ -535,30 +560,36 @@ public class user extends javax.swing.JFrame {
                     .addGroup(user_panel_rentLayout.createSequentialGroup()
                         .addGap(150, 150, 150)
                         .addComponent(user_rent_image, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(69, 69, 69)
                         .addGroup(user_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(user_panel_rentLayout.createSequentialGroup()
-                                .addComponent(user_rent_datereturn)
-                                .addGap(18, 18, 18)
-                                .addComponent(user_rent_bookdaterent))
-                            .addGroup(user_panel_rentLayout.createSequentialGroup()
-                                .addComponent(user_rent_daterent)
-                                .addGap(18, 18, 18)
-                                .addComponent(user_rent_bookdatereturn))
-                            .addGroup(user_panel_rentLayout.createSequentialGroup()
+                                .addGap(69, 69, 69)
                                 .addGroup(user_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(user_rent_namebook)
-                                    .addComponent(user_rent_type))
-                                .addGap(18, 18, 18)
-                                .addGroup(user_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(user_rent_booktype)
-                                    .addComponent(user_rent_bookname)))
+                                    .addGroup(user_panel_rentLayout.createSequentialGroup()
+                                        .addComponent(user_rent_datereturn)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(user_rent_bookdaterent))
+                                    .addGroup(user_panel_rentLayout.createSequentialGroup()
+                                        .addComponent(user_rent_daterent)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(user_rent_bookdatereturn))
+                                    .addGroup(user_panel_rentLayout.createSequentialGroup()
+                                        .addGroup(user_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(user_rent_namebook)
+                                            .addComponent(user_rent_type))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(user_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(user_rent_booktype)
+                                            .addComponent(user_rent_bookname)))
+                                    .addGroup(user_panel_rentLayout.createSequentialGroup()
+                                        .addComponent(user_rent_price)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(user_rent_bookprice))
+                                    .addGroup(user_panel_rentLayout.createSequentialGroup()
+                                        .addComponent(user_rent_author)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(user_rent_bookauthor))))
                             .addGroup(user_panel_rentLayout.createSequentialGroup()
-                                .addComponent(user_rent_price)
-                                .addGap(18, 18, 18)
-                                .addComponent(user_rent_bookprice))
-                            .addGroup(user_panel_rentLayout.createSequentialGroup()
-                                .addGap(97, 97, 97)
+                                .addGap(166, 166, 166)
                                 .addComponent(user_rent_button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(user_panel_rentLayout.createSequentialGroup()
                         .addGap(70, 70, 70)
@@ -587,7 +618,11 @@ public class user extends javax.swing.JFrame {
                         .addGroup(user_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(user_rent_type)
                             .addComponent(user_rent_booktype))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(user_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(user_rent_author)
+                            .addComponent(user_rent_bookauthor))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(user_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(user_rent_datereturn)
                             .addComponent(user_rent_bookdaterent))
@@ -599,9 +634,9 @@ public class user extends javax.swing.JFrame {
                         .addGroup(user_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(user_rent_price)
                             .addComponent(user_rent_bookprice))))
-                .addGap(135, 135, 135)
+                .addGap(70, 70, 70)
                 .addComponent(user_rent_button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56))
+                .addContainerGap())
         );
 
         user_multipanel.add(user_panel_rent, "card3");
@@ -650,6 +685,12 @@ public class user extends javax.swing.JFrame {
         user_return_bookfine.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
         user_return_bookfine.setText("00.00");
 
+        user_return_author.setFont(new java.awt.Font("Angsana New", 1, 36)); // NOI18N
+        user_return_author.setText("Author :");
+
+        user_return_bookauthor.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        user_return_bookauthor.setText("ศ.ดร.พันธกานต์ แก้วสังหาร");
+
         javax.swing.GroupLayout user_panel_returnbookLayout = new javax.swing.GroupLayout(user_panel_returnbook);
         user_panel_returnbook.setLayout(user_panel_returnbookLayout);
         user_panel_returnbookLayout.setHorizontalGroup(
@@ -683,7 +724,11 @@ public class user extends javax.swing.JFrame {
                                 .addComponent(user_return_bookfine))
                             .addGroup(user_panel_returnbookLayout.createSequentialGroup()
                                 .addGap(97, 97, 97)
-                                .addComponent(user_return_button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(user_return_button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(user_panel_returnbookLayout.createSequentialGroup()
+                                .addComponent(user_return_author)
+                                .addGap(18, 18, 18)
+                                .addComponent(user_return_bookauthor))))
                     .addGroup(user_panel_returnbookLayout.createSequentialGroup()
                         .addGap(70, 70, 70)
                         .addComponent(user_return_bookid)
@@ -695,6 +740,9 @@ public class user extends javax.swing.JFrame {
             user_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(user_panel_returnbookLayout.createSequentialGroup()
                 .addGroup(user_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(user_panel_returnbookLayout.createSequentialGroup()
+                        .addGap(233, 233, 233)
+                        .addComponent(user_return_image, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(user_panel_returnbookLayout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addGroup(user_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -708,7 +756,11 @@ public class user extends javax.swing.JFrame {
                         .addGroup(user_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(user_return_type)
                             .addComponent(user_return_booktype))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(user_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(user_return_author)
+                            .addComponent(user_return_bookauthor))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(user_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(user_return_daterent)
                             .addComponent(user_return_bookdaterent))
@@ -719,13 +771,10 @@ public class user extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(user_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(user_return_fine)
-                            .addComponent(user_return_bookfine)))
-                    .addGroup(user_panel_returnbookLayout.createSequentialGroup()
-                        .addGap(233, 233, 233)
-                        .addComponent(user_return_image, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                            .addComponent(user_return_bookfine))))
+                .addGap(70, 70, 70)
                 .addComponent(user_return_button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         user_multipanel.add(user_panel_returnbook, "card4");
@@ -766,14 +815,14 @@ public class user extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No", "Image", "ID", "Name", "Type", "Quantity", "Price", "Rent"
+                "No", "Image", "ID", "Name", "Author", "Type", "Quantity", "Price", "Rent"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Float.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Float.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -788,16 +837,16 @@ public class user extends javax.swing.JFrame {
         if (user_history_order.getColumnModel().getColumnCount() > 0) {
             user_history_order.getColumnModel().getColumn(0).setMinWidth(50);
             user_history_order.getColumnModel().getColumn(0).setMaxWidth(60);
-            user_history_order.getColumnModel().getColumn(1).setMinWidth(150);
+            user_history_order.getColumnModel().getColumn(1).setMinWidth(130);
             user_history_order.getColumnModel().getColumn(1).setMaxWidth(160);
-            user_history_order.getColumnModel().getColumn(2).setMinWidth(150);
+            user_history_order.getColumnModel().getColumn(2).setMinWidth(130);
             user_history_order.getColumnModel().getColumn(2).setMaxWidth(160);
-            user_history_order.getColumnModel().getColumn(5).setMinWidth(80);
-            user_history_order.getColumnModel().getColumn(5).setMaxWidth(90);
             user_history_order.getColumnModel().getColumn(6).setMinWidth(80);
             user_history_order.getColumnModel().getColumn(6).setMaxWidth(90);
-            user_history_order.getColumnModel().getColumn(7).setMinWidth(100);
-            user_history_order.getColumnModel().getColumn(7).setMaxWidth(110);
+            user_history_order.getColumnModel().getColumn(7).setMinWidth(80);
+            user_history_order.getColumnModel().getColumn(7).setMaxWidth(90);
+            user_history_order.getColumnModel().getColumn(8).setMinWidth(100);
+            user_history_order.getColumnModel().getColumn(8).setMaxWidth(110);
         }
 
         javax.swing.GroupLayout user_panel_historyLayout = new javax.swing.GroupLayout(user_panel_history);
@@ -839,7 +888,7 @@ public class user extends javax.swing.JFrame {
         );
         user_mainLayout.setVerticalGroup(
             user_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(user_sidetab, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(user_sidetab, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE)
             .addComponent(user_multipanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -933,6 +982,10 @@ public class user extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_user_mouseexited
 
+    private void closebutton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closebutton
+        dispose();
+    }//GEN-LAST:event_closebutton
+
     /**
      * @param args the command line arguments
      */
@@ -985,6 +1038,8 @@ public class user extends javax.swing.JFrame {
     private javax.swing.JPanel user_panel_rent;
     private javax.swing.JPanel user_panel_returnbook;
     private javax.swing.JPanel user_panel_welcome;
+    private javax.swing.JLabel user_rent_author;
+    private javax.swing.JLabel user_rent_bookauthor;
     private javax.swing.JLabel user_rent_bookdaterent;
     private javax.swing.JLabel user_rent_bookdatereturn;
     private javax.swing.JLabel user_rent_bookid;
@@ -999,6 +1054,8 @@ public class user extends javax.swing.JFrame {
     private javax.swing.JLabel user_rent_price;
     private javax.swing.JTextField user_rent_search;
     private javax.swing.JLabel user_rent_type;
+    private javax.swing.JLabel user_return_author;
+    private javax.swing.JLabel user_return_bookauthor;
     private javax.swing.JLabel user_return_bookdaterent;
     private javax.swing.JLabel user_return_bookdatereturn;
     private javax.swing.JLabel user_return_bookfine;
@@ -1034,6 +1091,7 @@ public class user extends javax.swing.JFrame {
     private javax.swing.JLabel user_txt_rent;
     private javax.swing.JLabel user_txt_return;
     private javax.swing.JLabel user_welcome_bookrent;
+    private javax.swing.JLabel user_welcome_close;
     private javax.swing.JLabel user_welcome_logo;
     private javax.swing.JLabel user_welcome_name;
     private javax.swing.JLabel user_welcome_welcome;

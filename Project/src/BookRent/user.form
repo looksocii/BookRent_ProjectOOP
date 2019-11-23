@@ -72,7 +72,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="user_sidetab" pref="0" max="32767" attributes="0"/>
+              <Component id="user_sidetab" pref="702" max="32767" attributes="0"/>
               <Component id="user_multipanel" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
@@ -399,6 +399,9 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="99" red="ff" type="rgb"/>
                 </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[200, 80]"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="user_mouseclicked"/>
@@ -496,14 +499,21 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="325" max="-2" attributes="0"/>
+                          <EmptySpace pref="337" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="user_welcome_close" min="-2" pref="40" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="user_welcome_close" min="-2" pref="40" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                           <Component id="user_welcome_welcome" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -551,6 +561,16 @@
                       <Image iconType="3" name="/images/logo.png"/>
                     </Property>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="user_welcome_close">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/images/close.png"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="closebutton"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -612,11 +632,12 @@
                     <Component class="javax.swing.JTable" name="user_library_order">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="8" rowCount="0">
+                          <Table columnCount="9" rowCount="0">
                             <Column editable="false" title="No" type="java.lang.Integer"/>
                             <Column editable="false" title="Image" type="java.lang.Object"/>
                             <Column editable="false" title="ID" type="java.lang.Integer"/>
                             <Column editable="false" title="Name" type="java.lang.String"/>
+                            <Column editable="false" title="Author" type="java.lang.String"/>
                             <Column editable="false" title="Type" type="java.lang.String"/>
                             <Column editable="false" title="Quantity" type="java.lang.Integer"/>
                             <Column editable="false" title="Price" type="java.lang.Float"/>
@@ -635,7 +656,12 @@
                               <Editor/>
                               <Renderer/>
                             </Column>
-                            <Column maxWidth="160" minWidth="150" prefWidth="-1" resizable="true">
+                            <Column maxWidth="140" minWidth="120" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
                               <Renderer/>
@@ -699,36 +725,45 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
                                   <Component id="user_rent_image" min="-2" pref="150" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="user_rent_datereturn" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="user_rent_bookdaterent" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="user_rent_datereturn" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="user_rent_bookdaterent" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="user_rent_daterent" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="user_rent_bookdatereturn" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="user_rent_namebook" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="user_rent_type" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="user_rent_booktype" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="user_rent_bookname" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="user_rent_price" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="user_rent_bookprice" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="user_rent_author" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="user_rent_bookauthor" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
                                       </Group>
                                       <Group type="102" attributes="0">
-                                          <Component id="user_rent_daterent" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="user_rent_bookdatereturn" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="user_rent_namebook" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="user_rent_type" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="user_rent_booktype" min="-2" max="-2" attributes="0"/>
-                                              <Component id="user_rent_bookname" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="user_rent_price" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="user_rent_bookprice" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="166" max="-2" attributes="0"/>
                                           <Component id="user_rent_button" min="-2" pref="120" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -753,7 +788,7 @@
                               <Component id="user_rent_search" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
                                   <Component id="user_rent_image" min="-2" pref="210" max="-2" attributes="0"/>
                               </Group>
@@ -768,7 +803,12 @@
                                       <Component id="user_rent_type" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="user_rent_booktype" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="user_rent_author" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="user_rent_bookauthor" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="user_rent_datereturn" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="user_rent_bookdaterent" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -785,9 +825,9 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                           <Component id="user_rent_button" min="-2" pref="40" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -906,6 +946,22 @@
                     <Property name="verticalAlignment" type="int" value="3"/>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JLabel" name="user_rent_author">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Angsana New" size="36" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Author :"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="user_rent_bookauthor">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Angsana New" size="36" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#xe28;.&#xe14;&#xe23;.&#xe1e;&#xe31;&#xe19;&#xe18;&#xe01;&#xe32;&#xe19;&#xe15;&#xe4c; &#xe41;&#xe01;&#xe49;&#xe27;&#xe2a;&#xe31;&#xe07;&#xe2b;&#xe32;&#xe23;"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="user_panel_returnbook">
@@ -963,6 +1019,11 @@
                                           <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
                                           <Component id="user_return_button" min="-2" pref="120" max="-2" attributes="0"/>
                                       </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="user_return_author" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="user_return_bookauthor" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -980,7 +1041,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="233" max="-2" attributes="0"/>
+                                  <Component id="user_return_image" min="-2" pref="210" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="user_return_bookid" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -996,7 +1061,12 @@
                                       <Component id="user_return_type" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="user_return_booktype" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="user_return_author" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="user_return_bookauthor" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="user_return_daterent" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="user_return_bookdaterent" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1012,14 +1082,10 @@
                                       <Component id="user_return_bookfine" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="233" max="-2" attributes="0"/>
-                                  <Component id="user_return_image" min="-2" pref="210" max="-2" attributes="0"/>
-                              </Group>
                           </Group>
-                          <EmptySpace pref="133" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                           <Component id="user_return_button" min="-2" pref="40" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                          <EmptySpace pref="59" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1138,6 +1204,22 @@
                     <Property name="text" type="java.lang.String" value="00.00"/>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JLabel" name="user_return_author">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Angsana New" size="36" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Author :"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="user_return_bookauthor">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Angsana New" size="36" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#xe28;.&#xe14;&#xe23;.&#xe1e;&#xe31;&#xe19;&#xe18;&#xe01;&#xe32;&#xe19;&#xe15;&#xe4c; &#xe41;&#xe01;&#xe49;&#xe27;&#xe2a;&#xe31;&#xe07;&#xe2b;&#xe32;&#xe23;"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="user_panel_history">
@@ -1252,11 +1334,12 @@
                     <Component class="javax.swing.JTable" name="user_history_order">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="8" rowCount="0">
+                          <Table columnCount="9" rowCount="0">
                             <Column editable="false" title="No" type="java.lang.Integer"/>
                             <Column editable="false" title="Image" type="java.lang.Object"/>
                             <Column editable="false" title="ID" type="java.lang.Integer"/>
                             <Column editable="false" title="Name" type="java.lang.String"/>
+                            <Column editable="false" title="Author" type="java.lang.String"/>
                             <Column editable="false" title="Type" type="java.lang.String"/>
                             <Column editable="false" title="Quantity" type="java.lang.Integer"/>
                             <Column editable="false" title="Price" type="java.lang.Float"/>
@@ -1270,12 +1353,17 @@
                               <Editor/>
                               <Renderer/>
                             </Column>
-                            <Column maxWidth="160" minWidth="150" prefWidth="-1" resizable="true">
+                            <Column maxWidth="160" minWidth="130" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
-                            <Column maxWidth="160" minWidth="150" prefWidth="-1" resizable="true">
+                            <Column maxWidth="160" minWidth="130" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
                               <Renderer/>

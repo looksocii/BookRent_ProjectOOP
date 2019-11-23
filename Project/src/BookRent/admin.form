@@ -26,7 +26,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="admin_main" min="-2" pref="1200" max="-2" attributes="0"/>
+              <Component id="admin_main" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -501,11 +501,6 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="333" max="-2" attributes="0"/>
-                          <Component id="admin_welcome_welcome" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="337" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="311" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -518,12 +513,27 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" pref="333" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="admin_welcome_welcome" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="337" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="admin_welcome_close" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="admin_welcome_close" min="-2" pref="40" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                           <Component id="admin_welcome_welcome" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -571,6 +581,16 @@
                       <Image iconType="3" name="/images/logo.png"/>
                     </Property>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="admin_welcome_close">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/images/close.png"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="closebutton"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -635,11 +655,12 @@
                     <Component class="javax.swing.JTable" name="admin_library_order">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="6" rowCount="0">
+                          <Table columnCount="7" rowCount="0">
                             <Column editable="false" title="No" type="java.lang.Integer"/>
                             <Column editable="false" title="Image" type="java.lang.Object"/>
                             <Column editable="false" title="ID" type="java.lang.Integer"/>
                             <Column editable="false" title="Name" type="java.lang.String"/>
+                            <Column editable="false" title="Author" type="java.lang.String"/>
                             <Column editable="false" title="Type" type="java.lang.String"/>
                             <Column editable="false" title="Quantity" type="java.lang.Integer"/>
                           </Table>
@@ -657,6 +678,11 @@
                               <Renderer/>
                             </Column>
                             <Column maxWidth="160" minWidth="150" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
                               <Renderer/>
@@ -698,46 +724,46 @@
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Component id="admin_add_image" min="-2" pref="90" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Component id="admin_add_buttonimage" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Component id="admin_add_id" min="-2" pref="80" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Component id="admin_add_name" min="-2" pref="115" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="admin_add_author" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Component id="admin_add_type" min="-2" pref="100" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Component id="admin_add_quantity" min="-2" pref="70" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="admin_add_price" min="-2" pref="75" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="admin_add_buttonadd" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="17" max="32767" attributes="0"/>
-                              <Component id="admin_add_buttonedit" min="-2" pref="70" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="admin_add_buttonupdate" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="admin_add_buttondelete" min="-2" pref="70" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace pref="25" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="admin_add_image" alignment="1" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="admin_add_quantity" alignment="3" max="32767" attributes="0"/>
                                   <Component id="admin_add_type" alignment="3" max="32767" attributes="0"/>
                                   <Component id="admin_add_name" alignment="3" max="32767" attributes="0"/>
                                   <Component id="admin_add_id" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="admin_add_price" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="admin_add_buttonadd" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="admin_add_buttonupdate" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="admin_add_buttonimage" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="admin_add_buttonedit" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="admin_add_buttondelete" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="admin_add_author" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="admin_add_price" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="admin_add_image" alignment="1" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
@@ -782,12 +808,12 @@
                         <Property name="text" type="java.lang.String" value="Price"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="admin_add_buttonadd">
+                    <Component class="javax.swing.JButton" name="admin_add_buttonupdate">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Angsana New" size="22" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="ADD"/>
+                        <Property name="text" type="java.lang.String" value="Update"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="admin_add_buttonimage">
@@ -813,20 +839,20 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="admin_add_buttonedit">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Angsana New" size="22" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="Edit"/>
-                      </Properties>
-                    </Component>
                     <Component class="javax.swing.JButton" name="admin_add_buttondelete">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Angsana New" size="22" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Delete"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="admin_add_author">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Angsana New" size="22" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Author"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -1301,20 +1327,18 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                              <Component id="admin_staff_addusername" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="admin_staff_addusername" min="-2" pref="170" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="admin_staff_addpassword" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="admin_staff_addpassword" min="-2" pref="170" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="admin_staff_addfirstname" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="admin_staff_addfirstname" min="-2" pref="170" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="admin_staff_addlastname" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="admin_staff_addlastname" min="-2" pref="170" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="admin_staff_addbuttonadd" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="admin_staff_addbuttonupdate" min="-2" pref="90" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="admin_staff_buttonedit" min="-2" pref="80" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="admin_staff_buttondelete" min="-2" pref="80" max="-2" attributes="0"/>
-                              <EmptySpace pref="31" max="32767" attributes="0"/>
+                              <Component id="admin_staff_buttondelete" min="-2" pref="90" max="-2" attributes="0"/>
+                              <EmptySpace pref="29" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1322,19 +1346,16 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace pref="30" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="admin_staff_addlastname" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                       <Component id="admin_staff_addusername" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="admin_staff_addpassword" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="admin_staff_addfirstname" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="admin_staff_addlastname" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                      <Component id="admin_staff_addbuttonadd" alignment="3" max="32767" attributes="0"/>
-                                      <Group type="103" alignment="3" groupAlignment="3" attributes="0">
-                                          <Component id="admin_staff_buttonedit" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="admin_staff_buttondelete" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="admin_staff_buttondelete" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="admin_staff_addbuttonupdate" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
@@ -1375,20 +1396,12 @@
                         <Property name="text" type="java.lang.String" value="Lastname"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="admin_staff_addbuttonadd">
+                    <Component class="javax.swing.JButton" name="admin_staff_addbuttonupdate">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Angsana New" size="22" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="ADD"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="admin_staff_buttonedit">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Angsana New" size="22" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="Edit"/>
+                        <Property name="text" type="java.lang.String" value="Update"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="admin_staff_buttondelete">

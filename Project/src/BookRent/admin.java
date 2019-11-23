@@ -55,6 +55,7 @@ public class admin extends javax.swing.JFrame {
         admin_welcome_bookrent = new javax.swing.JLabel();
         admin_welcome_name = new javax.swing.JLabel();
         admin_welcome_logo = new javax.swing.JLabel();
+        admin_welcome_close = new javax.swing.JLabel();
         admin_panel_library = new javax.swing.JPanel();
         admin_library_search = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -65,11 +66,11 @@ public class admin extends javax.swing.JFrame {
         admin_add_type = new javax.swing.JTextField();
         admin_add_quantity = new javax.swing.JTextField();
         admin_add_price = new javax.swing.JTextField();
-        admin_add_buttonadd = new javax.swing.JButton();
+        admin_add_buttonupdate = new javax.swing.JButton();
         admin_add_buttonimage = new javax.swing.JButton();
         admin_add_image = new javax.swing.JLabel();
-        admin_add_buttonedit = new javax.swing.JButton();
         admin_add_buttondelete = new javax.swing.JButton();
+        admin_add_author = new javax.swing.JTextField();
         admin_panel_rent = new javax.swing.JPanel();
         admin_rent_search = new javax.swing.JTextField();
         admin_rent_jscroll = new javax.swing.JScrollPane();
@@ -91,8 +92,7 @@ public class admin extends javax.swing.JFrame {
         admin_staff_addpassword = new javax.swing.JPasswordField();
         admin_staff_addfirstname = new javax.swing.JTextField();
         admin_staff_addlastname = new javax.swing.JTextField();
-        admin_staff_addbuttonadd = new javax.swing.JButton();
-        admin_staff_buttonedit = new javax.swing.JButton();
+        admin_staff_addbuttonupdate = new javax.swing.JButton();
         admin_staff_buttondelete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -399,14 +399,17 @@ public class admin extends javax.swing.JFrame {
 
         admin_welcome_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
 
+        admin_welcome_close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
+        admin_welcome_close.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closebutton(evt);
+            }
+        });
+
         javax.swing.GroupLayout admin_panel_welcomeLayout = new javax.swing.GroupLayout(admin_panel_welcome);
         admin_panel_welcome.setLayout(admin_panel_welcomeLayout);
         admin_panel_welcomeLayout.setHorizontalGroup(
             admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_welcomeLayout.createSequentialGroup()
-                .addGap(333, 333, 333)
-                .addComponent(admin_welcome_welcome)
-                .addGap(337, 337, 337))
             .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
                 .addGap(311, 311, 311)
                 .addGroup(admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -416,11 +419,22 @@ public class admin extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(admin_welcome_bookrent)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_welcomeLayout.createSequentialGroup()
+                .addGap(333, 333, 333)
+                .addGroup(admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_welcomeLayout.createSequentialGroup()
+                        .addComponent(admin_welcome_welcome)
+                        .addGap(337, 337, 337))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_welcomeLayout.createSequentialGroup()
+                        .addComponent(admin_welcome_close, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20))))
         );
         admin_panel_welcomeLayout.setVerticalGroup(
             admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
-                .addGap(110, 110, 110)
+                .addGap(21, 21, 21)
+                .addComponent(admin_welcome_close, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49)
                 .addComponent(admin_welcome_welcome)
                 .addGap(43, 43, 43)
                 .addGroup(admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -445,14 +459,14 @@ public class admin extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No", "Image", "ID", "Name", "Type", "Quantity"
+                "No", "Image", "ID", "Name", "Author", "Type", "Quantity"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -471,8 +485,8 @@ public class admin extends javax.swing.JFrame {
             admin_library_order.getColumnModel().getColumn(1).setMaxWidth(190);
             admin_library_order.getColumnModel().getColumn(2).setMinWidth(150);
             admin_library_order.getColumnModel().getColumn(2).setMaxWidth(160);
-            admin_library_order.getColumnModel().getColumn(5).setMinWidth(80);
-            admin_library_order.getColumnModel().getColumn(5).setMaxWidth(90);
+            admin_library_order.getColumnModel().getColumn(6).setMinWidth(80);
+            admin_library_order.getColumnModel().getColumn(6).setMaxWidth(90);
         }
 
         admin_liblrary_add.setBackground(new java.awt.Color(255, 102, 0));
@@ -492,8 +506,8 @@ public class admin extends javax.swing.JFrame {
         admin_add_price.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_add_price.setText("Price");
 
-        admin_add_buttonadd.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
-        admin_add_buttonadd.setText("ADD");
+        admin_add_buttonupdate.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_add_buttonupdate.setText("Update");
 
         admin_add_buttonimage.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_add_buttonimage.setText("Image");
@@ -506,11 +520,11 @@ public class admin extends javax.swing.JFrame {
         admin_add_image.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_add_image.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        admin_add_buttonedit.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
-        admin_add_buttonedit.setText("Edit");
-
         admin_add_buttondelete.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_add_buttondelete.setText("Delete");
+
+        admin_add_author.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_add_author.setText("Author");
 
         javax.swing.GroupLayout admin_liblrary_addLayout = new javax.swing.GroupLayout(admin_liblrary_add);
         admin_liblrary_add.setLayout(admin_liblrary_addLayout);
@@ -519,42 +533,42 @@ public class admin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_liblrary_addLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(admin_add_image, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addComponent(admin_add_buttonimage)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addComponent(admin_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addComponent(admin_add_name, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(admin_add_author, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
                 .addComponent(admin_add_type, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addComponent(admin_add_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(admin_add_price, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(admin_add_buttonadd)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addComponent(admin_add_buttonedit, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(admin_add_buttonupdate)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(admin_add_buttondelete, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         admin_liblrary_addLayout.setVerticalGroup(
             admin_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(admin_liblrary_addLayout.createSequentialGroup()
+            .addComponent(admin_add_image, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_liblrary_addLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(admin_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(admin_add_quantity)
                     .addComponent(admin_add_type)
                     .addComponent(admin_add_name)
                     .addComponent(admin_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(admin_add_price, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(admin_add_buttonadd)
+                    .addComponent(admin_add_buttonupdate)
                     .addComponent(admin_add_buttonimage)
-                    .addComponent(admin_add_buttonedit)
-                    .addComponent(admin_add_buttondelete))
+                    .addComponent(admin_add_buttondelete)
+                    .addComponent(admin_add_author)
+                    .addComponent(admin_add_price, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26))
-            .addComponent(admin_add_image, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout admin_panel_libraryLayout = new javax.swing.GroupLayout(admin_panel_library);
@@ -813,11 +827,8 @@ public class admin extends javax.swing.JFrame {
         admin_staff_addlastname.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_staff_addlastname.setText("Lastname");
 
-        admin_staff_addbuttonadd.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
-        admin_staff_addbuttonadd.setText("ADD");
-
-        admin_staff_buttonedit.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
-        admin_staff_buttonedit.setText("Edit");
+        admin_staff_addbuttonupdate.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_staff_addbuttonupdate.setText("Update");
 
         admin_staff_buttondelete.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_staff_buttondelete.setText("Delete");
@@ -828,36 +839,32 @@ public class admin extends javax.swing.JFrame {
             admin_staff_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(admin_staff_addLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(admin_staff_addusername, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(admin_staff_addusername, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(admin_staff_addpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(admin_staff_addpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(admin_staff_addfirstname, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(admin_staff_addfirstname, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(admin_staff_addlastname, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(admin_staff_addlastname, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(admin_staff_addbuttonadd, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(admin_staff_addbuttonupdate, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(admin_staff_buttonedit, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(admin_staff_buttondelete, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addComponent(admin_staff_buttondelete, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         admin_staff_addLayout.setVerticalGroup(
             admin_staff_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_staff_addLayout.createSequentialGroup()
                 .addContainerGap(30, Short.MAX_VALUE)
-                .addGroup(admin_staff_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(admin_staff_addlastname)
+                .addGroup(admin_staff_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(admin_staff_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(admin_staff_addusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(admin_staff_addpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(admin_staff_addfirstname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(admin_staff_addfirstname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(admin_staff_addlastname))
                     .addGroup(admin_staff_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(admin_staff_addbuttonadd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(admin_staff_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(admin_staff_buttonedit)
-                            .addComponent(admin_staff_buttondelete))))
+                        .addComponent(admin_staff_buttondelete)
+                        .addComponent(admin_staff_addbuttonupdate)))
                 .addGap(20, 20, 20))
         );
 
@@ -907,7 +914,7 @@ public class admin extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(admin_main, javax.swing.GroupLayout.PREFERRED_SIZE, 1200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(admin_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -1016,6 +1023,10 @@ public class admin extends javax.swing.JFrame {
         int ret = fileopen.showDialog(null, "Choose file");
     }//GEN-LAST:event_admin_add_buttonimageActionPerformed
 
+    private void closebutton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closebutton
+        dispose();
+    }//GEN-LAST:event_closebutton
+
     /**
      * @param args the command line arguments
      */
@@ -1052,10 +1063,10 @@ public class admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton admin_add_buttonadd;
+    private javax.swing.JTextField admin_add_author;
     private javax.swing.JButton admin_add_buttondelete;
-    private javax.swing.JButton admin_add_buttonedit;
     private javax.swing.JButton admin_add_buttonimage;
+    private javax.swing.JButton admin_add_buttonupdate;
     private javax.swing.JTextField admin_add_id;
     private javax.swing.JLabel admin_add_image;
     private javax.swing.JTextField admin_add_name;
@@ -1081,13 +1092,12 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JTable admin_return_order;
     private javax.swing.JPanel admin_sidetab;
     private javax.swing.JPanel admin_staff_add;
-    private javax.swing.JButton admin_staff_addbuttonadd;
+    private javax.swing.JButton admin_staff_addbuttonupdate;
     private javax.swing.JTextField admin_staff_addfirstname;
     private javax.swing.JTextField admin_staff_addlastname;
     private javax.swing.JPasswordField admin_staff_addpassword;
     private javax.swing.JTextField admin_staff_addusername;
     private javax.swing.JButton admin_staff_buttondelete;
-    private javax.swing.JButton admin_staff_buttonedit;
     private javax.swing.JTable admin_staff_order;
     private javax.swing.JScrollPane admin_staff_scroll;
     private javax.swing.JTextField admin_staff_search;
@@ -1116,6 +1126,7 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JScrollPane admin_user_scroll;
     private javax.swing.JTextField admin_user_search;
     private javax.swing.JLabel admin_welcome_bookrent;
+    private javax.swing.JLabel admin_welcome_close;
     private javax.swing.JLabel admin_welcome_logo;
     private javax.swing.JLabel admin_welcome_name;
     private javax.swing.JLabel admin_welcome_welcome;
