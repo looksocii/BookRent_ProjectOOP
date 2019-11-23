@@ -50,6 +50,7 @@ public class login extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jPanel2 = new RoundedPanel (50, new Color(102,102,255));
         jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         bookfly = new javax.swing.JLabel();
@@ -154,6 +155,15 @@ public class login extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 460, 90));
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
+        jLabel6.setText("jLabel6");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonclose(evt);
+            }
+        });
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 10, 40, 40));
+
         jLabel5.setFont(new java.awt.Font("Angsana New", 1, 28)); // NOI18N
         jLabel5.setText("Welcome BookRent system Is a program that will allow users");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, -1));
@@ -185,6 +195,10 @@ public class login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonclose(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonclose
+        dispose();
+    }//GEN-LAST:event_buttonclose
 
     /**
      * @param args the command line arguments
@@ -231,6 +245,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;

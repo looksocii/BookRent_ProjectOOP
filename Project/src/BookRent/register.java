@@ -41,6 +41,7 @@ public class register extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         bookfly = new javax.swing.JLabel();
         jPanel2 = new RoundedPanel (30, new Color(255,255,166));
         jPanel3 = new RoundedPanel (30, new Color(102,102,255));
@@ -64,6 +65,14 @@ public class register extends javax.swing.JFrame {
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closebutton(evt);
+            }
+        });
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 10, 40, 40));
 
         bookfly.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login1.png"))); // NOI18N
         jPanel1.add(bookfly, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
@@ -248,6 +257,10 @@ public class register extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtemailActionPerformed
 
+    private void closebutton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closebutton
+        dispose();
+    }//GEN-LAST:event_closebutton
+
     /**
      * @param args the command line arguments
      */
@@ -291,6 +304,7 @@ public class register extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

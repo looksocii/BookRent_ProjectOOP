@@ -31,7 +31,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="staff_main" alignment="0" pref="1200" max="32767" attributes="0"/>
+          <Component id="staff_main" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -704,10 +704,8 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="staff_add_id" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="staff_add_buttonimage" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                       <Component id="admin_staff_buttonedit" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="admin_staff_buttondelete" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="staff_add_buttonadd" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -715,6 +713,10 @@
                                       <Component id="staff_add_quantity" alignment="3" max="32767" attributes="0"/>
                                       <Component id="staff_add_type" alignment="3" max="32767" attributes="0"/>
                                       <Component id="staff_add_name" alignment="3" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="staff_add_id" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="staff_add_buttonimage" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>

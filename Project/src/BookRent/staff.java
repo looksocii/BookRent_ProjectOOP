@@ -505,9 +505,7 @@ public class staff extends javax.swing.JFrame {
             staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staff_liblrary_addLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addGroup(staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staff_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(staff_add_buttonimage)
+                .addGroup(staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(admin_staff_buttonedit)
                         .addComponent(admin_staff_buttondelete)
@@ -515,7 +513,10 @@ public class staff extends javax.swing.JFrame {
                         .addComponent(staff_add_price, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(staff_add_quantity)
                         .addComponent(staff_add_type)
-                        .addComponent(staff_add_name)))
+                        .addComponent(staff_add_name))
+                    .addGroup(staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(staff_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(staff_add_buttonimage)))
                 .addGap(26, 26, 26))
             .addComponent(staff_add_image, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -751,7 +752,7 @@ public class staff extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_main, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+            .addComponent(staff_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
