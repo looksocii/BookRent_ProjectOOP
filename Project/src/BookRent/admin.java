@@ -14,7 +14,7 @@ public class admin extends javax.swing.JFrame {
         initComponents();
         setVisible(true);
         setLocationRelativeTo(null);
-        setShape(new RoundRectangle2D.Double(0,0, 1000,700, 50,50));
+        setShape(new RoundRectangle2D.Double(0,0, 1200,700, 50,50));
     }
 
     /**
@@ -66,8 +66,10 @@ public class admin extends javax.swing.JFrame {
         admin_add_quantity = new javax.swing.JTextField();
         admin_add_price = new javax.swing.JTextField();
         admin_add_buttonadd = new javax.swing.JButton();
-        admin_add_jButtonimage = new javax.swing.JButton();
+        admin_add_buttonimage = new javax.swing.JButton();
         admin_add_image = new javax.swing.JLabel();
+        admin_add_buttonedit = new javax.swing.JButton();
+        admin_add_buttondelete = new javax.swing.JButton();
         admin_panel_rent = new javax.swing.JPanel();
         admin_rent_search = new javax.swing.JTextField();
         admin_rent_jscroll = new javax.swing.JScrollPane();
@@ -90,15 +92,17 @@ public class admin extends javax.swing.JFrame {
         admin_staff_addfirstname = new javax.swing.JTextField();
         admin_staff_addlastname = new javax.swing.JTextField();
         admin_staff_addbuttonadd = new javax.swing.JButton();
+        admin_staff_buttonedit = new javax.swing.JButton();
+        admin_staff_buttondelete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BookRent");
         setResizable(false);
 
         admin_main.setBackground(new java.awt.Color(255, 255, 153));
-        admin_main.setMaximumSize(new java.awt.Dimension(1000, 700));
-        admin_main.setMinimumSize(new java.awt.Dimension(1000, 700));
-        admin_main.setPreferredSize(new java.awt.Dimension(1000, 700));
+        admin_main.setMaximumSize(new java.awt.Dimension(1200, 700));
+        admin_main.setMinimumSize(new java.awt.Dimension(1200, 700));
+        admin_main.setPreferredSize(new java.awt.Dimension(1200, 700));
 
         admin_sidetab.setBackground(new java.awt.Color(255, 204, 0));
         admin_sidetab.setLayout(new javax.swing.BoxLayout(admin_sidetab, javax.swing.BoxLayout.PAGE_AXIS));
@@ -399,36 +403,34 @@ public class admin extends javax.swing.JFrame {
         admin_panel_welcome.setLayout(admin_panel_welcomeLayout);
         admin_panel_welcomeLayout.setHorizontalGroup(
             admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_welcomeLayout.createSequentialGroup()
+                .addGap(333, 333, 333)
+                .addComponent(admin_welcome_welcome)
+                .addGap(337, 337, 337))
             .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
-                .addGroup(admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(311, 311, 311)
+                .addGroup(admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(admin_welcome_name)
                     .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(244, 244, 244)
-                        .addComponent(admin_welcome_welcome))
-                    .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(218, 218, 218)
-                        .addGroup(admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(admin_welcome_name)
-                            .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
-                                .addComponent(admin_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(admin_welcome_bookrent)))))
-                .addGap(226, 226, 226))
+                        .addComponent(admin_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(admin_welcome_bookrent)))
+                .addContainerGap())
         );
         admin_panel_welcomeLayout.setVerticalGroup(
             admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
                 .addGap(110, 110, 110)
                 .addComponent(admin_welcome_welcome)
+                .addGap(43, 43, 43)
                 .addGroup(admin_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(67, 67, 67)
+                        .addGap(24, 24, 24)
                         .addComponent(admin_welcome_bookrent))
-                    .addGroup(admin_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(admin_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(57, 57, 57)
+                    .addComponent(admin_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56)
                 .addComponent(admin_welcome_name)
-                .addGap(225, 225, 225))
+                .addContainerGap())
         );
 
         admin_multipanel.add(admin_panel_welcome, "card6");
@@ -443,14 +445,14 @@ public class admin extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No", "Image", "ID", "Name", "Type", "Quantity", "Edit", "Delete"
+                "No", "Image", "ID", "Name", "Type", "Quantity"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -465,12 +467,12 @@ public class admin extends javax.swing.JFrame {
         if (admin_library_order.getColumnModel().getColumnCount() > 0) {
             admin_library_order.getColumnModel().getColumn(0).setMinWidth(50);
             admin_library_order.getColumnModel().getColumn(0).setMaxWidth(60);
-            admin_library_order.getColumnModel().getColumn(4).setHeaderValue("Type");
-            admin_library_order.getColumnModel().getColumn(5).setMinWidth(60);
-            admin_library_order.getColumnModel().getColumn(5).setMaxWidth(70);
-            admin_library_order.getColumnModel().getColumn(5).setHeaderValue("Quantity");
-            admin_library_order.getColumnModel().getColumn(6).setMinWidth(90);
-            admin_library_order.getColumnModel().getColumn(6).setMaxWidth(100);
+            admin_library_order.getColumnModel().getColumn(1).setMinWidth(180);
+            admin_library_order.getColumnModel().getColumn(1).setMaxWidth(190);
+            admin_library_order.getColumnModel().getColumn(2).setMinWidth(150);
+            admin_library_order.getColumnModel().getColumn(2).setMaxWidth(160);
+            admin_library_order.getColumnModel().getColumn(5).setMinWidth(80);
+            admin_library_order.getColumnModel().getColumn(5).setMaxWidth(90);
         }
 
         admin_liblrary_add.setBackground(new java.awt.Color(255, 102, 0));
@@ -493,39 +495,49 @@ public class admin extends javax.swing.JFrame {
         admin_add_buttonadd.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_add_buttonadd.setText("ADD");
 
-        admin_add_jButtonimage.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
-        admin_add_jButtonimage.setText("Image");
-        admin_add_jButtonimage.addActionListener(new java.awt.event.ActionListener() {
+        admin_add_buttonimage.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_add_buttonimage.setText("Image");
+        admin_add_buttonimage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                admin_add_jButtonimageActionPerformed(evt);
+                admin_add_buttonimageActionPerformed(evt);
             }
         });
 
         admin_add_image.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_add_image.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        admin_add_buttonedit.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_add_buttonedit.setText("Edit");
+
+        admin_add_buttondelete.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_add_buttondelete.setText("Delete");
+
         javax.swing.GroupLayout admin_liblrary_addLayout = new javax.swing.GroupLayout(admin_liblrary_add);
         admin_liblrary_add.setLayout(admin_liblrary_addLayout);
         admin_liblrary_addLayout.setHorizontalGroup(
             admin_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_liblrary_addLayout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addComponent(admin_add_image, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(admin_add_image, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(admin_add_jButtonimage, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(admin_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(admin_add_name, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(admin_add_buttonimage)
+                .addGap(18, 18, 18)
+                .addComponent(admin_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(admin_add_name, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(admin_add_type, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
+                .addGap(18, 18, 18)
                 .addComponent(admin_add_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(admin_add_price, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(admin_add_buttonadd, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+                .addGap(18, 18, 18)
+                .addComponent(admin_add_buttonadd)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(admin_add_buttonedit, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(admin_add_buttondelete, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         admin_liblrary_addLayout.setVerticalGroup(
             admin_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -538,7 +550,9 @@ public class admin extends javax.swing.JFrame {
                     .addComponent(admin_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(admin_add_price, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(admin_add_buttonadd)
-                    .addComponent(admin_add_jButtonimage))
+                    .addComponent(admin_add_buttonimage)
+                    .addComponent(admin_add_buttonedit)
+                    .addComponent(admin_add_buttondelete))
                 .addGap(26, 26, 26))
             .addComponent(admin_add_image, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -547,23 +561,21 @@ public class admin extends javax.swing.JFrame {
         admin_panel_library.setLayout(admin_panel_libraryLayout);
         admin_panel_libraryLayout.setHorizontalGroup(
             admin_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_libraryLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(admin_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE)
-                    .addComponent(admin_library_search))
-                .addGap(39, 39, 39))
+            .addComponent(admin_liblrary_add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(admin_panel_libraryLayout.createSequentialGroup()
-                .addComponent(admin_liblrary_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addGroup(admin_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE)
+                    .addComponent(admin_library_search))
+                .addContainerGap())
         );
         admin_panel_libraryLayout.setVerticalGroup(
             admin_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_libraryLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(admin_library_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(admin_liblrary_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
@@ -615,20 +627,20 @@ public class admin extends javax.swing.JFrame {
         admin_panel_rentLayout.setHorizontalGroup(
             admin_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_rentLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(admin_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(admin_rent_jscroll)
-                    .addComponent(admin_rent_search, javax.swing.GroupLayout.DEFAULT_SIZE, 727, Short.MAX_VALUE))
-                .addGap(37, 37, 37))
+                .addGap(26, 26, 26)
+                .addGroup(admin_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(admin_rent_search)
+                    .addComponent(admin_rent_jscroll, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
         admin_panel_rentLayout.setVerticalGroup(
             admin_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(admin_panel_rentLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(admin_rent_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(admin_rent_jscroll, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(admin_rent_jscroll, javax.swing.GroupLayout.PREFERRED_SIZE, 591, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         admin_multipanel.add(admin_panel_rent, "card3");
@@ -677,28 +689,28 @@ public class admin extends javax.swing.JFrame {
         admin_panel_returnbook.setLayout(admin_panel_returnbookLayout);
         admin_panel_returnbookLayout.setHorizontalGroup(
             admin_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_returnbookLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(admin_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(admin_return_jscroll)
-                    .addComponent(admin_rent_search1, javax.swing.GroupLayout.DEFAULT_SIZE, 727, Short.MAX_VALUE))
-                .addGap(37, 37, 37))
+            .addGroup(admin_panel_returnbookLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(admin_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(admin_rent_search1)
+                    .addComponent(admin_return_jscroll, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
         admin_panel_returnbookLayout.setVerticalGroup(
             admin_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(admin_panel_returnbookLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(admin_rent_search1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(admin_return_jscroll, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(admin_return_jscroll, javax.swing.GroupLayout.PREFERRED_SIZE, 591, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         admin_multipanel.add(admin_panel_returnbook, "card4");
 
         admin_panel_user.setBackground(new java.awt.Color(255, 204, 0));
 
-        admin_user_search.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        admin_user_search.setFont(new java.awt.Font("Angsana New", 0, 30)); // NOI18N
 
         admin_user_order.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -734,9 +746,9 @@ public class admin extends javax.swing.JFrame {
         admin_panel_userLayout.setHorizontalGroup(
             admin_panel_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(admin_panel_userLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(26, 26, 26)
                 .addGroup(admin_panel_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(admin_user_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 750, Short.MAX_VALUE)
+                    .addComponent(admin_user_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE)
                     .addComponent(admin_user_search))
                 .addGap(26, 26, 26))
         );
@@ -744,10 +756,10 @@ public class admin extends javax.swing.JFrame {
             admin_panel_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(admin_panel_userLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(admin_user_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(admin_user_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 571, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addComponent(admin_user_search, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(admin_user_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 591, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         admin_multipanel.add(admin_panel_user, "card5");
@@ -761,14 +773,14 @@ public class admin extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No", "Username", "Firstname", "Lastname", "Edit", "Delete"
+                "No", "Username", "Firstname", "Lastname"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -779,15 +791,15 @@ public class admin extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        admin_staff_order.setPreferredSize(new java.awt.Dimension(451, 0));
         admin_staff_scroll.setViewportView(admin_staff_order);
         if (admin_staff_order.getColumnModel().getColumnCount() > 0) {
             admin_staff_order.getColumnModel().getColumn(0).setMinWidth(50);
             admin_staff_order.getColumnModel().getColumn(0).setMaxWidth(60);
-            admin_staff_order.getColumnModel().getColumn(4).setMinWidth(90);
-            admin_staff_order.getColumnModel().getColumn(4).setMaxWidth(100);
         }
 
         admin_staff_add.setBackground(new java.awt.Color(255, 102, 0));
+        admin_staff_add.setPreferredSize(new java.awt.Dimension(1000, 85));
 
         admin_staff_addusername.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_staff_addusername.setText("Username");
@@ -804,6 +816,12 @@ public class admin extends javax.swing.JFrame {
         admin_staff_addbuttonadd.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         admin_staff_addbuttonadd.setText("ADD");
 
+        admin_staff_buttonedit.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_staff_buttonedit.setText("Edit");
+
+        admin_staff_buttondelete.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_staff_buttondelete.setText("Delete");
+
         javax.swing.GroupLayout admin_staff_addLayout = new javax.swing.GroupLayout(admin_staff_add);
         admin_staff_add.setLayout(admin_staff_addLayout);
         admin_staff_addLayout.setHorizontalGroup(
@@ -819,7 +837,11 @@ public class admin extends javax.swing.JFrame {
                 .addComponent(admin_staff_addlastname, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(admin_staff_addbuttonadd, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(admin_staff_buttonedit, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(admin_staff_buttondelete, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         admin_staff_addLayout.setVerticalGroup(
             admin_staff_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -831,7 +853,11 @@ public class admin extends javax.swing.JFrame {
                         .addComponent(admin_staff_addusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(admin_staff_addpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(admin_staff_addfirstname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(admin_staff_addbuttonadd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(admin_staff_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(admin_staff_addbuttonadd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(admin_staff_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(admin_staff_buttonedit)
+                            .addComponent(admin_staff_buttondelete))))
                 .addGap(20, 20, 20))
         );
 
@@ -839,23 +865,21 @@ public class admin extends javax.swing.JFrame {
         admin_panel_staff.setLayout(admin_panel_staffLayout);
         admin_panel_staffLayout.setHorizontalGroup(
             admin_panel_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_staffLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(admin_panel_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(admin_staff_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE)
-                    .addComponent(admin_staff_search))
-                .addGap(39, 39, 39))
+            .addComponent(admin_staff_add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(admin_panel_staffLayout.createSequentialGroup()
-                .addComponent(admin_staff_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addGroup(admin_panel_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(admin_staff_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE)
+                    .addComponent(admin_staff_search))
+                .addContainerGap())
         );
         admin_panel_staffLayout.setVerticalGroup(
             admin_panel_staffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_panel_staffLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(admin_staff_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(admin_staff_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(admin_staff_search, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(admin_staff_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(admin_staff_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
@@ -882,7 +906,9 @@ public class admin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(admin_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(admin_main, javax.swing.GroupLayout.PREFERRED_SIZE, 1200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -985,10 +1011,10 @@ public class admin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_admin_mouseexited
 
-    private void admin_add_jButtonimageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_add_jButtonimageActionPerformed
+    private void admin_add_buttonimageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_add_buttonimageActionPerformed
         JFileChooser fileopen = new JFileChooser();
         int ret = fileopen.showDialog(null, "Choose file");
-    }//GEN-LAST:event_admin_add_jButtonimageActionPerformed
+    }//GEN-LAST:event_admin_add_buttonimageActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1027,9 +1053,11 @@ public class admin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton admin_add_buttonadd;
+    private javax.swing.JButton admin_add_buttondelete;
+    private javax.swing.JButton admin_add_buttonedit;
+    private javax.swing.JButton admin_add_buttonimage;
     private javax.swing.JTextField admin_add_id;
     private javax.swing.JLabel admin_add_image;
-    private javax.swing.JButton admin_add_jButtonimage;
     private javax.swing.JTextField admin_add_name;
     private javax.swing.JTextField admin_add_price;
     private javax.swing.JTextField admin_add_quantity;
@@ -1058,6 +1086,8 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JTextField admin_staff_addlastname;
     private javax.swing.JPasswordField admin_staff_addpassword;
     private javax.swing.JTextField admin_staff_addusername;
+    private javax.swing.JButton admin_staff_buttondelete;
+    private javax.swing.JButton admin_staff_buttonedit;
     private javax.swing.JTable admin_staff_order;
     private javax.swing.JScrollPane admin_staff_scroll;
     private javax.swing.JTextField admin_staff_search;

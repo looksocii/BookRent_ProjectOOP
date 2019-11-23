@@ -13,7 +13,7 @@ public class user extends javax.swing.JFrame {
         initComponents();
         setVisible(true);
         setLocationRelativeTo(null);
-        setShape(new RoundRectangle2D.Double(0,0, 1000,700, 50,50));
+        setShape(new RoundRectangle2D.Double(0,0, 1200,700, 50,50));
     }
 
     /**
@@ -96,12 +96,14 @@ public class user extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BookRent");
+        setMaximumSize(new java.awt.Dimension(1200, 700));
+        setMinimumSize(new java.awt.Dimension(1200, 700));
         setResizable(false);
 
         user_main.setBackground(new java.awt.Color(255, 255, 153));
-        user_main.setMaximumSize(new java.awt.Dimension(1000, 700));
-        user_main.setMinimumSize(new java.awt.Dimension(1000, 700));
-        user_main.setPreferredSize(new java.awt.Dimension(1000, 700));
+        user_main.setMaximumSize(new java.awt.Dimension(1200, 700));
+        user_main.setMinimumSize(new java.awt.Dimension(1200, 700));
+        user_main.setPreferredSize(new java.awt.Dimension(1200, 700));
 
         user_sidetab.setBackground(new java.awt.Color(255, 204, 0));
         user_sidetab.setLayout(new javax.swing.BoxLayout(user_sidetab, javax.swing.BoxLayout.PAGE_AXIS));
@@ -359,10 +361,11 @@ public class user extends javax.swing.JFrame {
         user_sidetab.add(user_tab_logout);
 
         user_multipanel.setBackground(new java.awt.Color(255, 255, 153));
+        user_multipanel.setPreferredSize(new java.awt.Dimension(1000, 700));
         user_multipanel.setLayout(new java.awt.CardLayout());
 
         user_panel_welcome.setBackground(new java.awt.Color(255, 204, 0));
-        user_panel_welcome.setPreferredSize(new java.awt.Dimension(800, 700));
+        user_panel_welcome.setPreferredSize(new java.awt.Dimension(1000, 700));
 
         user_welcome_welcome.setFont(new java.awt.Font("Banaue", 1, 90)); // NOI18N
         user_welcome_welcome.setText("WELCOME");
@@ -379,32 +382,32 @@ public class user extends javax.swing.JFrame {
         user_panel_welcome.setLayout(user_panel_welcomeLayout);
         user_panel_welcomeLayout.setHorizontalGroup(
             user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_panel_welcomeLayout.createSequentialGroup()
-                .addGap(218, 218, 218)
-                .addGroup(user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(user_welcome_name)
-                    .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                        .addComponent(user_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(user_welcome_bookrent)))
-                .addGap(248, 248, 248))
             .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                .addGap(244, 244, 244)
-                .addComponent(user_welcome_welcome)
-                .addContainerGap())
+                .addGroup(user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(user_panel_welcomeLayout.createSequentialGroup()
+                        .addGap(333, 333, 333)
+                        .addComponent(user_welcome_welcome))
+                    .addGroup(user_panel_welcomeLayout.createSequentialGroup()
+                        .addGap(311, 311, 311)
+                        .addGroup(user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(user_welcome_name)
+                            .addGroup(user_panel_welcomeLayout.createSequentialGroup()
+                                .addComponent(user_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(user_welcome_bookrent)))))
+                .addGap(325, 325, 325))
         );
         user_panel_welcomeLayout.setVerticalGroup(
             user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(user_panel_welcomeLayout.createSequentialGroup()
                 .addGap(110, 110, 110)
                 .addComponent(user_welcome_welcome)
+                .addGap(43, 43, 43)
                 .addGroup(user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(67, 67, 67)
+                        .addGap(24, 24, 24)
                         .addComponent(user_welcome_bookrent))
-                    .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(user_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(user_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(57, 57, 57)
                 .addComponent(user_welcome_name)
                 .addGap(225, 225, 225))
@@ -413,6 +416,7 @@ public class user extends javax.swing.JFrame {
         user_multipanel.add(user_panel_welcome, "card6");
 
         user_panel_library.setBackground(new java.awt.Color(255, 204, 0));
+        user_panel_library.setPreferredSize(new java.awt.Dimension(1000, 700));
 
         user_library_search.setFont(new java.awt.Font("Angsana New", 0, 30)); // NOI18N
 
@@ -440,31 +444,46 @@ public class user extends javax.swing.JFrame {
             }
         });
         user_library_scroll.setViewportView(user_library_order);
+        if (user_library_order.getColumnModel().getColumnCount() > 0) {
+            user_library_order.getColumnModel().getColumn(0).setMinWidth(50);
+            user_library_order.getColumnModel().getColumn(0).setMaxWidth(60);
+            user_library_order.getColumnModel().getColumn(1).setMinWidth(150);
+            user_library_order.getColumnModel().getColumn(1).setMaxWidth(160);
+            user_library_order.getColumnModel().getColumn(2).setMinWidth(150);
+            user_library_order.getColumnModel().getColumn(2).setMaxWidth(160);
+            user_library_order.getColumnModel().getColumn(5).setMinWidth(80);
+            user_library_order.getColumnModel().getColumn(5).setMaxWidth(90);
+            user_library_order.getColumnModel().getColumn(6).setMinWidth(80);
+            user_library_order.getColumnModel().getColumn(6).setMaxWidth(90);
+            user_library_order.getColumnModel().getColumn(7).setMinWidth(100);
+            user_library_order.getColumnModel().getColumn(7).setMaxWidth(110);
+        }
 
         javax.swing.GroupLayout user_panel_libraryLayout = new javax.swing.GroupLayout(user_panel_library);
         user_panel_library.setLayout(user_panel_libraryLayout);
         user_panel_libraryLayout.setHorizontalGroup(
             user_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_panel_libraryLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(26, 26, 26)
                 .addGroup(user_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(user_library_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE)
+                    .addComponent(user_library_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE)
                     .addComponent(user_library_search))
-                .addGap(42, 42, 42))
+                .addGap(26, 26, 26))
         );
         user_panel_libraryLayout.setVerticalGroup(
             user_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_panel_libraryLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(user_library_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(user_library_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(user_library_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 591, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         user_multipanel.add(user_panel_library, "card2");
 
         user_panel_rent.setBackground(new java.awt.Color(255, 204, 0));
+        user_panel_rent.setPreferredSize(new java.awt.Dimension(1000, 700));
 
         user_rent_bookid.setFont(new java.awt.Font("Angsana New", 1, 84)); // NOI18N
         user_rent_bookid.setText("BOOK ID");
@@ -514,11 +533,10 @@ public class user extends javax.swing.JFrame {
             .addGroup(user_panel_rentLayout.createSequentialGroup()
                 .addGroup(user_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(user_panel_rentLayout.createSequentialGroup()
-                        .addGap(79, 79, 79)
+                        .addGap(150, 150, 150)
                         .addComponent(user_rent_image, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(69, 69, 69)
                         .addGroup(user_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(user_rent_button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(user_panel_rentLayout.createSequentialGroup()
                                 .addComponent(user_rent_datereturn)
                                 .addGap(18, 18, 18)
@@ -538,13 +556,16 @@ public class user extends javax.swing.JFrame {
                             .addGroup(user_panel_rentLayout.createSequentialGroup()
                                 .addComponent(user_rent_price)
                                 .addGap(18, 18, 18)
-                                .addComponent(user_rent_bookprice))))
+                                .addComponent(user_rent_bookprice))
+                            .addGroup(user_panel_rentLayout.createSequentialGroup()
+                                .addGap(97, 97, 97)
+                                .addComponent(user_rent_button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(user_panel_rentLayout.createSequentialGroup()
-                        .addGap(46, 46, 46)
+                        .addGap(70, 70, 70)
                         .addComponent(user_rent_bookid)
-                        .addGap(26, 26, 26)
-                        .addComponent(user_rent_search, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(36, 36, 36))
+                        .addGap(40, 40, 40)
+                        .addComponent(user_rent_search, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(98, 98, 98))
         );
         user_panel_rentLayout.setVerticalGroup(
             user_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -580,13 +601,13 @@ public class user extends javax.swing.JFrame {
                             .addComponent(user_rent_bookprice))))
                 .addGap(135, 135, 135)
                 .addComponent(user_rent_button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54))
+                .addGap(56, 56, 56))
         );
 
         user_multipanel.add(user_panel_rent, "card3");
 
         user_panel_returnbook.setBackground(new java.awt.Color(255, 204, 0));
-        user_panel_returnbook.setPreferredSize(new java.awt.Dimension(800, 700));
+        user_panel_returnbook.setPreferredSize(new java.awt.Dimension(1000, 700));
 
         user_return_bookid.setFont(new java.awt.Font("Angsana New", 1, 84)); // NOI18N
         user_return_bookid.setText("BOOK ID");
@@ -636,16 +657,10 @@ public class user extends javax.swing.JFrame {
             .addGroup(user_panel_returnbookLayout.createSequentialGroup()
                 .addGroup(user_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(user_panel_returnbookLayout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(user_return_bookid)
-                        .addGap(26, 26, 26)
-                        .addComponent(user_return_search, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(user_panel_returnbookLayout.createSequentialGroup()
-                        .addGap(79, 79, 79)
+                        .addGap(150, 150, 150)
                         .addComponent(user_return_image, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(69, 69, 69)
                         .addGroup(user_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(user_return_button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(user_panel_returnbookLayout.createSequentialGroup()
                                 .addComponent(user_return_daterent)
                                 .addGap(18, 18, 18)
@@ -665,8 +680,16 @@ public class user extends javax.swing.JFrame {
                             .addGroup(user_panel_returnbookLayout.createSequentialGroup()
                                 .addComponent(user_return_fine)
                                 .addGap(18, 18, 18)
-                                .addComponent(user_return_bookfine)))))
-                .addGap(36, 36, 36))
+                                .addComponent(user_return_bookfine))
+                            .addGroup(user_panel_returnbookLayout.createSequentialGroup()
+                                .addGap(97, 97, 97)
+                                .addComponent(user_return_button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(user_panel_returnbookLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(user_return_bookid)
+                        .addGap(40, 40, 40)
+                        .addComponent(user_return_search, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         user_panel_returnbookLayout.setVerticalGroup(
             user_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -700,14 +723,15 @@ public class user extends javax.swing.JFrame {
                     .addGroup(user_panel_returnbookLayout.createSequentialGroup()
                         .addGap(233, 233, 233)
                         .addComponent(user_return_image, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(135, 135, 135)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
                 .addComponent(user_return_button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54))
+                .addGap(58, 58, 58))
         );
 
         user_multipanel.add(user_panel_returnbook, "card4");
 
         user_panel_history.setBackground(new java.awt.Color(255, 204, 0));
+        user_panel_history.setPreferredSize(new java.awt.Dimension(1000, 700));
 
         user_history_title.setBackground(new java.awt.Color(255, 153, 0));
 
@@ -762,7 +786,18 @@ public class user extends javax.swing.JFrame {
         });
         user_history_scroll.setViewportView(user_history_order);
         if (user_history_order.getColumnModel().getColumnCount() > 0) {
-            user_history_order.getColumnModel().getColumn(7).setResizable(false);
+            user_history_order.getColumnModel().getColumn(0).setMinWidth(50);
+            user_history_order.getColumnModel().getColumn(0).setMaxWidth(60);
+            user_history_order.getColumnModel().getColumn(1).setMinWidth(150);
+            user_history_order.getColumnModel().getColumn(1).setMaxWidth(160);
+            user_history_order.getColumnModel().getColumn(2).setMinWidth(150);
+            user_history_order.getColumnModel().getColumn(2).setMaxWidth(160);
+            user_history_order.getColumnModel().getColumn(5).setMinWidth(80);
+            user_history_order.getColumnModel().getColumn(5).setMaxWidth(90);
+            user_history_order.getColumnModel().getColumn(6).setMinWidth(80);
+            user_history_order.getColumnModel().getColumn(6).setMaxWidth(90);
+            user_history_order.getColumnModel().getColumn(7).setMinWidth(100);
+            user_history_order.getColumnModel().getColumn(7).setMaxWidth(110);
         }
 
         javax.swing.GroupLayout user_panel_historyLayout = new javax.swing.GroupLayout(user_panel_history);
@@ -770,12 +805,12 @@ public class user extends javax.swing.JFrame {
         user_panel_historyLayout.setHorizontalGroup(
             user_panel_historyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(user_panel_historyLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(26, 26, 26)
                 .addGroup(user_panel_historyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(user_history_name)
-                    .addComponent(user_history_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
-                    .addComponent(user_history_search))
-                .addGap(16, 16, 16))
+                    .addComponent(user_history_search)
+                    .addComponent(user_history_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
             .addComponent(user_history_title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         user_panel_historyLayout.setVerticalGroup(
@@ -787,8 +822,8 @@ public class user extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(user_history_search, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(user_history_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addComponent(user_history_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         user_multipanel.add(user_panel_history, "card5");
@@ -812,7 +847,9 @@ public class user extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(user_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(user_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

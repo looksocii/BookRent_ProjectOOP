@@ -13,7 +13,7 @@ public class staff extends javax.swing.JFrame {
         initComponents();
         setVisible(true);
         setLocationRelativeTo(null);
-        setShape(new RoundRectangle2D.Double(0,0, 1000,700, 50,50));
+        setShape(new RoundRectangle2D.Double(0,0, 1200,700, 50,50));
     }
 
     /**
@@ -65,6 +65,8 @@ public class staff extends javax.swing.JFrame {
         staff_add_buttonadd = new javax.swing.JButton();
         staff_add_buttonimage = new javax.swing.JButton();
         staff_add_image = new javax.swing.JLabel();
+        admin_staff_buttonedit = new javax.swing.JButton();
+        admin_staff_buttondelete = new javax.swing.JButton();
         staff_panel_rent = new javax.swing.JPanel();
         staff_rent_search = new javax.swing.JTextField();
         staff_rent_jscroll = new javax.swing.JScrollPane();
@@ -80,12 +82,14 @@ public class staff extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BookRent");
-        setMaximumSize(new java.awt.Dimension(1000, 700));
-        setMinimumSize(new java.awt.Dimension(1000, 700));
+        setMaximumSize(new java.awt.Dimension(1200, 700));
+        setMinimumSize(new java.awt.Dimension(1200, 700));
         setResizable(false);
 
         staff_main.setBackground(new java.awt.Color(255, 255, 153));
-        staff_main.setPreferredSize(new java.awt.Dimension(1000, 700));
+        staff_main.setMaximumSize(new java.awt.Dimension(1200, 700));
+        staff_main.setMinimumSize(new java.awt.Dimension(1200, 700));
+        staff_main.setPreferredSize(new java.awt.Dimension(1200, 700));
 
         staff_sidetab.setBackground(new java.awt.Color(255, 204, 0));
         staff_sidetab.setLayout(new javax.swing.BoxLayout(staff_sidetab, javax.swing.BoxLayout.PAGE_AXIS));
@@ -328,7 +332,7 @@ public class staff extends javax.swing.JFrame {
         staff_tab_logoutLayout.setHorizontalGroup(
             staff_tab_logoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_tab_logoutLayout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
                 .addComponent(staff_tab_logoutlogo)
                 .addGap(18, 18, 18)
                 .addComponent(staff_txt_logout)
@@ -343,6 +347,7 @@ public class staff extends javax.swing.JFrame {
         staff_sidetab.add(staff_tab_logout);
 
         staff_multipanel.setBackground(new java.awt.Color(255, 255, 153));
+        staff_multipanel.setPreferredSize(new java.awt.Dimension(1000, 700));
         staff_multipanel.setLayout(new java.awt.CardLayout());
 
         staff_panel_welcome.setBackground(new java.awt.Color(255, 204, 0));
@@ -366,33 +371,32 @@ public class staff extends javax.swing.JFrame {
             .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
                 .addGroup(staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(244, 244, 244)
+                        .addGap(333, 333, 333)
                         .addComponent(staff_welcome_welcome))
                     .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(218, 218, 218)
+                        .addGap(311, 311, 311)
                         .addGroup(staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(staff_welcome_name)
                             .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
                                 .addComponent(staff_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(staff_welcome_bookrent)))))
-                .addGap(235, 235, 235))
+                .addGap(16, 16, 16))
         );
         staff_panel_welcomeLayout.setVerticalGroup(
             staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
                 .addGap(110, 110, 110)
                 .addComponent(staff_welcome_welcome)
+                .addGap(43, 43, 43)
                 .addGroup(staff_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(67, 67, 67)
+                        .addGap(24, 24, 24)
                         .addComponent(staff_welcome_bookrent))
-                    .addGroup(staff_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(staff_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(staff_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(57, 57, 57)
                 .addComponent(staff_welcome_name)
-                .addGap(225, 225, 225))
+                .addContainerGap())
         );
 
         staff_multipanel.add(staff_panel_welcome, "card6");
@@ -407,14 +411,14 @@ public class staff extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No", "Image", "ID", "Name", "Type", "Quantity", "Edit", "Delete"
+                "No", "Image", "ID", "Name", "Type", "Quantity"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -425,7 +429,18 @@ public class staff extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        staff_library_order.setPreferredSize(new java.awt.Dimension(451, 0));
         staff_library_scroll.setViewportView(staff_library_order);
+        if (staff_library_order.getColumnModel().getColumnCount() > 0) {
+            staff_library_order.getColumnModel().getColumn(0).setMinWidth(50);
+            staff_library_order.getColumnModel().getColumn(0).setMaxWidth(60);
+            staff_library_order.getColumnModel().getColumn(1).setMinWidth(180);
+            staff_library_order.getColumnModel().getColumn(1).setMaxWidth(190);
+            staff_library_order.getColumnModel().getColumn(2).setMinWidth(150);
+            staff_library_order.getColumnModel().getColumn(2).setMaxWidth(160);
+            staff_library_order.getColumnModel().getColumn(5).setMinWidth(80);
+            staff_library_order.getColumnModel().getColumn(5).setMaxWidth(90);
+        }
 
         staff_liblrary_add.setBackground(new java.awt.Color(255, 102, 0));
 
@@ -453,41 +468,54 @@ public class staff extends javax.swing.JFrame {
         staff_add_image.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
         staff_add_image.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        admin_staff_buttonedit.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_staff_buttonedit.setText("Edit");
+
+        admin_staff_buttondelete.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_staff_buttondelete.setText("Delete");
+
         javax.swing.GroupLayout staff_liblrary_addLayout = new javax.swing.GroupLayout(staff_liblrary_add);
         staff_liblrary_add.setLayout(staff_liblrary_addLayout);
         staff_liblrary_addLayout.setHorizontalGroup(
             staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_liblrary_addLayout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addComponent(staff_add_image, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(staff_add_image, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(staff_add_buttonimage, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(staff_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(staff_add_name, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(staff_add_buttonimage)
+                .addGap(18, 18, 18)
+                .addComponent(staff_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(staff_add_name, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(staff_add_type, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
+                .addGap(18, 18, 18)
                 .addComponent(staff_add_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(staff_add_price, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(staff_add_buttonadd, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(staff_add_buttonadd)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(admin_staff_buttonedit, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(admin_staff_buttondelete, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         staff_liblrary_addLayout.setVerticalGroup(
             staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staff_liblrary_addLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staff_add_quantity)
-                    .addComponent(staff_add_type)
-                    .addComponent(staff_add_name)
                     .addComponent(staff_add_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(staff_add_price, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(staff_add_buttonadd)
-                    .addComponent(staff_add_buttonimage))
+                    .addComponent(staff_add_buttonimage)
+                    .addGroup(staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(admin_staff_buttonedit)
+                        .addComponent(admin_staff_buttondelete)
+                        .addComponent(staff_add_buttonadd)
+                        .addComponent(staff_add_price, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(staff_add_quantity)
+                        .addComponent(staff_add_type)
+                        .addComponent(staff_add_name)))
                 .addGap(26, 26, 26))
             .addComponent(staff_add_image, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -496,23 +524,21 @@ public class staff extends javax.swing.JFrame {
         staff_panel_library.setLayout(staff_panel_libraryLayout);
         staff_panel_libraryLayout.setHorizontalGroup(
             staff_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_libraryLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(staff_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(staff_library_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE)
-                    .addComponent(staff_library_search))
-                .addGap(39, 39, 39))
             .addGroup(staff_panel_libraryLayout.createSequentialGroup()
-                .addComponent(staff_liblrary_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addGroup(staff_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(staff_library_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE)
+                    .addComponent(staff_library_search))
+                .addContainerGap())
+            .addComponent(staff_liblrary_add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         staff_panel_libraryLayout.setVerticalGroup(
             staff_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_libraryLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(staff_library_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(staff_library_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(staff_library_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(staff_liblrary_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
@@ -548,26 +574,38 @@ public class staff extends javax.swing.JFrame {
             }
         });
         staff_rent_jscroll.setViewportView(staff_rent_order);
+        if (staff_rent_order.getColumnModel().getColumnCount() > 0) {
+            staff_rent_order.getColumnModel().getColumn(0).setMinWidth(50);
+            staff_rent_order.getColumnModel().getColumn(0).setMaxWidth(60);
+            staff_rent_order.getColumnModel().getColumn(1).setMinWidth(100);
+            staff_rent_order.getColumnModel().getColumn(1).setMaxWidth(110);
+            staff_rent_order.getColumnModel().getColumn(3).setMinWidth(100);
+            staff_rent_order.getColumnModel().getColumn(3).setMaxWidth(110);
+            staff_rent_order.getColumnModel().getColumn(6).setMinWidth(80);
+            staff_rent_order.getColumnModel().getColumn(6).setMaxWidth(90);
+            staff_rent_order.getColumnModel().getColumn(7).setMinWidth(80);
+            staff_rent_order.getColumnModel().getColumn(7).setMaxWidth(90);
+        }
 
         javax.swing.GroupLayout staff_panel_rentLayout = new javax.swing.GroupLayout(staff_panel_rent);
         staff_panel_rent.setLayout(staff_panel_rentLayout);
         staff_panel_rentLayout.setHorizontalGroup(
             staff_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_rentLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(staff_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(staff_rent_jscroll)
-                    .addComponent(staff_rent_search, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE))
-                .addGap(37, 37, 37))
+                .addGap(26, 26, 26)
+                .addGroup(staff_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(staff_rent_search)
+                    .addComponent(staff_rent_jscroll, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
         staff_panel_rentLayout.setVerticalGroup(
             staff_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staff_panel_rentLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(staff_rent_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(staff_rent_jscroll, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(staff_rent_jscroll, javax.swing.GroupLayout.PREFERRED_SIZE, 593, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         staff_multipanel.add(staff_panel_rent, "card3");
@@ -601,33 +639,46 @@ public class staff extends javax.swing.JFrame {
             }
         });
         staff_return_jscroll.setViewportView(staff_return_order);
+        if (staff_return_order.getColumnModel().getColumnCount() > 0) {
+            staff_return_order.getColumnModel().getColumn(0).setMinWidth(50);
+            staff_return_order.getColumnModel().getColumn(0).setMaxWidth(60);
+            staff_return_order.getColumnModel().getColumn(3).setMinWidth(100);
+            staff_return_order.getColumnModel().getColumn(3).setMaxWidth(110);
+            staff_return_order.getColumnModel().getColumn(6).setMinWidth(80);
+            staff_return_order.getColumnModel().getColumn(6).setMaxWidth(90);
+            staff_return_order.getColumnModel().getColumn(7).setMinWidth(80);
+            staff_return_order.getColumnModel().getColumn(7).setMaxWidth(90);
+        }
 
         javax.swing.GroupLayout staff_panel_returnbookLayout = new javax.swing.GroupLayout(staff_panel_returnbook);
         staff_panel_returnbook.setLayout(staff_panel_returnbookLayout);
         staff_panel_returnbookLayout.setHorizontalGroup(
             staff_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, staff_panel_returnbookLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(staff_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(staff_return_jscroll)
-                    .addComponent(staff_rent_search1, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE))
-                .addGap(37, 37, 37))
+                .addGap(26, 26, 26)
+                .addGroup(staff_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(staff_rent_search1)
+                    .addComponent(staff_return_jscroll, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
         staff_panel_returnbookLayout.setVerticalGroup(
             staff_panel_returnbookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staff_panel_returnbookLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(staff_rent_search1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(staff_return_jscroll, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(staff_rent_search1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(staff_return_jscroll, javax.swing.GroupLayout.PREFERRED_SIZE, 593, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         staff_multipanel.add(staff_panel_returnbook, "card4");
 
         staff_panel_user.setBackground(new java.awt.Color(255, 204, 0));
+        staff_panel_user.setPreferredSize(new java.awt.Dimension(1000, 700));
 
         staff_user_search.setFont(new java.awt.Font("Angsana New", 0, 36)); // NOI18N
+        staff_user_search.setMinimumSize(new java.awt.Dimension(6, 42));
+        staff_user_search.setPreferredSize(new java.awt.Dimension(6, 42));
 
         staff_user_order.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -653,26 +704,30 @@ public class staff extends javax.swing.JFrame {
             }
         });
         staff_user_scroll.setViewportView(staff_user_order);
+        if (staff_user_order.getColumnModel().getColumnCount() > 0) {
+            staff_user_order.getColumnModel().getColumn(0).setMinWidth(50);
+            staff_user_order.getColumnModel().getColumn(0).setMaxWidth(60);
+        }
 
         javax.swing.GroupLayout staff_panel_userLayout = new javax.swing.GroupLayout(staff_panel_user);
         staff_panel_user.setLayout(staff_panel_userLayout);
         staff_panel_userLayout.setHorizontalGroup(
             staff_panel_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staff_panel_userLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(26, 26, 26)
                 .addGroup(staff_panel_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(staff_user_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 750, Short.MAX_VALUE)
-                    .addComponent(staff_user_search))
-                .addGap(35, 35, 35))
+                    .addComponent(staff_user_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE)
+                    .addComponent(staff_user_search, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
         staff_panel_userLayout.setVerticalGroup(
             staff_panel_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staff_panel_userLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(staff_user_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(staff_user_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 571, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addComponent(staff_user_search, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(staff_user_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 593, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         staff_multipanel.add(staff_panel_user, "card5");
@@ -683,8 +738,8 @@ public class staff extends javax.swing.JFrame {
             staff_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(staff_mainLayout.createSequentialGroup()
                 .addComponent(staff_sidetab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(staff_multipanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(staff_multipanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         staff_mainLayout.setVerticalGroup(
             staff_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -696,11 +751,11 @@ public class staff extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(staff_main, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(staff_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(staff_main, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE)
         );
 
         pack();
@@ -816,6 +871,8 @@ public class staff extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton admin_staff_buttondelete;
+    private javax.swing.JButton admin_staff_buttonedit;
     private javax.swing.JButton staff_add_buttonadd;
     private javax.swing.JButton staff_add_buttonimage;
     private javax.swing.JTextField staff_add_id;
