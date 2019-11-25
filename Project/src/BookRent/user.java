@@ -408,7 +408,7 @@ public class user extends javax.swing.JFrame {
                                 .addComponent(user_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(user_welcome_bookrent)))))
-                .addContainerGap(337, Short.MAX_VALUE))
+                .addGap(337, 337, 337))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_panel_welcomeLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(user_welcome_close, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
