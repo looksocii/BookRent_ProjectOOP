@@ -25,6 +25,7 @@ public class staff extends javax.swing.JFrame {
         DefaultTableModel dm;
         String addressImage1, addressImage2;
         private int num1=0, num2=0, num3=0, num4=0, num5=0, num6=0, num7=0, id=0, notImg1=0, notImg2=0;
+        private int staff1=0, staff2=0, staff3=0, staff4=0, staff5=0, staff6=0;
         DatabaseManagement db = new DatabaseManagement();
         // edited
     
@@ -236,6 +237,13 @@ public class staff extends javax.swing.JFrame {
         staff_user_search = new javax.swing.JTextField();
         staff_user_scroll = new javax.swing.JScrollPane();
         staff_user_order = new javax.swing.JTable();
+        admin_staff_add1 = new javax.swing.JPanel();
+        admin_user_addusername = new javax.swing.JTextField();
+        admin_user_addpassword = new javax.swing.JPasswordField();
+        admin_user_addfirstname = new javax.swing.JTextField();
+        admin_staff_addbuttonadd1 = new javax.swing.JButton();
+        admin_staff_buttondelete2 = new javax.swing.JButton();
+        admin_user_addlastname = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BookRent");
@@ -682,7 +690,7 @@ public class staff extends javax.swing.JFrame {
                 .addComponent(admin_staff_buttondelete1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(admin_staff_buttondelete, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         staff_liblrary_addLayout.setVerticalGroup(
             staff_liblrary_addLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -939,11 +947,100 @@ public class staff extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        staff_user_order.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                staff_user_orderMouseClicked(evt);
+            }
+        });
         staff_user_scroll.setViewportView(staff_user_order);
         if (staff_user_order.getColumnModel().getColumnCount() > 0) {
             staff_user_order.getColumnModel().getColumn(0).setMinWidth(50);
             staff_user_order.getColumnModel().getColumn(0).setMaxWidth(60);
         }
+
+        admin_staff_add1.setBackground(new java.awt.Color(255, 102, 0));
+        admin_staff_add1.setPreferredSize(new java.awt.Dimension(1000, 85));
+
+        admin_user_addusername.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_user_addusername.setText("Username");
+        admin_user_addusername.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admin_user_addusernameMouseClicked(evt);
+            }
+        });
+
+        admin_user_addpassword.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        admin_user_addpassword.setText("xxxxxxxxxxx");
+        admin_user_addpassword.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admin_user_addpasswordMouseClicked(evt);
+            }
+        });
+
+        admin_user_addfirstname.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_user_addfirstname.setText("Firstname");
+        admin_user_addfirstname.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admin_user_addfirstnameMouseClicked(evt);
+            }
+        });
+
+        admin_staff_addbuttonadd1.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_staff_addbuttonadd1.setText("ADD");
+        admin_staff_addbuttonadd1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                admin_staff_addbuttonadd1ActionPerformed(evt);
+            }
+        });
+
+        admin_staff_buttondelete2.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_staff_buttondelete2.setText("Delete");
+        admin_staff_buttondelete2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                admin_staff_buttondelete2ActionPerformed(evt);
+            }
+        });
+
+        admin_user_addlastname.setFont(new java.awt.Font("Angsana New", 0, 22)); // NOI18N
+        admin_user_addlastname.setText("Lastname");
+        admin_user_addlastname.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admin_user_addlastnameMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout admin_staff_add1Layout = new javax.swing.GroupLayout(admin_staff_add1);
+        admin_staff_add1.setLayout(admin_staff_add1Layout);
+        admin_staff_add1Layout.setHorizontalGroup(
+            admin_staff_add1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(admin_staff_add1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(admin_user_addusername, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(admin_user_addpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(admin_user_addfirstname, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(admin_user_addlastname, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(admin_staff_addbuttonadd1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(admin_staff_buttondelete2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32))
+        );
+        admin_staff_add1Layout.setVerticalGroup(
+            admin_staff_add1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admin_staff_add1Layout.createSequentialGroup()
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addGroup(admin_staff_add1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(admin_user_addusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(admin_user_addpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(admin_user_addfirstname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(admin_user_addlastname)
+                    .addComponent(admin_staff_addbuttonadd1)
+                    .addComponent(admin_staff_buttondelete2))
+                .addGap(20, 20, 20))
+        );
 
         javax.swing.GroupLayout staff_panel_userLayout = new javax.swing.GroupLayout(staff_panel_user);
         staff_panel_user.setLayout(staff_panel_userLayout);
@@ -954,7 +1051,8 @@ public class staff extends javax.swing.JFrame {
                 .addGroup(staff_panel_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(staff_user_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE)
                     .addComponent(staff_user_search, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(26, 26, 26))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(admin_staff_add1, javax.swing.GroupLayout.DEFAULT_SIZE, 1005, Short.MAX_VALUE)
         );
         staff_panel_userLayout.setVerticalGroup(
             staff_panel_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -962,8 +1060,10 @@ public class staff extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(staff_user_search, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(staff_user_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(staff_user_scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(admin_staff_add1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         staff_multipanel.add(staff_panel_user, "card5");
@@ -1086,7 +1186,7 @@ public class staff extends javax.swing.JFrame {
                 if(objects[0].equals(selectId)){
                     id = Integer.parseInt((String) objects[0]);
                     staff_add_image.setIcon((Icon) objects[1]);
-                    addressImage2 = shareMethod.imageAddress[row];
+                    addressImage2 = shareMethod.getImageAddress()[row];
                     staff_add_id.setText((String) objects[2]);
                     staff_add_name.setText((String) objects[3]);
                     staff_add_name1.setText((String) objects[4]);
@@ -1309,7 +1409,7 @@ public class staff extends javax.swing.JFrame {
     private void staff_user_searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_staff_user_searchKeyReleased
         // TODO add your handling code here:
         String str = staff_user_search.getText();
-        filterUser(str.toUpperCase());
+        filterUser(str);
     }//GEN-LAST:event_staff_user_searchKeyReleased
 
     private void jTable1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseEntered
@@ -1339,12 +1439,126 @@ public class staff extends javax.swing.JFrame {
             staff_add_quantity.setText("Quantity");
             staff_add_price.setText("Price");
             admin_staff_buttondelete1.setText("Add");
+            num1=0; num2=0; num3=0; num4=0; num5=0; num6=0; num7=0; id=0;
         }else{
             JOptionPane.showMessageDialog(null, "You have not selected.");
         }
         notImg1=0;
         notImg2=0;
     }//GEN-LAST:event_admin_staff_buttondeleteActionPerformed
+
+    private void admin_user_addusernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admin_user_addusernameMouseClicked
+        // TODO add your handling code here:
+        if(staff1 == 0){
+            admin_user_addusername.setText("");
+            staff1 = 1;
+        }
+    }//GEN-LAST:event_admin_user_addusernameMouseClicked
+
+    private void admin_user_addpasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admin_user_addpasswordMouseClicked
+        // TODO add your handling code here:
+        if(staff2 == 0){
+            admin_user_addpassword.setText("");
+            staff2 = 1;
+        }
+    }//GEN-LAST:event_admin_user_addpasswordMouseClicked
+
+    private void admin_user_addfirstnameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admin_user_addfirstnameMouseClicked
+        // TODO add your handling code here:
+        if(staff3 == 0){
+            admin_user_addfirstname.setText("");
+            staff3 = 1;
+        }
+    }//GEN-LAST:event_admin_user_addfirstnameMouseClicked
+
+    private void admin_staff_addbuttonadd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_staff_addbuttonadd1ActionPerformed
+        String[] arrayOfStaff = {admin_user_addusername.getText(), admin_user_addpassword.getText(), admin_user_addfirstname.getText(),
+                                admin_user_addlastname.getText(), "0", "0"};
+        if (staff6==0){
+            db.insertCustomerDataBase(arrayOfStaff, shareMethod.findAmountOfCustomer()+1);
+            JOptionPane.showMessageDialog(null, "Add Completed.");
+            setTableUser();
+            admin_user_addusername.setText("Username");
+            admin_user_addfirstname.setText("Firstname");
+            admin_user_addlastname.setText("Lastname");
+            admin_user_addpassword.setText("xxxxxxxxxx");
+            admin_staff_addbuttonadd1.setText("Add");
+            staff1=0; staff2=0; staff3=0; staff4=0; staff5=0; staff6=0;
+        }else{
+            db.updateCustomerDataBase(arrayOfStaff, id);
+            JOptionPane.showMessageDialog(null, "Update Completed.");
+            setTableUser();
+            admin_user_addusername.setText("Username");
+            admin_user_addfirstname.setText("Firstname");
+            admin_user_addlastname.setText("Lastname");
+            admin_user_addpassword.setText("xxxxxxxxxx");
+            admin_staff_addbuttonadd1.setText("Add");
+            staff1=0; staff2=0; staff3=0; staff4=0; staff5=0; staff6=0;
+        }
+    }//GEN-LAST:event_admin_staff_addbuttonadd1ActionPerformed
+
+    private void admin_staff_buttondelete2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_staff_buttondelete2ActionPerformed
+        // TODO add your handling code here:
+        if (id != 0){
+            db.deleteRowCustomerDataBase(id);
+            try {
+                shareMethod.updateBeforeDeleteCustomer(id);
+            } catch (IOException ex) {
+                Logger.getLogger(staff.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            JOptionPane.showMessageDialog(null, "Delete Done.");
+            setTableUser();
+            admin_user_addusername.setText("Username");
+            admin_user_addfirstname.setText("Firstname");
+            admin_user_addlastname.setText("Lastname");
+            admin_user_addpassword.setText("xxxxxxxxxx");
+            admin_staff_addbuttonadd1.setText("Add");
+            staff1=0; staff2=0; staff3=0; staff4=0; staff5=0; staff6=0;
+        }else{
+            JOptionPane.showMessageDialog(null, "You have not selected.");
+        }
+    }//GEN-LAST:event_admin_staff_buttondelete2ActionPerformed
+
+    private void admin_user_addlastnameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admin_user_addlastnameMouseClicked
+        // TODO add your handling code here:
+        if(staff4 == 0){
+            admin_user_addlastname.setText("");
+            staff4 = 1;
+        }
+    }//GEN-LAST:event_admin_user_addlastnameMouseClicked
+
+    private void staff_user_orderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staff_user_orderMouseClicked
+        // TODO add your handling code here:
+        Object[][] str = shareMethod.getCustomerData();
+        int row = staff_user_order.getSelectedRow();
+        String selectId = staff_user_order.getValueAt(row, 0).toString();
+        if (evt.getClickCount() == 2){
+            staff1=1; staff2=1; staff3=1; staff4=1; staff5=1; staff6=1;
+            for (Object[] objects : str) {
+                if(objects[0].equals(selectId)){
+                    id = Integer.parseInt((String) objects[0]);
+                    admin_user_addusername.setText((String) objects[1]);
+                    admin_user_addpassword.setText(shareMethod.getPassword()[id-1]);
+                    admin_user_addfirstname.setText((String) objects[2]);
+                    admin_user_addlastname.setText((String) objects[3]);
+                    admin_staff_addbuttonadd1.setText("Update");
+                }
+            }
+        }else{
+            for (Object[] objects : str) {
+                if(objects[0].equals(selectId)){
+                    id = Integer.parseInt((String) objects[0]);
+                    System.out.println(id);
+                }
+            }
+            admin_user_addusername.setText("Username");
+            admin_user_addpassword.setText("xxxxxxxxxxx");
+            admin_user_addfirstname.setText("Firstname");
+            admin_user_addlastname.setText("Lastname");
+            admin_staff_addbuttonadd1.setText("Add");
+            staff1=0; staff2=0; staff3=0; staff4=0; staff5=0; staff6=0;
+        }
+    }//GEN-LAST:event_staff_user_orderMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1382,8 +1596,15 @@ public class staff extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel admin_staff_add1;
+    private javax.swing.JButton admin_staff_addbuttonadd1;
     private javax.swing.JButton admin_staff_buttondelete;
     private javax.swing.JButton admin_staff_buttondelete1;
+    private javax.swing.JButton admin_staff_buttondelete2;
+    private javax.swing.JTextField admin_user_addfirstname;
+    private javax.swing.JTextField admin_user_addlastname;
+    private javax.swing.JPasswordField admin_user_addpassword;
+    private javax.swing.JTextField admin_user_addusername;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JButton staff_add_buttonimage;

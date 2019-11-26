@@ -18,6 +18,7 @@ public class ShareMethod {
     ResultSet resultSetPersonnel = data.readPersonnelDataBase();
     Object[][] bookData;
     Object[][] historyData;
+    private static String[] password;
     private int amount;
     private LinkedList<Double> OutstandingBalance = new LinkedList<Double>();
     private LinkedList<Integer> BookBalance = new LinkedList<Integer>();
@@ -88,6 +89,7 @@ public class ShareMethod {
     public int findAmountOfCustomer() {
         int i=0;
         try {
+            resultSetCustomer = data.readCustomerDataBase();
             resultSetCustomer.beforeFirst();
             while (resultSetCustomer.next()) {
                 i = resultSetCustomer.getInt(1);
@@ -136,6 +138,7 @@ public class ShareMethod {
                 amount = resultSetPersonnel.getInt(1);
             }
             bookData = new Object[amount][5];
+            password = new String[amount];
             System.out.println(amount);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -144,11 +147,13 @@ public class ShareMethod {
 
     public void UserAmount() {
         try {
+            resultSetCustomer = data.readCustomerDataBase();
             resultSetCustomer.beforeFirst();
             while (resultSetCustomer.next()) {
                 amount = resultSetCustomer.getInt(1);
             }
             bookData = new Object[amount][6];
+            password = new String[amount];
             System.out.println(amount);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -158,13 +163,14 @@ public class ShareMethod {
     public void bookHistoryAmount() {
         amount = 0;
         try {
+            resultSetHistory = data.readHistoryOfUserDataBase();
             resultSetHistory.beforeFirst();
             while (resultSetHistory.next()) {
                 if (username.equals(resultSetHistory.getString(2))) {
                     amount++;
                 }
             }
-            historyData = new Object[amount][8];
+            historyData = new Object[amount][9];
             System.out.println(amount);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -240,11 +246,12 @@ public class ShareMethod {
             resultSetPersonnel = data.readPersonnelDataBase();
             resultSetPersonnel.beforeFirst();
             while (resultSetPersonnel.next()) {
-                bookData[i][0] = resultSetPersonnel.getString(1).toUpperCase();
-                bookData[i][1] = resultSetPersonnel.getString(2).toUpperCase();
-                bookData[i][2] = resultSetPersonnel.getString(4).toUpperCase();
-                bookData[i][3] = resultSetPersonnel.getString(5).toUpperCase();
-                bookData[i][4] = resultSetPersonnel.getString(6).toUpperCase();
+                bookData[i][0] = resultSetPersonnel.getString(1);
+                bookData[i][1] = resultSetPersonnel.getString(2);
+                bookData[i][2] = resultSetPersonnel.getString(4);
+                bookData[i][3] = resultSetPersonnel.getString(5);
+                bookData[i][4] = resultSetPersonnel.getString(6);
+                password[i] = resultSetPersonnel.getString(3);
                 System.out.println(i);
                 i++;
             }
@@ -264,15 +271,16 @@ public class ShareMethod {
             while (resultSetHistory.next()) {
                 for (Object[] book : bookData) {
                     if (username.equals(resultSetHistory.getString(2))
-                            && (resultSetHistory.getString(4).toUpperCase().equals(book[2]))) {
+                            && (resultSetHistory.getString(4).equals(book[2]))) {
                         historyData[i][0] = i + 1 + "";
-                        historyData[i][1] = book[1];
-                        historyData[i][2] = book[2];
-                        historyData[i][3] = book[3];
-                        historyData[i][4] = book[4];
-                        historyData[i][5] = book[5];
-                        historyData[i][6] = resultSetHistory.getString(5).toUpperCase();
-                        historyData[i][7] = resultSetHistory.getString(6).toUpperCase();
+                        historyData[i][1] = book[2];
+                        historyData[i][2] = book[3];
+                        historyData[i][3] = book[4];
+                        historyData[i][4] = book[5];
+                        historyData[i][5] = resultSetHistory.getString(5);
+                        historyData[i][6] = resultSetHistory.getString(6);
+                        historyData[i][7] = resultSetHistory.getString(7);
+                        historyData[i][8] = resultSetHistory.getString(8);
                         System.out.println(historyData[i][7]);
                         i++;
                     }
@@ -294,13 +302,13 @@ public class ShareMethod {
             while (resultSetHistory.next()) {
                 if (resultSetHistory.getString(8).toUpperCase().equals("RETURNED")) {
                     historyData[i][0] = i + 1 + "";
-                    historyData[i][1] = resultSetHistory.getString(2).toUpperCase();
-                    historyData[i][2] = resultSetHistory.getString(3).toUpperCase();
-                    historyData[i][3] = resultSetHistory.getString(4).toUpperCase();
-                    historyData[i][4] = resultSetHistory.getString(5).toUpperCase();
-                    historyData[i][5] = resultSetHistory.getString(6).toUpperCase();
-                    historyData[i][6] = resultSetHistory.getString(7).toUpperCase();
-                    historyData[i][7] = resultSetHistory.getString(8).toUpperCase();
+                    historyData[i][1] = resultSetHistory.getString(2);
+                    historyData[i][2] = resultSetHistory.getString(3);
+                    historyData[i][3] = resultSetHistory.getString(4);
+                    historyData[i][4] = resultSetHistory.getString(5);
+                    historyData[i][5] = resultSetHistory.getString(6);
+                    historyData[i][6] = resultSetHistory.getString(7);
+                    historyData[i][7] = resultSetHistory.getString(8);
                     System.out.println(historyData[i][7]);
                     i++;
 
@@ -322,13 +330,13 @@ public class ShareMethod {
             while (resultSetHistory.next()) {
                 if (resultSetHistory.getString(8).toUpperCase().equals("RENTED")) {
                     historyData[i][0] = i + 1 + "";
-                    historyData[i][1] = resultSetHistory.getString(2).toUpperCase();
-                    historyData[i][2] = resultSetHistory.getString(3).toUpperCase();
-                    historyData[i][3] = resultSetHistory.getString(4).toUpperCase();
-                    historyData[i][4] = resultSetHistory.getString(5).toUpperCase();
-                    historyData[i][5] = resultSetHistory.getString(6).toUpperCase();
-                    historyData[i][6] = resultSetHistory.getString(7).toUpperCase();
-                    historyData[i][7] = resultSetHistory.getString(8).toUpperCase();
+                    historyData[i][1] = resultSetHistory.getString(2);
+                    historyData[i][2] = resultSetHistory.getString(3);
+                    historyData[i][3] = resultSetHistory.getString(4);
+                    historyData[i][4] = resultSetHistory.getString(5);
+                    historyData[i][5] = resultSetHistory.getString(6);
+                    historyData[i][6] = resultSetHistory.getString(7);
+                    historyData[i][7] = resultSetHistory.getString(8);
                     System.out.println(historyData[i][7]);
                     i++;
                 }
@@ -347,12 +355,13 @@ public class ShareMethod {
             resultSetCustomer = data.readCustomerDataBase();
             resultSetCustomer.beforeFirst();
             while (resultSetCustomer.next()) {
-                bookData[i][0] = resultSetCustomer.getString(1).toUpperCase();
-                bookData[i][1] = resultSetCustomer.getString(2).toUpperCase();
-                bookData[i][2] = resultSetCustomer.getString(4).toUpperCase();
-                bookData[i][3] = resultSetCustomer.getString(5).toUpperCase();
-                bookData[i][4] = resultSetCustomer.getString(6).toUpperCase();
-                bookData[i][5] = resultSetCustomer.getString(7).toUpperCase();
+                bookData[i][0] = resultSetCustomer.getString(1);
+                bookData[i][1] = resultSetCustomer.getString(2);
+                password[i] = resultSetCustomer.getString(3);
+                bookData[i][2] = resultSetCustomer.getString(4);
+                bookData[i][3] = resultSetCustomer.getString(5);
+                bookData[i][4] = resultSetCustomer.getString(6);
+                bookData[i][5] = resultSetCustomer.getString(7);
                 System.out.println(bookData[i][1]);
                 i++;
             }
@@ -401,9 +410,11 @@ public class ShareMethod {
 
     public int setBookDataDecrease(String ID) {
         try {
+            resultSetBookStore = data.readBookStoreDataBase();
             resultSetBookStore.beforeFirst();
             while(resultSetBookStore.next()){
                 if(ID.equals(resultSetBookStore.getString(4))){
+                        System.out.println(Integer.parseInt(resultSetBookStore.getString(5))-1);
                         return Integer.parseInt(resultSetBookStore.getString(5))-1;
                 }
             }
@@ -449,6 +460,50 @@ public class ShareMethod {
         }
         return adDress;
     }
+    
+    public void updateBeforeDeletePersonnel(int ID) throws IOException {
+        resultSetPersonnel = data.readPersonnelDataBase();
+        try {
+            System.out.println("come in");
+            resultSetPersonnel.beforeFirst();
+            while (resultSetPersonnel.next()) {
+                String insertData = "UPDATE Personnel SET ID = ";
+                if(resultSetPersonnel.getInt(1)>=ID){
+                    insertData += resultSetPersonnel.getInt(1)-1;
+                }else{
+                    insertData += resultSetPersonnel.getInt(1);
+                }
+                insertData += " WHERE ID =" + resultSetPersonnel.getInt(1) + ";";
+                System.out.println(insertData);
+                data.DataBase().executeUpdate(insertData);
+                System.out.println("updated");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void updateBeforeDeleteCustomer(int ID) throws IOException {
+        try {
+            System.out.println("come in");
+            resultSetCustomer = data.readCustomerDataBase();
+            resultSetCustomer.beforeFirst();
+            while (resultSetCustomer.next()) {
+                String insertData = "UPDATE Customer SET ID = ";
+                if(resultSetCustomer.getInt(1)>=ID){
+                    insertData += resultSetCustomer.getInt(1)-1;
+                }else{
+                    insertData += resultSetCustomer.getInt(1);
+                }
+                insertData += " WHERE ID =" + resultSetCustomer.getInt(1) + ";";
+                System.out.println(insertData);
+                data.DataBase().executeUpdate(insertData);
+                System.out.println("updated");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     public LinkedList<Double> getOutstandingBalance() {
         return OutstandingBalance;
@@ -466,4 +521,19 @@ public class ShareMethod {
         BookBalance = bookBalance;
     }
     
+    public String[] getPassword() {
+        return password;
+    }
+
+    public void setPassword(String[] password) {
+        this.password = password;
+    }
+
+    public static String[] getImageAddress() {
+        return imageAddress;
+    }
+
+    public static void setImageAddress(String[] imageAddress) {
+        ShareMethod.imageAddress = imageAddress;
+    }
 }

@@ -1,6 +1,7 @@
 package BookRent;
 
 import java.awt.Color;
+import java.awt.Image;
 import java.awt.geom.RoundRectangle2D;
 import java.io.IOException;
 import static java.lang.Math.abs;
@@ -13,6 +14,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -23,21 +26,26 @@ public class user extends javax.swing.JFrame {
     DatabaseManagement db = new DatabaseManagement();
     ShareMethod shareMethod = new ShareMethod();
     DefaultTableModel dm;
-    
+
     //edited---------------------------------------------------------------------------------
     //ตัวแปรมารอรับ
     private double total, price;
-    
+    private String id, outBook;
+
     //สร้าง ResultSet เก็บไว้ในตัวแปรชื่อ book
     ResultSet book = new DatabaseManagement().readBookStoreDataBase();
     ResultSet history = new DatabaseManagement().readHistoryOfUserDataBase();
-    
+
     //set วัน/เดือน/ปี ปัจจุบัน
     Calendar c = Calendar.getInstance();
     SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
     private String currentDate = df.format(c.getTime());
-    //edited---------------------------------------------------------------------------------
     
+    ImageIcon Image = new ImageIcon("C:\\Users\\Puntakarn\\Desktop\\Full\\BookRent\\src\\images\\bg.png");
+    Image newImage = Image.getImage().getScaledInstance(150, 220, 0);
+    Icon bgPNG = new ImageIcon(newImage);
+    //edited---------------------------------------------------------------------------------
+
     /**
      * Creates new form user
      */
@@ -46,10 +54,10 @@ public class user extends javax.swing.JFrame {
         initComponents();
         setVisible(true);
         setLocationRelativeTo(null);
-        setShape(new RoundRectangle2D.Double(0,0, 1200,700, 50,50));
-        
-        user_welcome_name.setText(ShareMethod.firstName+" "+ShareMethod.lastName);
-        user_history_name.setText(ShareMethod.firstName+" "+ShareMethod.lastName);
+        setShape(new RoundRectangle2D.Double(0, 0, 1200, 700, 50, 50));
+
+        user_welcome_name.setText(ShareMethod.firstName + " " + ShareMethod.lastName);
+        user_history_name.setText(ShareMethod.firstName + " " + ShareMethod.lastName);
         try {
             setTableBook();
             setTableHistory();
@@ -57,31 +65,31 @@ public class user extends javax.swing.JFrame {
             Logger.getLogger(user.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    private void filterOrder(String query){
+
+    private void filterOrder(String query) {
         dm = (DefaultTableModel) user_library_order.getModel();
         TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel>(dm);
         user_library_order.setRowSorter(tr);
         tr.setRowFilter(RowFilter.regexFilter(query));
     }
-    
-    private void filterHistory(String query){
+
+    private void filterHistory(String query) {
         dm = (DefaultTableModel) user_history_order.getModel();
         TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel>(dm);
         user_history_order.setRowSorter(tr);
         tr.setRowFilter(RowFilter.regexFilter(query));
     }
-    
+
     //edited---------------------------------------------------------------------------------
     //เมทเธทบวกวันที่เพิ่มจากวันที่ปัจจุบัน
-    public String dateAdd(int day){
+    public String dateAdd(int day) {
         Date currentDate = new Date();
         Calendar c = Calendar.getInstance();
         c.add(Calendar.DATE, day);
         Date currentDatePlusOne = c.getTime();
         return df.format(currentDatePlusOne);
     }
-    
+
     //เมทเธทหาความต่างของวันที่
     public int dateDiff(String startDate, String endDate) {
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
@@ -97,61 +105,61 @@ public class user extends javax.swing.JFrame {
         return 0;
     }
     //edited---------------------------------------------------------------------------------
-    
-    public void setTableBook() throws IOException{
+
+    public void setTableBook() throws IOException {
         user_library_order.setModel(new javax.swing.table.DefaultTableModel(shareMethod.getBookStoreData(),
-                                new String[] { "No", "Image", "ID", "BookName", "Author", "Category", "Quantity",
-                                                "Price" }) {
-                        Class[] types = new Class[] { java.lang.String.class, javax.swing.Icon.class,
-                                        java.lang.String.class, java.lang.String.class, java.lang.String.class,
-                                        java.lang.String.class, java.lang.String.class, java.lang.String.class };
-                        boolean[] canEdit = new boolean[] { false, false, false, false, false, false, false, false };
+                new String[]{"No", "Image", "ID", "BookName", "Author", "Category", "Quantity",
+                    "Price"}) {
+            Class[] types = new Class[]{java.lang.String.class, javax.swing.Icon.class,
+                java.lang.String.class, java.lang.String.class, java.lang.String.class,
+                java.lang.String.class, java.lang.String.class, java.lang.String.class};
+            boolean[] canEdit = new boolean[]{false, false, false, false, false, false, false, false};
 
-                        public Class getColumnClass(int columnIndex) {
-                                return types[columnIndex];
-                        }
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
 
-                        public boolean isCellEditable(int rowIndex, int columnIndex) {
-                                return canEdit[columnIndex];
-                        }
-                });
-                user_library_order.setRowHeight(100);
-                
-            if (user_library_order.getColumnModel().getColumnCount() > 0) {
-                user_library_order.getColumnModel().getColumn(0).setMinWidth(30);
-                user_library_order.getColumnModel().getColumn(0).setMaxWidth(40);
-                user_library_order.getColumnModel().getColumn(1).setMinWidth(150);
-                user_library_order.getColumnModel().getColumn(1).setMaxWidth(160);
-                user_library_order.getColumnModel().getColumn(2).setMinWidth(150);
-                user_library_order.getColumnModel().getColumn(2).setMaxWidth(160);
-                user_library_order.getColumnModel().getColumn(5).setMinWidth(80);
-                user_library_order.getColumnModel().getColumn(5).setMaxWidth(90);
-                user_library_order.getColumnModel().getColumn(6).setMinWidth(80);
-                user_library_order.getColumnModel().getColumn(6).setMaxWidth(90);
-                user_library_order.getColumnModel().getColumn(7).setMinWidth(100);
-                user_library_order.getColumnModel().getColumn(7).setMaxWidth(110);
-            }        
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+        user_library_order.setRowHeight(100);
+
+        if (user_library_order.getColumnModel().getColumnCount() > 0) {
+            user_library_order.getColumnModel().getColumn(0).setMinWidth(30);
+            user_library_order.getColumnModel().getColumn(0).setMaxWidth(40);
+            user_library_order.getColumnModel().getColumn(1).setMinWidth(150);
+            user_library_order.getColumnModel().getColumn(1).setMaxWidth(160);
+            user_library_order.getColumnModel().getColumn(2).setMinWidth(150);
+            user_library_order.getColumnModel().getColumn(2).setMaxWidth(160);
+            user_library_order.getColumnModel().getColumn(5).setMinWidth(80);
+            user_library_order.getColumnModel().getColumn(5).setMaxWidth(90);
+            user_library_order.getColumnModel().getColumn(6).setMinWidth(80);
+            user_library_order.getColumnModel().getColumn(6).setMaxWidth(90);
+            user_library_order.getColumnModel().getColumn(7).setMinWidth(100);
+            user_library_order.getColumnModel().getColumn(7).setMaxWidth(110);
         }
-    
-        public void setTableHistory(){
-            user_history_order.setModel(new javax.swing.table.DefaultTableModel(shareMethod.getHistoryData(),
-                                    new String[] { "No", "Image", "ID", "BookName", "Author", "Category",
-                                                    "Price", "Time", "ReturnTime", "Status"}) {
-                            Class[] types = new Class[] { java.lang.String.class, java.lang.String.class,
-                                            java.lang.String.class, java.lang.String.class, java.lang.String.class,
-                                            java.lang.String.class, java.lang.String.class, java.lang.String.class,
-                                            java.lang.String.class, java.lang.String.class };
-                            boolean[] canEdit = new boolean[] { false, false, false, false, false, false, false, false };
+    }
 
-                            public Class getColumnClass(int columnIndex) {
-                                    return types[columnIndex];
-                            }
+    public void setTableHistory() {
+        user_history_order.setModel(new javax.swing.table.DefaultTableModel(shareMethod.getHistoryData(),
+                new String[]{"No", "BookID", "BookName", "Author", "Category",
+                    "Price", "RentTime", "ReturnTime", "Status"}) {
+            Class[] types = new Class[]{java.lang.String.class, java.lang.String.class,
+                java.lang.String.class, java.lang.String.class, java.lang.String.class,
+                java.lang.String.class, java.lang.String.class, java.lang.String.class,
+                java.lang.String.class};
+            boolean[] canEdit = new boolean[]{false, false, false, false, false, false, false, false, false};
 
-                            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                                    return canEdit[columnIndex];
-                            }
-                    });        
-        }
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -1094,79 +1102,79 @@ public class user extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void user_mouseclicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_mouseclicked
-        if (evt.getSource()== user_tab_welcome){
+        if (evt.getSource() == user_tab_welcome) {
             user_panel_welcome.setVisible(true);
             user_panel_library.setVisible(false);
             user_panel_rent.setVisible(false);
             user_panel_returnbook.setVisible(false);
             user_panel_history.setVisible(false);
         }
-        if (evt.getSource()== user_tab_library){
+        if (evt.getSource() == user_tab_library) {
             user_panel_welcome.setVisible(false);
             user_panel_library.setVisible(true);
             user_panel_rent.setVisible(false);
             user_panel_returnbook.setVisible(false);
             user_panel_history.setVisible(false);
         }
-        if (evt.getSource()== user_tab_rent){
+        if (evt.getSource() == user_tab_rent) {
             user_panel_welcome.setVisible(false);
             user_panel_library.setVisible(false);
             user_panel_rent.setVisible(true);
             user_panel_returnbook.setVisible(false);
             user_panel_history.setVisible(false);
         }
-        if (evt.getSource()== user_tab_return){
+        if (evt.getSource() == user_tab_return) {
             user_panel_welcome.setVisible(false);
             user_panel_library.setVisible(false);
             user_panel_rent.setVisible(false);
             user_panel_returnbook.setVisible(true);
             user_panel_history.setVisible(false);
         }
-        if (evt.getSource()== user_tab_history){
+        if (evt.getSource() == user_tab_history) {
             user_panel_welcome.setVisible(false);
             user_panel_library.setVisible(false);
             user_panel_rent.setVisible(false);
             user_panel_returnbook.setVisible(false);
             user_panel_history.setVisible(true);
         }
-        if (evt.getSource()== user_tab_logout){
+        if (evt.getSource() == user_tab_logout) {
             new login().setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_user_mouseclicked
 
     private void user_mouseentered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_mouseentered
-        if (evt.getSource()== user_tab_library){
-            user_tab_library.setBackground(new Color(255,204,0));
+        if (evt.getSource() == user_tab_library) {
+            user_tab_library.setBackground(new Color(255, 204, 0));
         }
-        if (evt.getSource()== user_tab_rent){
-            user_tab_rent.setBackground(new Color(255,204,0));
+        if (evt.getSource() == user_tab_rent) {
+            user_tab_rent.setBackground(new Color(255, 204, 0));
         }
-        if (evt.getSource()== user_tab_return){
-            user_tab_return.setBackground(new Color(255,204,0));
+        if (evt.getSource() == user_tab_return) {
+            user_tab_return.setBackground(new Color(255, 204, 0));
         }
-        if (evt.getSource()== user_tab_history){
-            user_tab_history.setBackground(new Color(255,204,0));
+        if (evt.getSource() == user_tab_history) {
+            user_tab_history.setBackground(new Color(255, 204, 0));
         }
-        if (evt.getSource()== user_tab_logout){
-            user_tab_logout.setBackground(new Color(255,204,0));
+        if (evt.getSource() == user_tab_logout) {
+            user_tab_logout.setBackground(new Color(255, 204, 0));
         }
     }//GEN-LAST:event_user_mouseentered
 
     private void user_mouseexited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_mouseexited
-        if (evt.getSource()== user_tab_library){
-            user_tab_library.setBackground(new Color(255,153,0));
+        if (evt.getSource() == user_tab_library) {
+            user_tab_library.setBackground(new Color(255, 153, 0));
         }
-        if (evt.getSource()== user_tab_rent){
-            user_tab_rent.setBackground(new Color(255,153,0));
+        if (evt.getSource() == user_tab_rent) {
+            user_tab_rent.setBackground(new Color(255, 153, 0));
         }
-        if (evt.getSource()== user_tab_return){
-            user_tab_return.setBackground(new Color(255,153,0));
+        if (evt.getSource() == user_tab_return) {
+            user_tab_return.setBackground(new Color(255, 153, 0));
         }
-        if (evt.getSource()== user_tab_history){
-            user_tab_history.setBackground(new Color(255,153,0));
+        if (evt.getSource() == user_tab_history) {
+            user_tab_history.setBackground(new Color(255, 153, 0));
         }
-        if (evt.getSource()== user_tab_logout){
+        if (evt.getSource() == user_tab_logout) {
             user_tab_logout.setBackground(new Color(255, 153, 0));
         }
     }//GEN-LAST:event_user_mouseexited
@@ -1177,7 +1185,6 @@ public class user extends javax.swing.JFrame {
     }//GEN-LAST:event_user_library_searchKeyReleased
 
     private void user_rent_searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_user_rent_searchKeyReleased
-       
         //edited---------------------------------------------------------------------------------
         //การค้นหาข้อมูลในตารางจาก ResultSet ที่เชื่อม DataBase ไว้ตอนเริ่มโปรแกรม
         //โดยใช้ Event KeyReleased *เมื่อมีการกรอกขอมูลลง JTextField เมทเธทนี้จะทำงาน
@@ -1185,10 +1192,16 @@ public class user extends javax.swing.JFrame {
         int num = 0;
         try {
             book.beforeFirst(); //ตั้งให้ ResultSet เริ่มที่ตัวแรกใหม่
-            while(book.next()){
+            while (book.next()) {
                 //เมื่อข้อมูลที่กรอกลงไปตรงกับข้อมูลใน ResultSet ที่ดึงมาจาก DataBase
-                if(str.equals(book.getString(4))){
+                if (str.equals(book.getString(4))) {
+                    outBook = book.getString(5);
+                    id = book.getString(1);
                     num = 1;
+                    ImageIcon Image = new ImageIcon(book.getString(7));
+                    Image newImage = Image.getImage().getScaledInstance(150, 220, 0);
+                    Icon addIcon = new ImageIcon(newImage);
+                    user_rent_image.setIcon(addIcon);
                     user_rent_bookname.setText(book.getString(2));
                     user_rent_booktype.setText(book.getString(3));
                     user_rent_bookdaterent.setText(book.getString(6));
@@ -1196,11 +1209,12 @@ public class user extends javax.swing.JFrame {
                     String dateOut = dateAdd(1);
                     user_rent_bookprice.setText(dateOut);
                     price = Double.parseDouble(book.getString(8));
-                    user_rent_bookprice2.setText(Double.toString(price)+" Baht");
+                    user_rent_bookprice2.setText(Double.toString(price) + " Baht");
                 }
             }
             book.beforeFirst(); //ตั้งให้ ResultSet เริ่มที่ตัวแรกใหม่
-            if(num == 0){ //เมื่อข้อมูลไม่ตรง
+            if (num == 0) { //เมื่อข้อมูลไม่ตรง
+                user_rent_image.setIcon(bgPNG);
                 user_rent_bookname.setText("");
                 user_rent_booktype.setText("");
                 user_rent_bookdaterent.setText("");
@@ -1211,32 +1225,45 @@ public class user extends javax.swing.JFrame {
         } catch (Exception e) {
         }
         //edited---------------------------------------------------------------------------------
-        
+
     }//GEN-LAST:event_user_rent_searchKeyReleased
 
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
-        
+
         //edited---------------------------------------------------------------------------------
         //เมื่อเลือกว่าจะยืมหนังสือกี่วันที่ jComboBox
         String dateOut = dateAdd(Integer.parseInt(jComboBox1.getSelectedItem().toString())); //คิดความต่างของวันที่โดยใช้ เมทเธท dateAdd
         user_rent_bookprice.setText(dateOut);
-        total = Double.parseDouble(jComboBox1.getSelectedItem().toString())*price; //คิดราคารวมว่ายืมกี่วันราคาทั้งหมดกี่บาท
-        user_rent_bookprice2.setText(Double.toString(total)+" Baht");
+        total = Double.parseDouble(jComboBox1.getSelectedItem().toString()) * price; //คิดราคารวมว่ายืมกี่วันราคาทั้งหมดกี่บาท
+        user_rent_bookprice2.setText(Double.toString(total) + " Baht");
         //edited---------------------------------------------------------------------------------
-        
+
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     private void user_rent_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_rent_buttonActionPerformed
-        String[] str = {ShareMethod.username,  user_rent_bookname.getText(), user_rent_search.getText(), };
-        //db.insertHistoryOfUserDataBase(insertDataToMethod, shareMethod.findAmountOfHistory() + 1);
-        JOptionPane.showMessageDialog(null, "Rent done.");
-          user_rent_search.setText("");
-          user_rent_bookname.setText("");
-          user_rent_booktype.setText("");
-          user_rent_bookdaterent.setText("");
-          user_rent_bookprice3.setText("");
-          user_rent_bookprice.setText("");
-          user_rent_bookprice2.setText("");
+        if (outBook.equals("0")){
+            JOptionPane.showMessageDialog(null, "Out of books.");
+        }else{
+            String[] str1 = {ShareMethod.username, user_rent_bookname.getText(), user_rent_search.getText(), user_rent_bookprice2.getText(), 
+                        user_rent_bookprice3.getText(), user_rent_bookprice.getText(), "RENTED"};
+            db.insertHistoryOfUserDataBase(str1, shareMethod.findAmountOfHistory()+1);
+            db.updateAmountBookStoreDataBase(Integer.toString(shareMethod.setBookDataDecrease(user_rent_search.getText())), Integer.parseInt(id));
+            JOptionPane.showMessageDialog(null, "Rent done.");
+            setTableHistory();
+            try {
+                setTableBook();
+            } catch (IOException ex) {
+                Logger.getLogger(user.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            user_rent_search.setText("");
+            user_rent_bookname.setText("");
+            user_rent_booktype.setText("");
+            user_rent_bookdaterent.setText("");
+            user_rent_bookprice3.setText("");
+            user_rent_bookprice.setText("");
+            user_rent_bookprice2.setText("");
+            user_rent_image.setIcon(bgPNG);
+        }
     }//GEN-LAST:event_user_rent_buttonActionPerformed
 
     private void user_return_searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_user_return_searchKeyReleased
@@ -1245,13 +1272,13 @@ public class user extends javax.swing.JFrame {
         int num = 0;
         try {
             history.beforeFirst();
-            while(history.next()){
-                if(history.getString(2).equals(ShareMethod.username) && history.getString(4).equals(str) && history.getString(8).equals("rented")){
+            while (history.next()) {
+                if (history.getString(2).equals(ShareMethod.username) && history.getString(4).equals(str) && history.getString(8).equals("rented")) {
                     num = 1;
                     user_return_bookname.setText(history.getString(3));
                     book.beforeFirst();
-                    while(book.next()){
-                        if(history.getString(4).equals(book.getString(4))){
+                    while (book.next()) {
+                        if (history.getString(4).equals(book.getString(4))) {
                             user_return_booktype1.setText(book.getString(3));
                             user_return_booktype.setText(book.getString(6));
                             price = Double.parseDouble(book.getString(8));
@@ -1260,16 +1287,16 @@ public class user extends javax.swing.JFrame {
                     book.beforeFirst();
                     user_return_bookdaterent.setText(history.getString(6));
                     user_return_bookdatereturn.setText(history.getString(7));
-                    if(dateDiff(currentDate, history.getString(7)) > 0){
+                    if (dateDiff(currentDate, history.getString(7)) > 0) {
                         user_return_bookfine.setText("0.0 Baht");
                     } else {
-                        double total = (abs(dateDiff(currentDate, history.getString(7)))*2)*price;
-                        user_return_bookfine.setText(Double.toString(total)+" Baht");
+                        double total = (abs(dateDiff(currentDate, history.getString(7))) * 2) * price;
+                        user_return_bookfine.setText(Double.toString(total) + " Baht");
                     }
                 }
             }
             history.beforeFirst();
-            if(num == 0){
+            if (num == 0) {
                 user_return_bookname.setText("");
                 user_return_booktype1.setText("");
                 user_return_booktype.setText("");
@@ -1283,20 +1310,19 @@ public class user extends javax.swing.JFrame {
 
     private void user_return_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_return_buttonActionPerformed
         JOptionPane.showMessageDialog(null, "Return done.");
-          user_return_bookname.setText("");
-          user_return_booktype1.setText("");
-          user_return_booktype.setText("");
-          user_return_bookdaterent.setText("");
-          user_return_bookdatereturn.setText("");
-          user_return_bookfine.setText("");
-          user_return_search.setText("");
+        user_return_bookname.setText("");
+        user_return_booktype1.setText("");
+        user_return_booktype.setText("");
+        user_return_bookdaterent.setText("");
+        user_return_bookdatereturn.setText("");
+        user_return_bookfine.setText("");
+        user_return_search.setText("");
     }//GEN-LAST:event_user_return_buttonActionPerformed
 
     private void user_history_searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_user_history_searchKeyReleased
-        
+
         String str = user_history_search.getText();
         filterHistory(str.toUpperCase());
-        
     }//GEN-LAST:event_user_history_searchKeyReleased
 
     private void user_library_searchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_library_searchMouseClicked
@@ -1306,10 +1332,6 @@ public class user extends javax.swing.JFrame {
 
     private void user_library_orderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_library_orderMouseClicked
 
-            // TODO add your handling code here:
-            int row = user_library_order.getSelectedRow();
-            String selectId = user_library_order.getValueAt(row, 2).toString();
-            user_rent_search.setText(selectId);
     }//GEN-LAST:event_user_library_orderMouseClicked
 
     private void user_history_searchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_history_searchMouseClicked

@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class DatabaseManagement {
 
-    private String url = "jdbc:mysql://ihost.it.kmitl.ac.th:3306/it61070139_dbSTD";
+    private String url = "jdbc:mysql://ihost.it.kmitl.ac.th:3306/it61070139_dbSTD?seUnicode=true&characterEncoding=UTF-8";
     private String sqlReadCustomer = "SELECT * FROM Customer";
     private String sqlReadPersonnel = "SELECT * FROM Personnel";
     private String sqlReadBookStore = "SELECT * FROM BookStore";
@@ -142,7 +142,7 @@ public class DatabaseManagement {
         }
         insertData += ") VALUES(" + ID;
         for (String data : insertDataToMethod) {
-            insertData += ",'" + data + "'";
+            insertData += ",\"" + data + "\"";
         }
         insertData += ");";
         try {
@@ -168,7 +168,7 @@ public class DatabaseManagement {
         }
         insertData += ") VALUES(" + ID;
         for (String data : insertDataToMethod) {
-            insertData += ",'" + data + "'";
+            insertData += ",\"" + data + "\"";
         }
         insertData += ");";
         try {
@@ -194,7 +194,7 @@ public class DatabaseManagement {
         }
         insertData += ") VALUES(" + ID;
         for (String data : insertDataToMethod) {
-            insertData += ",'" + data + "'";
+            insertData += ",\"" + data + "\"";
         }
         insertData += ");";
         try {
@@ -230,6 +230,7 @@ public class DatabaseManagement {
         }
         closeConnection();
     }
+
     public void updateBookStoreDataBaseNoImage(String insertDataToMethod[], int ID) {
         index = 1;
         insertData = "UPDATE BookStore SET ";
@@ -238,7 +239,7 @@ public class DatabaseManagement {
             insertData += " = \"" + data + "\"";
             if (index == 6) {
                 break;
-            }else {
+            } else {
                 insertData += ", ";
             }
             index++;
@@ -283,7 +284,7 @@ public class DatabaseManagement {
         insertData = "UPDATE Personnel SET ";
         for (String data : insertDataToMethod) {
             insertData += columnPersonnel[index];
-            insertData += " = '" + data + "'";
+            insertData += " = \"" + data + "\"";
             if (index == 5) {
                 break;
             } else {
@@ -307,7 +308,7 @@ public class DatabaseManagement {
         insertData = "UPDATE HistoryOfUser SET ";
         for (String data : insertDataToMethod) {
             insertData += columnHistoryOfUser[index];
-            insertData += " = '" + data + "'";
+            insertData += " = \"" + data + "\"";
             if (index == 7) {
                 break;
             } else {
@@ -368,6 +369,19 @@ public class DatabaseManagement {
             e.printStackTrace();
         }
         closeConnection();
+    }
+
+    public void updateAmountBookStoreDataBase(String string, int ID) {
+        String insertData;
+        insertData = "UPDATE BookStore SET  Amount = \"" + string;
+        insertData += "\" WHERE ID = " + ID + ";";
+        try {
+            System.out.println(insertData);
+            DataBase().executeUpdate(insertData);
+            System.out.println("updated");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     // public void main(String[] args) throws SQLException {
