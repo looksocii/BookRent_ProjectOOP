@@ -255,7 +255,7 @@ public class user extends javax.swing.JFrame {
         user_main.setMinimumSize(new java.awt.Dimension(1200, 700));
         user_main.setPreferredSize(new java.awt.Dimension(1200, 700));
 
-        header.setBackground(new java.awt.Color(255, 102, 0));
+        header.setBackground(new java.awt.Color(0, 0, 153));
         header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 headerMouseDragged(evt);
@@ -281,6 +281,7 @@ public class user extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logoheader.png"))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Coolsville", 0, 16)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("BOOKRENT");
 
         javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
@@ -303,11 +304,11 @@ public class user extends javax.swing.JFrame {
             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         user_sidetab.setBackground(new java.awt.Color(255, 204, 0));
-        user_sidetab.setLayout(new javax.swing.BoxLayout(user_sidetab, javax.swing.BoxLayout.PAGE_AXIS));
+        user_sidetab.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         user_tab_welcome.setBackground(new java.awt.Color(255, 102, 0));
         user_tab_welcome.setPreferredSize(new java.awt.Dimension(200, 140));
@@ -325,24 +326,12 @@ public class user extends javax.swing.JFrame {
                 user_tab_welcomeMousePressed(evt);
             }
         });
+        user_tab_welcome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         user_tab_welcomelogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/welcome.png"))); // NOI18N
+        user_tab_welcome.add(user_tab_welcomelogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, -1, 140));
 
-        javax.swing.GroupLayout user_tab_welcomeLayout = new javax.swing.GroupLayout(user_tab_welcome);
-        user_tab_welcome.setLayout(user_tab_welcomeLayout);
-        user_tab_welcomeLayout.setHorizontalGroup(
-            user_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(user_tab_welcomeLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(user_tab_welcomelogo)
-                .addContainerGap(60, Short.MAX_VALUE))
-        );
-        user_tab_welcomeLayout.setVerticalGroup(
-            user_tab_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(user_tab_welcomelogo, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-        );
-
-        user_sidetab.add(user_tab_welcome);
+        user_sidetab.add(user_tab_welcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         user_tab_library.setBackground(new java.awt.Color(255, 153, 0));
         user_tab_library.setPreferredSize(new java.awt.Dimension(200, 80));
@@ -384,7 +373,7 @@ public class user extends javax.swing.JFrame {
             .addComponent(user_tab_librarylogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
-        user_sidetab.add(user_tab_library);
+        user_sidetab.add(user_tab_library, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, -1, -1));
 
         user_tab_rent.setBackground(new java.awt.Color(255, 153, 0));
         user_tab_rent.setPreferredSize(new java.awt.Dimension(200, 80));
@@ -426,7 +415,7 @@ public class user extends javax.swing.JFrame {
             .addComponent(user_txt_rent, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        user_sidetab.add(user_tab_rent);
+        user_sidetab.add(user_tab_rent, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, -1, -1));
 
         user_tab_return.setBackground(new java.awt.Color(255, 153, 0));
         user_tab_return.setPreferredSize(new java.awt.Dimension(200, 80));
@@ -468,7 +457,7 @@ public class user extends javax.swing.JFrame {
             .addComponent(user_tab_returnlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
-        user_sidetab.add(user_tab_return);
+        user_sidetab.add(user_tab_return, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, -1, -1));
 
         user_tab_history.setBackground(new java.awt.Color(255, 153, 0));
         user_tab_history.setPreferredSize(new java.awt.Dimension(200, 80));
@@ -510,7 +499,7 @@ public class user extends javax.swing.JFrame {
             .addComponent(user_tab_historylogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
-        user_sidetab.add(user_tab_history);
+        user_sidetab.add(user_tab_history, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, -1, -1));
 
         user_tab_empty1.setBackground(new java.awt.Color(255, 153, 0));
         user_tab_empty1.setPreferredSize(new java.awt.Dimension(200, 80));
@@ -526,7 +515,7 @@ public class user extends javax.swing.JFrame {
             .addGap(0, 80, Short.MAX_VALUE)
         );
 
-        user_sidetab.add(user_tab_empty1);
+        user_sidetab.add(user_tab_empty1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, -1, -1));
 
         user_tab_empty2.setBackground(new java.awt.Color(255, 153, 0));
         user_tab_empty2.setPreferredSize(new java.awt.Dimension(200, 80));
@@ -542,7 +531,7 @@ public class user extends javax.swing.JFrame {
             .addGap(0, 80, Short.MAX_VALUE)
         );
 
-        user_sidetab.add(user_tab_empty2);
+        user_sidetab.add(user_tab_empty2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 540, -1, -1));
 
         user_tab_logout.setBackground(new java.awt.Color(255, 153, 0));
         user_tab_logout.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -583,7 +572,7 @@ public class user extends javax.swing.JFrame {
             .addComponent(user_tab_logoutlogo, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
-        user_sidetab.add(user_tab_logout);
+        user_sidetab.add(user_tab_logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 620, -1, -1));
 
         user_multipanel.setBackground(new java.awt.Color(255, 255, 153));
         user_multipanel.setPreferredSize(new java.awt.Dimension(1000, 700));
@@ -591,52 +580,22 @@ public class user extends javax.swing.JFrame {
 
         user_panel_welcome.setBackground(new java.awt.Color(255, 204, 0));
         user_panel_welcome.setPreferredSize(new java.awt.Dimension(1000, 700));
+        user_panel_welcome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         user_welcome_welcome.setFont(new java.awt.Font("Banaue", 1, 90)); // NOI18N
         user_welcome_welcome.setText("WELCOME");
+        user_panel_welcome.add(user_welcome_welcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 110, -1, -1));
 
         user_welcome_bookrent.setFont(new java.awt.Font("Banaue", 0, 54)); // NOI18N
         user_welcome_bookrent.setText("BookRent");
+        user_panel_welcome.add(user_welcome_bookrent, new org.netbeans.lib.awtextra.AbsoluteConstraints(461, 267, -1, -1));
 
         user_welcome_name.setFont(new java.awt.Font("TH SarabunPSK", 0, 48)); // NOI18N
         user_welcome_name.setText("xxxxxxxxxxxxxxxxxx");
+        user_panel_welcome.add(user_welcome_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(377, 422, -1, -1));
 
         user_welcome_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
-
-        javax.swing.GroupLayout user_panel_welcomeLayout = new javax.swing.GroupLayout(user_panel_welcome);
-        user_panel_welcome.setLayout(user_panel_welcomeLayout);
-        user_panel_welcomeLayout.setHorizontalGroup(
-            user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                .addGroup(user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(282, 282, 282)
-                        .addComponent(user_welcome_welcome))
-                    .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(323, 323, 323)
-                        .addComponent(user_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(user_welcome_bookrent))
-                    .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(377, 377, 377)
-                        .addComponent(user_welcome_name)))
-                .addGap(322, 322, 322))
-        );
-        user_panel_welcomeLayout.setVerticalGroup(
-            user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(user_welcome_welcome)
-                .addGap(43, 43, 43)
-                .addGroup(user_panel_welcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(user_panel_welcomeLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(user_welcome_bookrent))
-                    .addComponent(user_welcome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
-                .addComponent(user_welcome_name)
-                .addContainerGap())
-        );
+        user_panel_welcome.add(user_welcome_logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 243, -1, -1));
 
         user_multipanel.add(user_panel_welcome, "card6");
 
@@ -655,6 +614,8 @@ public class user extends javax.swing.JFrame {
                 user_library_searchKeyReleased(evt);
             }
         });
+
+        user_library_scroll.setDoubleBuffered(true);
 
         user_library_order.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         user_library_order.setModel(new javax.swing.table.DefaultTableModel(
@@ -680,6 +641,10 @@ public class user extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        user_library_order.setFocusable(false);
+        user_library_order.setRowHeight(25);
+        user_library_order.setShowVerticalLines(false);
+        user_library_order.getTableHeader().setReorderingAllowed(false);
         user_library_order.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 user_library_orderMouseClicked(evt);
@@ -708,9 +673,9 @@ public class user extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, user_panel_libraryLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(user_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(user_library_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE)
+                    .addComponent(user_library_scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 924, Short.MAX_VALUE)
                     .addComponent(user_library_search))
-                .addGap(26, 26, 26))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         user_panel_libraryLayout.setVerticalGroup(
             user_panel_libraryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -848,7 +813,7 @@ public class user extends javax.swing.JFrame {
                         .addComponent(user_rent_bookid)
                         .addGap(40, 40, 40)
                         .addComponent(user_rent_search, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(65, 65, 65))
+                .addContainerGap())
         );
         user_panel_rentLayout.setVerticalGroup(
             user_panel_rentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1159,7 +1124,7 @@ public class user extends javax.swing.JFrame {
                 .addComponent(user_sidetab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(user_multipanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(header, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         user_mainLayout.setVerticalGroup(
             user_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1510,7 +1475,14 @@ public class user extends javax.swing.JFrame {
         user_tab_history.setBackground(new Color(255, 153, 0));
         user_tab_logout.setBackground(new Color(255, 153, 0));
     }//GEN-LAST:event_user_tab_welcomeMousePressed
-        /**
+    private void menuActionPerformed(java.awt.event.ActionEvent evt) {
+        int posicion = menu.getX();
+        if(posicion > 0){
+            
+        }
+    }
+
+    /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
