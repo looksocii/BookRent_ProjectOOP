@@ -1,0 +1,31 @@
+CComic Books = 003
+
+id : 003000 
+book : Blab!: Number 18
+by : Monte Beauchamp
+Price : $17.48
+IMG : 01.jpg
+
+id : 003001 
+book : Art in Time: Unknown Comic Book Adventures, 1940-1980
+by : Dan Nadel
+Price : $20.98
+IMG : 02.jpg
+
+id : 003002 
+book : Deitch's Pictorama
+by : Gene Deitch, Simon Deitch, Seth Kallen Deitch
+Price : $7.98 
+IMG : 03.jpg
+
+id : 003003 
+book : Criminal Volume 7: Wrong Place, Wrong Time
+by : Ed Brubaker
+Price : $11.48
+IMG : 04.jpg
+
+id : 003004 
+book : Deadpool Kills Deadpool
+by : Cullen Bunn
+Price : $8.98
+IMG : 05.jpg
