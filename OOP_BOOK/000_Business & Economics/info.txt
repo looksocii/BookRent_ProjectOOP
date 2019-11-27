@@ -1,0 +1,31 @@
+Business & Economics = 000
+
+id : 000000 
+book : Rich Dad's Cashflow Quadrant: Guide to Financial Freedom
+by : Robert T. Kiyosaki
+Price : $9.98 USD
+IMG : 01.jpg
+
+id : 000001 
+book : Who Moved My Cheese?
+by : Spencer Johnson, Ken Blanchard
+Price : $7.48 
+IMG : 02.jpg
+
+id : 000002 
+book : The Intelligent Investor REV Ed.
+by : Benjamin Graham, Jason Zweig
+Price : $11.48
+IMG : 03.jpg
+
+id : 000003 
+book : The Five Dysfunctions of a Team: A Leadership Fable
+by : Patrick M. Lencioni
+Price : $7.48 
+IMG : 04.jpg
+
+id : 000004 
+book : Principles: Life and Work
+by : Ray Dalio
+Price : $16.98
+IMG : 05.jpg
