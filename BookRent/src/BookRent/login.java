@@ -261,9 +261,14 @@ public class login extends javax.swing.JFrame {
             }
             user.beforeFirst();
             
-            //เช็ค Admin และ Set
+            
+            //**************************************************************************
+            //ตัง้ค่า admin และ รหัสผ่าน
             String admin = "admin";
             String pass = "0000";
+            //**************************************************************************
+            
+            
             if(txt1.equals(admin) && txt2.equals(pass)){
                 ShareMethod.setFirstName("Admin");
                 ShareMethod.setLastName("");

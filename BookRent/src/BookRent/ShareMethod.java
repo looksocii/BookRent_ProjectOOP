@@ -34,7 +34,14 @@ public class ShareMethod {
         this.addressImage = addressImage;
         FileInputStream in = new FileInputStream(addressImage);
         BufferedInputStream bin = new BufferedInputStream(in);
+        
+        
+        //*************************************************************************************************************************************************
+        //************ เปลี่ยนเป็นที่อยู่โฟลเดอร์โปรแกรมบนเครื่องของคุณ ดังนี้ ("ที่อยู่โฟลเดอร์โปรแกรม\\BookRent\\src\\imagecopy\\img" + currentDate + ".png");
         FileOutputStream ou = new FileOutputStream("C:\\Users\\User\\Desktop\\BookRent_ProjectOOP\\BookRent\\src\\imagecopy\\img" + currentDate + ".png");
+        //*************************************************************************************************************************************************
+        
+        
         BufferedOutputStream bou = new BufferedOutputStream(ou);
         int i = 0;
         while (i != -1) {
@@ -44,7 +51,14 @@ public class ShareMethod {
         bin.close();
         bou.close();
         System.out.println("Copied!");
+        
+        
+        //*****************************************************************************************************************************************
+        //************ เปลี่ยนเป็นที่อยู่โฟลเดอร์โปรแกรมบนเครื่องของคุณ ดังนี้ ("ที่อยู่โฟลเดอร์โปรแกรม\\\\BookRent\\\\src\\\\imagecopy\\\\img" + currentDate + ".png");
         return "C:\\\\Users\\\\User\\\\Desktop\\\\BookRent_ProjectOOP\\\\BookRent\\\\src\\\\imagecopy\\\\img" + currentDate + ".png";
+        //*****************************************************************************************************************************************
+        
+        
     }
 
     public int findAmountOfBook() {

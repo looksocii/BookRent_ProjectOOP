@@ -30,7 +30,13 @@ public class staff extends javax.swing.JFrame {
         DatabaseManagement db = new DatabaseManagement();
         // edited
         
+        
+        //******************************************************************************************************************************
+        //***************** เปลี่ยนเป็นที่อยู่โฟลเดอร์โปรแกรมบนเครื่องของคุณ ดังนี้ ("ที่อยู่โฟลเดอร์โปรแกรม\\BookRent\\src\\images\\bg.png");
         ImageIcon Image = new ImageIcon("C:\\Users\\User\\Desktop\\BookRent_ProjectOOP\\BookRent\\src\\images\\bg.png");
+        //******************************************************************************************************************************
+        
+        
         Image newImage = Image.getImage().getScaledInstance(150, 220, 0);
         Icon bgPNG = new ImageIcon(newImage);
     
