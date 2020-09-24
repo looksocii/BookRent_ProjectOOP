@@ -13,3 +13,13 @@
 <img src="./img_books/02.jpg">
 <h3>Track : <b>Software Engineering</b></h3>
 <h3>Type of Coding Languages : <b>Java’s Object-Oriented Concepts</b></h3>
+
+# Team
+
+<ol>
+    <li>) 61070093 | Design GUI | นาย ธีรวัต กาญจนปานวงษ์</li>
+	<li>) 61070133 | Coding | นาย พอพล อินทรีย์</li>
+    <li>) 61070139 | Coding | นาย พันธกานต์ แก้วสังหาร</li>
+    <li>) 61070219 | Coding | นาย ศิรพัชร นาคะรัตนากร</li>
+    <li>) 61070220 | Design GUI, Report | นาย ศิรวิทย์ โบศรี</li>
+</ol>
